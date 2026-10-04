@@ -1,0 +1,21 @@
+{
+  "name": "nextplay",
+  "version": "1.0.0",
+  "description": "NEXTPLAY — Next Generation Game Hub",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Build complete - static HTML site'",
+    "lint": "echo 'No linter configured for static HTML'"
+  },
+  "keywords": [
+    "games",
+    "browser-games",
+    "nextplay"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
