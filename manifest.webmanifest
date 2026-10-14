@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "NEXTPLAY PRO — Ultimate Aura Gaming",
+  "short_name": "NEXTPLAY",
+  "description": "Discover online games, earn XP, complete quests and build your gaming profile.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090711",
+  "theme_color": "#090711",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
