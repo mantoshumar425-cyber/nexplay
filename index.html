@@ -4,233 +4,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050d29">
-<meta name="description" content="NEXTPLAY 🎮 Play free online games, discover popular games, and enjoy Spin & Win virtual rewards.">
-<title>🎮 NEXTPLAY — Play More, Be Happy!</title>
+<meta name="theme-color" content="#080719">
+<meta name="description" content="NEXTPLAY Pro — discover free online games, earn virtual XP, level up and enjoy Spin & Win.">
+<meta name="robots" content="index,follow">
+<title>NEXTPLAY PRO 🎮 | Play • Spin • Level Up</title>
 <style>
-:root{
- --bg:#050d29;--panel:#081735;--panel2:#101e43;
- --purple:#922fff;--cyan:#13c9ff;--pink:#f052e7;
- --text:#f8faff;--muted:#a9b9e8;--line:#30477c;
-}
+:root{--bg:#080719;--panel:#11112b;--panel2:#19173b;--purple:#9333ea;--pink:#ec4899;--cyan:#22d3ee;--text:#fff;--muted:#b5b4d5;--line:#ffffff19}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:radial-gradient(ellipse at 50% 0,#112b64 0,transparent 45%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
-button,input{font:inherit}
-button,a{-webkit-tap-highlight-color:transparent}
-button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-.container{width:min(1450px,calc(100% - 46px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:#050c24f2;backdrop-filter:blur(18px);border-bottom:1px solid #283b69}
-.top{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.logo{font-size:27px;font-weight:1000;letter-spacing:-1.2px;white-space:nowrap}
-.logo span{color:#ae69ff}
-.logo small{display:block;font-size:10px;color:#b8c8ed;letter-spacing:0;font-weight:600}
-nav{display:flex;gap:12px;align-items:center}
-nav a{padding:13px 17px;border-radius:12px;font-size:14px;font-weight:800;white-space:nowrap}
-nav a:first-child,nav a:hover{background:linear-gradient(120deg,#8e27ff,#5625d9)}
-.search{display:flex;align-items:center;gap:9px;border:1px solid #30477c;background:#081331;border-radius:30px;padding:0 17px;width:300px}
-.search input{background:transparent;color:white;border:0;outline:0;width:100%;padding:13px 0}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:365px;align-items:center;gap:20px;padding:20px 10px 28px}
-.hero-copy{padding:16px 8px}
-.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.4px;color:#bda6ff}
-h1{font-size:clamp(54px,5.3vw,84px);line-height:.98;letter-spacing:-3px;margin:18px 0}
-.gradient{background:linear-gradient(100deg,#ffdf4d,#ff6bdf,#bba0ff);background-clip:text;color:transparent}
-.hero p{font-size:17px;line-height:1.65;color:#d5def8;max-width:610px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
-.btn{border:1px solid #40518b;border-radius:12px;background:#111f45;color:white;padding:12px 18px;font-weight:850;transition:.2s}
-.btn:hover{filter:brightness(1.2);transform:translateY(-2px)}
-.primary{background:linear-gradient(110deg,#9a27ff,#503aff,#00bdf3);border:0;box-shadow:0 5px 24px #852bff55}
-.hero-art{height:330px;position:relative;display:grid;place-items:center;border:1px solid #2679df;border-radius:24px;overflow:hidden;background:radial-gradient(circle at 45% 45%,#2147a5,#091637 68%);box-shadow:inset 0 0 50px #2766ff33}
-.hero-art:before{content:"";position:absolute;width:340px;height:340px;border:1px solid #5d7aff66;border-radius:50%;box-shadow:0 0 45px #4b47ff44}
-.gamer{font-size:clamp(100px,11vw,160px);z-index:1;filter:drop-shadow(0 0 25px #1bcbff66);animation:float 3s ease-in-out infinite}
-.floating{position:absolute;z-index:2;background:#101b45eF;border:1px solid #8269ff;border-radius:12px;padding:12px 15px;font-weight:900}
-.f1{top:18px;left:14px}.f2{top:35px;right:14px}.f3{bottom:17px;left:20px}
-@keyframes float{50%{transform:translateY(-8px) rotate(3deg)}}
-.categories{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;padding:12px;background:#06132d;border:1px solid #213e73;border-radius:19px;margin:0 0 28px}
-.cat{display:grid;place-items:center;gap:7px;padding:12px 4px;border-radius:13px;background:transparent;color:#dfe8ff;border:0;font-size:12px;font-weight:800}
-.cat .emoji{font-size:28px}
-.cat.active,.cat:hover{background:linear-gradient(145deg,#7926ff,#3721b0);box-shadow:0 5px 18px #5b24ff44}
-.section{margin:26px 0 30px}
-.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}
-h2{font-size:28px;letter-spacing:-.7px;margin:0}
-.muted{font-size:12px;color:var(--muted);margin-top:5px}
-.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:15px}
-.game{min-width:0;border:1px solid #213b70;border-radius:15px;overflow:hidden;background:linear-gradient(150deg,#0e1c40,#06112b);cursor:pointer;transition:.2s}
-.game:hover{transform:translateY(-4px);border-color:#22bfff;box-shadow:0 8px 22px #008cff20}
-.cover{aspect-ratio:1.16;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#153c78,#26175a);overflow:hidden}
-.cover img{position:absolute;width:100%;height:100%;object-fit:cover}
-.cover .fallback{font-size:44px}
-.info{padding:11px}
-.title{font-size:13px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sub{font-size:11px;color:#bac8ed;margin-top:6px}
-.tag{display:inline-block;color:#ffe5a2;font-size:11px;font-weight:800;margin-top:7px}
-.ad-slot{min-height:70px;border:1px dashed #34466e;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8494bb;font-size:11px;margin:20px 0}
-.spin-panel{display:grid;grid-template-columns:1fr 1.05fr 1fr;align-items:center;gap:20px;padding:23px 26px;border:1px solid #b32cff;border-radius:22px;background:radial-gradient(ellipse at center,#411183 0,transparent 70%),linear-gradient(105deg,#170744,#25075a,#081942);box-shadow:0 0 35px #841aff22}
-.spin-panel h2{font-size:35px;color:#e2c3ff}
-.spin-panel p{color:#e0d8ff;font-size:14px;line-height:1.7}
-.reward-list{list-style:none;padding:0;display:grid;gap:12px;font-size:14px;font-weight:750}
-.wheel-shell{width:min(280px,100%);aspect-ratio:1;position:relative;margin:auto}
-.wheel{width:100%;height:100%;border:8px solid #ffcf43;border-radius:50%;position:relative;background:conic-gradient(#00bbec 0 45deg,#df28c9 45deg 90deg,#7c39ff 90deg 135deg,#ff8d16 135deg 180deg,#17bb77 180deg 225deg,#1b5dff 225deg 270deg,#e93f9b 270deg 315deg,#28bf76 315deg);box-shadow:0 0 0 4px #f99c37,0 0 28px #ffb52d88;transition:transform 4s cubic-bezier(.12,.72,.12,1)}
-.wheel:after{content:"🎁";position:absolute;inset:0;display:grid;place-items:center;font-size:35px}
-.pointer{position:absolute;z-index:2;left:50%;top:-12px;transform:translateX(-50%);border-left:15px solid transparent;border-right:15px solid transparent;border-top:30px solid white}
-.wheel-btn{display:block;margin:18px auto 8px}
-.result{text-align:center;min-height:24px;font-size:13px;font-weight:850;color:#ffdf72}
-.note{text-align:center;color:#b9b8db;font-size:10px;line-height:1.5}
-.statsbar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #304d8e;background:#0b1a3c;border-radius:17px;margin:28px 0;padding:19px 0}
-.stat{text-align:center;border-right:1px solid #263a68}
-.stat:last-child{border:0}
-.stat strong{display:block;font-size:23px;color:#d18aff}
-.stat span{font-size:12px;color:#c1cbed}
-footer{border-top:1px solid #243b6c;padding:27px 0 35px;color:#bdc9e8;font-size:12px}
-.foot{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}
-.foot-links{display:flex;gap:18px;flex-wrap:wrap}
-.status{text-align:center;padding:25px;color:var(--muted)}
-.player{display:none;position:fixed;inset:0;z-index:100;background:#030716;flex-direction:column}
-.player.open{display:flex}
-.player-bar{padding:12px;display:flex;justify-content:space-between;align-items:center;background:#101b3b}
-#frameWrap{flex:1;min-height:0}
-#gameFrame{width:100%;height:100%;border:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:radial-gradient(ellipse at 10% 0%,#30206a66,transparent 35%),radial-gradient(ellipse at 90% 20%,#082d6b44,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif}
+button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}
+.container{width:min(1400px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:30;background:#09081bf2;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.top{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{font-size:25px;font-weight:1000;letter-spacing:-1px;white-space:nowrap}.logo span{color:#bb83ff}.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:0}
+nav{display:flex;align-items:center;gap:5px}nav a{padding:11px;border-radius:11px;font-size:13px;font-weight:800}nav a:hover{background:#9333ea44}
+.search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid #7770ca55;border-radius:13px;padding:0 12px;min-width:190px}
+.search input{background:transparent;color:white;border:0;outline:0;padding:12px 0;width:100%;min-width:0}
+.btn{border:1px solid var(--line);background:#1b1939;color:white;border-radius:12px;padding:11px 15px;font-weight:850;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.15)}
+.primary{background:linear-gradient(105deg,#9333ea,#6d28d9,#2563eb);border:0;box-shadow:0 5px 24px #9333ea33}
+button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center;padding:36px 5px}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.3px;color:#d8b4fe}
+h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-3px;margin:17px 0}
+.gradient{background:linear-gradient(100deg,#f0abfc,#a78bfa,#22d3ee);background-clip:text;color:transparent}
+.hero p{color:#d2d0ed;line-height:1.8;max-width:560px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.hero-art{height:320px;position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid #a855f766;border-radius:25px;background:radial-gradient(circle at center,#54219b88,transparent 60%),linear-gradient(135deg,#11113b,#090d26)}
+.hero-emoji{font-size:145px;filter:drop-shadow(0 0 25px #a855f7aa);animation:float 3s ease-in-out infinite}
+.float-tag{position:absolute;background:#191339;border:1px solid #a855f766;border-radius:12px;padding:10px;font-size:12px;font-weight:900}
+.tag1{top:17px;left:14px}.tag2{top:40px;right:14px}.tag3{bottom:17px;left:20px}
+@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}
+.statsbar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:16px;background:#11112b;margin:8px 0 28px;padding:18px 0}
+.stat{text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}
+.stat strong{display:block;font-size:23px;color:#d8b4fe}.stat span{font-size:11px;color:var(--muted)}
+.section{margin:28px 0}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+h2{font-size:25px;letter-spacing:-.6px;margin:0}.muted{font-size:12px;color:var(--muted);margin-top:5px}
+.chips{display:flex;gap:9px;overflow-x:auto;padding:2px 0 14px}
+.chip{flex-shrink:0;background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:11px;padding:10px 14px;font-size:12px;font-weight:850}
+.chip.active,.chip:hover{color:white;border-color:#a855f7;background:#9333ea44}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.game{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(150deg,#171634,#0c0d22);cursor:pointer;transition:.2s}
+.game:hover{transform:translateY(-4px);border-color:#a855f7}
+.cover{aspect-ratio:1.13;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#272051,#101b40);overflow:hidden}
+.cover img{position:absolute;width:100%;height:100%;object-fit:cover}.cover .emoji{font-size:40px}
+.info{padding:10px}.title{font-size:12px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub{font-size:10px;color:var(--muted);margin-top:5px}.playlabel{color:#f0abfc;font-weight:900}
+.status{text-align:center;color:var(--muted);padding:22px}
+.ad-slot{min-height:70px;margin:20px 0;border:1px dashed #ffffff24;border-radius:12px;display:grid;place-items:center;text-align:center;color:#77758e;font-size:11px}
+.panel{border:1px solid #a855f755;border-radius:20px;padding:23px;background:radial-gradient(ellipse at center,#41118366,transparent 65%),linear-gradient(120deg,#170d38,#100b29,#071a35)}
+.spin-layout{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:25px}
+.reward-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px}
+.wheel-shell{width:min(285px,100%);aspect-ratio:1;position:relative;margin:auto}
+.pointer{position:absolute;z-index:3;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:29px solid white;filter:drop-shadow(0 2px 5px black)}
+.wheel{width:100%;height:100%;border:8px solid #facc15;border-radius:50%;position:relative;box-shadow:0 0 0 4px #f9731688,0 0 28px #f59e0b66;transition:transform 4s cubic-bezier(.12,.72,.12,1)}
+.wheel-labels{position:absolute;inset:0}.wheel-label{position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px;display:grid;place-items:center;font-size:21px;transform:rotate(var(--a)) translateY(-94px) rotate(calc(-1 * var(--a)))}
+.wheel-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;border:5px solid #f0abfc;background:linear-gradient(135deg,#a21caf,#6d28d9);display:grid;place-items:center;font-weight:1000;box-shadow:0 0 20px #e879f9aa}
+.result{min-height:23px;text-align:center;color:#f0abfc;font-size:13px;font-weight:850;margin-top:10px}
+.note{font-size:10px;line-height:1.6;color:var(--muted)}
+.dashboard{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.box{border:1px solid var(--line);border-radius:17px;padding:20px;background:#10132e;min-width:0}
+.profile{display:flex;align-items:center;gap:14px}.avatar{width:60px;height:60px;display:grid;place-items:center;font-size:32px;background:#2b1858;border-radius:17px}
+.progress{height:10px;background:#050d29;border-radius:20px;overflow:hidden;margin:12px 0}
+.progress div{height:100%;width:0;background:linear-gradient(90deg,#922fff,#13c9ff);transition:width .3s}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid var(--line)}th{color:#d8b4fe;background:#171638}td{color:#e9e9fa}
+.tablewrap{overflow-x:auto;border-radius:10px}
+.donate{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+footer{border-top:1px solid var(--line);margin-top:35px;padding:28px 0 40px;color:var(--muted);font-size:12px;line-height:1.8}
+.footerrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.links{display:flex;gap:16px;flex-wrap:wrap}
+.player{display:none;position:fixed;inset:0;z-index:100;background:#05040b;flex-direction:column}.player.open{display:flex}
+.playerbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;background:#11112b}
+#framewrap{flex:1;min-height:0}#gameframe{width:100%;height:100%;border:0;background:#090719}
 .mobile-nav{display:none}
-@media(max-width:1100px){.container{width:calc(100% - 28px)}.top{gap:12px}.search{width:220px}nav{gap:2px}nav a{padding:11px 9px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.categories{grid-template-columns:repeat(5,minmax(0,1fr))}}
-@media(max-width:650px){
- .container{width:calc(100% - 20px)}.top{height:auto;padding:10px 0;flex-wrap:wrap}.logo{font-size:22px}nav{display:none}.search{order:3;width:100%}
- .hero{grid-template-columns:1fr;padding-top:22px;gap:10px}.hero-copy{padding:5px 0}h1{font-size:48px;letter-spacing:-2px}.hero p{font-size:14px}.hero-art{height:210px}.gamer{font-size:105px}
- .categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding:6px}.cat{font-size:10px;padding:10px 1px}.cat .emoji{font-size:22px}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.section{margin:22px 0}h2{font-size:22px}.info{padding:9px}.title{font-size:12px}
- .spin-panel{grid-template-columns:1fr;padding:18px;gap:12px}.spin-panel h2{text-align:center}.spin-copy{text-align:center}.reward-list{grid-template-columns:1fr 1fr;font-size:12px}.wheel-shell{width:230px}
- .statsbar{grid-template-columns:repeat(2,1fr);gap:18px}.stat:nth-child(2){border:0}
- .mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;justify-content:space-around;background:#070e25f5;border-top:1px solid #293b68;padding:8px 0 calc(8px + env(safe-area-inset-bottom))}
- .mobile-nav a{text-align:center;font-size:10px;color:#d5dcf5}.mobile-nav span{display:block;font-size:19px}
- footer{padding-bottom:100px}
+@media(max-width:1150px){nav a{padding:9px 6px;font-size:12px}.search{min-width:160px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:700px){
+.container{width:calc(100% - 22px)}.top{padding:10px 0;flex-wrap:wrap}.logo{font-size:22px}nav{display:none}.search{order:3;width:100%}
+.hero{grid-template-columns:1fr;padding:24px 0;gap:12px}h1{font-size:49px;letter-spacing:-2px}.hero-art{height:205px}.hero-emoji{font-size:100px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.spin-layout{grid-template-columns:1fr;gap:15px}.panel{padding:16px}
+.reward-list{grid-template-columns:1fr 1fr}.wheel-shell{width:250px}.wheel-label{transform:rotate(var(--a)) translateY(-81px) rotate(calc(-1 * var(--a)))}
+.dashboard{grid-template-columns:1fr}.donate{grid-template-columns:1fr;text-align:center}.statsbar{grid-template-columns:repeat(2,1fr);gap:16px}.stat:nth-child(2){border:0}
+.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:40;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));background:#0b0a1af5;border-top:1px solid var(--line)}
+.mobile-nav a{text-align:center;font-size:10px;color:var(--muted)}.mobile-nav span{display:block;font-size:19px;margin-bottom:2px}footer{padding-bottom:105px}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header><div class="container top">
- <a class="logo" href="#home">🎮 NEXT<span>PLAY</span><small>Play More 🎮 Be Happy 😊</small></a>
- <nav><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#categories">▦ Categories</a><a href="#spin">🎁 Spin & Win</a></nav>
- <label class="search">🔎 <input id="search" placeholder="Search games..." aria-label="Search games"></label>
+<a class="logo" href="#home">🎮 NEXT<span>PLAY</span><small>PRO GAMING ARENA 🚀</small></a>
+<nav><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#dashboard">🏆 Players</a><a href="#spin">🎡 Spin</a><a href="#donate">💜 Support</a></nav>
+<label class="search">🔎 <input id="search" type="search" placeholder="Search games..." aria-label="Search games"></label>
 </div></header>
 
 <main class="container" id="home">
- <section class="hero">
-  <div class="hero-copy">
-   <span class="eyebrow">✨ YOUR ULTIMATE GAMING DESTINATION!</span>
-   <h1>PLAY 🎮<br><span class="gradient">• SPIN • WIN</span></h1>
-   <p>😎 Discover epic games, challenge yourself and unlock fun virtual rewards! 🎁🚀</p>
-   <div class="actions"><button class="btn primary" id="start">🚀 Start Playing Now!</button><button class="btn" id="surprise">🎲 Surprise Me!</button></div>
-   <div class="muted">🎮 1000+ Game discovery · ⚡ No download · 🌈 Play anytime</div>
-  </div>
-  <div class="hero-art"><span class="floating f1">😎 GAME ON!</span><span class="floating f2">🎁 Spin & Win</span><span class="gamer">🕹️</span><span class="floating f3">🏆 LEVEL UP!</span></div>
- </section>
+<section class="hero">
+<div>
+<div class="eyebrow">✨ YOUR NEXT GAMING ADVENTURE STARTS HERE</div>
+<h1>PLAY 🎮<br><span class="gradient">SPIN • WIN</span><br>LEVEL UP! ⚡</h1>
+<p>🔥 Discover free games, collect virtual rewards, track your play sessions and climb your personal XP leaderboard!</p>
+<div class="actions"><button class="btn primary" id="start">🚀 Start Playing</button><button class="btn" id="surprise">🎲 Surprise Me!</button></div>
+<div class="muted">🎮 Browser games · 🏆 XP levels · 🎁 Virtual rewards</div>
+</div>
+<div class="hero-art"><span class="float-tag tag1">🔥 GAME ON!</span><span class="float-tag tag2">🏆 LEVEL UP</span><span class="hero-emoji">🕹️</span><span class="float-tag tag3">💜 NEXTPLAY PRO</span></div>
+</section>
 
- <div class="categories" id="categories">
-  <button class="cat active" data-cat="all"><span class="emoji">🏠</span>All Games</button>
-  <button class="cat" data-cat="action"><span class="emoji">🚀</span>Action</button>
-  <button class="cat" data-cat="racing"><span class="emoji">🏁</span>Racing</button>
-  <button class="cat" data-cat="puzzle"><span class="emoji">🧩</span>Puzzle</button>
-  <button class="cat" data-cat="sports"><span class="emoji">⚽</span>Sports</button>
-  <button class="cat" data-cat="arcade"><span class="emoji">🕹️</span>Arcade</button>
-  <button class="cat" data-cat="casual"><span class="emoji">💖</span>Casual</button>
-  <button class="cat" data-cat="adventure"><span class="emoji">🏕️</span>Adventure</button>
-  <button class="cat" data-cat="strategy"><span class="emoji">♟️</span>Strategy</button>
-  <button class="cat" data-cat="all"><span class="emoji">✨</span>More</button>
- </div>
+<div class="statsbar">
+<div class="stat"><strong id="gamecount">—</strong><span>🎮 Games Loaded</span></div>
+<div class="stat"><strong id="statxp">0</strong><span>⚡ Your XP</span></div>
+<div class="stat"><strong id="statcoins">100</strong><span>🪙 Virtual Coins</span></div>
+<div class="stat"><strong id="statlevel">1</strong><span>⭐ Your Level</span></div>
+</div>
 
- <section class="section" id="games">
-  <div class="section-head"><div><h2>🔥 Popular Games</h2><div class="muted" id="resultText">Find your next favorite!</div></div><button class="btn" id="refresh">🔄 Refresh</button></div>
-  <div class="status" id="loading">⏳ Loading games...</div><div class="grid" id="grid"></div>
-  <div class="status" id="error" hidden>😕 Games couldn't load. Check your GamePix feed or network settings.<br><button class="btn" id="retry">Retry 🔄</button></div>
-  <div class="status" id="empty" hidden>No games found 😅</div>
-  <div style="text-align:center;margin-top:18px"><button class="btn primary" id="more">🎮 Load More Games ↓</button></div>
- </section>
+<section class="section" id="categories">
+<div class="head"><div><h2>🧩 Pick Your Vibe!</h2><div class="muted">Find your next favorite game.</div></div></div>
+<div class="chips">
+<button class="chip active" data-cat="all">🎮 All Games</button><button class="chip" data-cat="action">⚔️ Action</button><button class="chip" data-cat="racing">🏎️ Racing</button><button class="chip" data-cat="puzzle">🧩 Puzzle</button><button class="chip" data-cat="sports">⚽ Sports</button><button class="chip" data-cat="arcade">🕹️ Arcade</button><button class="chip" data-cat="strategy">♟️ Strategy</button><button class="chip" data-cat="adventure">🗺️ Adventure</button><button class="chip" data-cat="casual">🌈 Casual</button>
+</div>
+</section>
 
- <div class="ad-slot">📢 Advertisement · Adsterra Social Bar script is installed separately</div>
+<section class="section" id="games">
+<div class="head"><div><h2>🔥 Popular Games</h2><div class="muted" id="resulttext">Discover your next adventure.</div></div><button class="btn" id="refresh">🔄 Refresh</button></div>
+<div class="status" id="loading">⏳ Loading games...</div><div class="grid" id="grid"></div>
+<div class="status" id="empty" hidden>😅 No games found. Try another search.</div>
+<div class="status" id="error" hidden>😕 Games could not load. Check your feed settings or connection.<br><button class="btn primary" id="retry">🔄 Retry</button></div>
+<div style="text-align:center;margin-top:18px"><button class="btn primary" id="more">🎮 Load More Games ↓</button></div>
+</section>
 
- <section class="section" id="spin">
-  <div class="spin-panel">
-   <div class="spin-copy"><h2>🎁 Spin <span class="gradient">& Win!</span></h2><p>✨ Daily virtual spin! Try your luck and get a fun surprise. 🎉</p><ul class="reward-list"><li>🪙 Bonus Coins</li><li>💎 Diamond Points</li><li>🎁 Mystery Gift</li><li>🍀 Lucky Surprise</li></ul><div class="note">Virtual points only. No cash value or cash redemption.</div></div>
-   <div class="wheel-shell"><div class="pointer"></div><div class="wheel" id="wheel"></div></div>
-   <div><h2 style="text-align:center">🎉 Spin Now!</h2><p style="text-align:center">Your next surprise is waiting!</p><button class="btn primary wheel-btn" id="spin">🎡 SPIN NOW!</button><div class="result" id="result" aria-live="polite">🍀 Good luck!</div><div class="note" id="limit">One spin per day on this device.</div></div>
-  </div>
- </section>
+<div class="ad-slot">📢 Advertisement area · Insert your real Adsterra Social Bar code separately.</div>
 
- <section class="section" id="newgames"><div class="section-head"><div><h2>⭐ New Games</h2><div class="muted">Fresh discoveries for you 🆕</div></div><button class="btn" id="viewAll">View All →</button></div><div class="grid" id="newGrid"></div></section>
- <section class="section" id="recent"><div class="section-head"><h2>🕹️ Recently Played</h2><button class="btn" id="clear">🗑️ Clear</button></div><div class="grid" id="recentGrid"></div><div class="muted" id="noRecent">Your recent games will appear here.</div></section>
+<section class="section panel" id="spin">
+<div class="head"><div><h2>🎡 Spin & Win Rewards!</h2><div class="muted">16 virtual prizes · Daily fun · No purchase needed</div></div></div>
+<div class="spin-layout">
+<div><h2>🎁 Spin for surprises!</h2><p class="muted" style="line-height:1.8">Collect virtual coins and XP bonuses. Rewards are for fun only and have no cash value.</p>
+<ul class="reward-list" id="rewardlist"></ul></div>
+<div class="wheel-shell"><div class="pointer"></div><div class="wheel" id="wheel"><div class="wheel-labels" id="wheellabels"></div></div><div class="wheel-center">SPIN!</div></div>
+<div style="text-align:center"><h2>🍀 Try Your Luck</h2><p class="muted">Your next surprise is waiting!</p><button class="btn primary" id="spinbtn">🎡 SPIN NOW!</button><div class="result" id="spinresult" aria-live="polite">✨ Good luck, gamer!</div><p class="note" id="spinlimit">One spin per day on this device.</p></div>
+</div>
+</section>
 
- <div class="statsbar"><div class="stat"><strong>🎮 <span id="count">—</span></strong><span>Games loaded</span></div><div class="stat"><strong>😊 FREE</strong><span>Browser games</span></div><div class="stat"><strong>⭐ Fun</strong><span>Virtual rewards</span></div><div class="stat"><strong>⚡ 24/7</strong><span>Play anytime</span></div></div>
+<section class="section" id="dashboard">
+<div class="head"><div><h2>🏆 Gamer Dashboard</h2><div class="muted">Your progress on this device.</div></div></div>
+<div class="dashboard">
+<div class="box">
+<div class="profile"><div class="avatar">😎</div><div><strong id="playername">NEXTPLAY Gamer</strong><div class="muted">🎮 Local Player Profile</div></div><button class="btn" id="rename" style="margin-left:auto">✏️ Edit</button></div>
+<div class="statsbar" style="margin:20px 0">
+<div class="stat"><strong id="dashlevel">1</strong><span>⭐ Level</span></div><div class="stat"><strong id="dashxp">0</strong><span>⚡ XP</span></div><div class="stat"><strong id="dashcoins">100</strong><span>🪙 Coins</span></div><div class="stat"><strong id="dashgames">0</strong><span>🎮 Sessions</span></div>
+</div>
+<strong>⚡ Level Progress</strong><div class="progress"><div id="xpbar"></div></div><div class="muted" id="xptext">0 / 100 XP to next level</div>
+<p class="note">XP comes from tracked play sessions, not verified scores inside third-party games. Closing a game early may not count as a completed session.</p>
+</div>
+<div class="box"><h2>🥇 Local Leaderboard</h2><p class="muted">This device only — not a global ranking.</p><div class="tablewrap"><table><thead><tr><th>Rank</th><th>Gamer</th><th>Level</th><th>XP</th></tr></thead><tbody id="leaderboard"></tbody></table></div><p class="note">Rankings stored in your browser can be changed and are not verified.</p></div>
+</div>
+</section>
+
+<section class="section" id="recent"><div class="head"><div><h2>🕹️ Recently Played</h2><div class="muted">Jump back into your adventures.</div></div><button class="btn" id="clearrecent">🗑️ Clear</button></div><div class="grid" id="recentgrid"></div><div class="muted" id="norecent">Play a game and it will appear here.</div></section>
+
+<section class="section" id="donate"><div class="panel donate">
+<div><div class="eyebrow">💜 SUPPORT NEXTPLAY</div><h2 style="margin-top:10px">❤️ Help Us Build More!</h2><p class="muted" style="line-height:1.8">Support future gaming features and improvements with an optional donation. No purchase is needed to play.</p><p class="note">Only use a legitimate payment provider and publish accurate payment and refund information where applicable.</p></div>
+<div style="text-align:center"><div style="font-size:55px">💜🎮</div><a class="btn primary" href="#donation-info">❤️ Donation Setup</a><div class="note" id="donation-info" style="margin-top:12px">Payment link not configured. Add your real verified provider URL in the code before accepting donations.</div></div>
+</div></section>
+
+<section class="section" id="privacy"><div class="box"><h2>🔒 Privacy & Data</h2><p class="muted" style="line-height:1.8">This demo stores player name, XP, coins, spin date and recent games in this browser's local storage. Clearing browser data can remove progress. Game providers and advertising providers may process data under their own policies. Publish a complete privacy policy that accurately describes your actual services before launching advertising.</p><p><a href="#home" style="color:#d8b4fe">⬆ Back to top</a></p></div></section>
 </main>
-<footer><div class="container foot"><div><a class="logo" href="#home">🎮 NEXT<span>PLAY</span></a><p>Play More 🎮 Be Happy 😊</p></div><div class="foot-links"><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#spin">🎁 Spin</a><a href="/privacy-policy.html">🔒 Privacy Policy</a></div><div>© <span id="year"></span> NEXTPLAY 💜</div></div></footer>
 
-<nav class="mobile-nav"><a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#categories"><span>🧩</span>Explore</a><a href="#spin"><span>🎡</span>Spin</a><a href="#recent"><span>🕹️</span>Recent</a></nav>
+<footer><div class="container footerrow"><div><a class="logo" href="#home">🎮 NEXT<span>PLAY</span></a><p>Play More. Be Happy. 💜</p></div><div class="links"><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#spin">🎡 Spin</a><a href="#dashboard">🏆 Leaderboard</a><a href="#privacy">🔒 Privacy</a></div><div>© <span id="year"></span> NEXTPLAY PRO</div></div></footer>
 
-<div class="player" id="player" role="dialog" aria-modal="true"><div class="player-bar"><strong id="playerTitle">🎮 NEXTPLAY</strong><div><button class="btn" id="fullscreen">⛶ Fullscreen</button> <button class="btn" id="close">✕ Close</button></div></div><div id="frameWrap"><iframe id="gameFrame" title="Game player" allow="fullscreen; autoplay; gamepad" allowfullscreen style="width:100%;height:100%"></iframe></div></div>
+<nav class="mobile-nav"><a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#categories"><span>🧩</span>Explore</a><a href="#spin"><span>🎡</span>Spin</a><a href="#dashboard"><span>🏆</span>Profile</a></nav>
 
-<!-- Paste the real Adsterra Social Bar code from your publisher dashboard here. -->
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="Game player"><div class="playerbar"><strong id="playertitle">🎮 NEXTPLAY</strong><div><button class="btn" id="fullscreen">⛶ Fullscreen</button> <button class="btn" id="close">✕ Close</button></div></div><div id="framewrap"><iframe id="gameframe" title="Game" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe></div></div>
+
+<!-- ADSTERRA: Paste the exact Social Bar script from your Adsterra publisher dashboard here. -->
+
 <script>
 (()=>{
+"use strict";
 const $=id=>document.getElementById(id);
-const SID="MX192",SIZE=48;
-let games=[],page=1,last=Infinity,busy=false,cat="all";
+const SID="MX192",PAGE_SIZE=48;
+const prizes=[
+{emoji:"🪙",name:"10 Bonus Coins",coins:10,xp:0},
+{emoji:"💎",name:"Diamond Points",coins:0,xp:15},
+{emoji:"🎁",name:"Mystery Gift",coins:20,xp:5},
+{emoji:"⭐",name:"10 Star XP",coins:0,xp:10},
+{emoji:"🍀",name:"Lucky Bonus",coins:15,xp:5},
+{emoji:"⚡",name:"25 XP Boost",coins:0,xp:25},
+{emoji:"🏆",name:"Trophy Bonus",coins:30,xp:5},
+{emoji:"🎉",name:"Party Reward",coins:15,xp:10},
+{emoji:"🚀",name:"Power Boost",coins:10,xp:15},
+{emoji:"💜",name:"Purple Bonus",coins:25,xp:5},
+{emoji:"🌟",name:"Mega Star",coins:0,xp:20},
+{emoji:"🎮",name:"Gamer Reward",coins:20,xp:10},
+{emoji:"🪙",name:"50 Bonus Coins",coins:50,xp:0},
+{emoji:"💎",name:"Rare Gem",coins:0,xp:30},
+{emoji:"🔥",name:"Fire XP",coins:10,xp:20},
+{emoji:"👑",name:"Royal Reward",coins:40,xp:10}
+];
+const stateKey="nextplay_pro_v1";
+function readState(){try{return JSON.parse(localStorage.getItem(stateKey))||{name:"NEXTPLAY Gamer",xp:0,coins:100,sessions:0,spinDay:"",recent:[],history:[]}}catch{return{name:"NEXTPLAY Gamer",xp:0,coins:100,sessions:0,spinDay:"",recent:[],history:[]}}}
+let state=readState(),games=[],page=1,lastPage=Infinity,busy=false,category="all",rotation=0,spinning=false,activeGame=null,sessionTimer=null,sessionAwarded=false;
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function norm(x){
-const slug=x.namespace||x.slug||"";
-return {id:String(x.id||slug||x.title||x.name),title:String(x.title||x.name||"Game"),image:String(x.image||x.thumbnail||x.image_url||x.cover||""),category:String(x.category||x.genre||"casual").toLowerCase(),url:String(x.embed_url||x.embed||x.game_url||(slug?`https://play.gamepix.com/${encodeURIComponent(slug)}/embed?sid=${encodeURIComponent(SID)}`:"")),source:String(x.url||x.link||"")};
-}
-function categoryOf(g){
-const t=(g.title+" "+g.category).toLowerCase();
-for(const [c,words] of Object.entries({racing:["race","car","driving"],sports:["sport","football","soccer","basketball"],puzzle:["puzzle","match","brain","mahjong"],action:["action","battle","shooter","zombie"],arcade:["arcade","runner","platform"],strategy:["strategy","defense"],adventure:["adventure","quest"],casual:["casual","idle","clicker"]}))if(words.some(w=>t.includes(w)))return c;
-return g.category||"casual";
-}
-function list(d){if(Array.isArray(d))return d;for(const k of ["items","games","results","data"])if(Array.isArray(d?.[k]))return d[k];return []}
-async function load(reset=false){
-if(busy)return;if(!reset&&page>last)return;busy=true;
-if(reset){page=1;last=Infinity;games=[];$("grid").innerHTML="";$("newGrid").innerHTML="";$("loading").hidden=false;$("error").hidden=true}
-try{
-const r=await fetch(`https://feeds.gamepix.com/v2/json?sid=${encodeURIComponent(SID)}&pagination=${SIZE}&page=${page}`);
-if(!r.ok)throw Error("Feed error");
-const d=await r.json(),batch=list(d).map(norm);const seen=new Set(games.map(g=>g.id));
-batch.forEach(g=>{if(!seen.has(g.id)){games.push(g);seen.add(g.id)}});
-const lp=Number(d.last_page||d.pagination?.last_page);if(lp>0)last=lp;else if(batch.length<SIZE)last=page;
-page++;$("loading").hidden=true;$("count").textContent=games.length;render();
-}catch(e){console.error(e);$("loading").hidden=true;if(!games.length)$("error").hidden=false}
-finally{busy=false;$("more").textContent=page>last?"All games loaded 🎉":"🎮 Load More Games ↓"}
-}
-function card(g){const em={racing:"🏎️",sports:"⚽",puzzle:"🧩",action:"⚔️",arcade:"🕹️",strategy:"♟️",adventure:"🗺️",casual:"🌈"}[categoryOf(g)]||"🎮";return `<article class="game" tabindex="0" role="button" data-id="${esc(g.id)}"><div class="cover"><span class="fallback">${em}</span>${g.image?`<img src="${esc(g.image)}" alt="${esc(g.title)}" loading="lazy" onerror="this.remove()">`:""}</div><div class="info"><div class="title">${esc(g.title)}</div><div class="sub">${em} ${esc(categoryOf(g))}</div><div class="tag">🔥 PLAY NOW</div></div></article>`}
-function filtered(){const q=$("search").value.toLowerCase().trim();return games.filter(g=>(cat==="all"||categoryOf(g)===cat)&&(!q||(g.title+" "+g.category).toLowerCase().includes(q)))}
-function render(){
-const a=filtered();$("grid").innerHTML=a.map(card).join("");$("resultText").textContent=`🎮 ${a.length} games available`;$("empty").hidden=a.length>0||!games.length;
-$("newGrid").innerHTML=games.slice(-6).reverse().map(card).join("");
-}
-function recent(){try{return JSON.parse(localStorage.getItem("np_desktop_recent")||"[]")}catch{return []}}
-function renderRecent(){const a=recent();$("noRecent").hidden=a.length>0;$("recentGrid").innerHTML=a.map(card).join("")}
-function play(g){if(!g)return;if(!g.url){if(g.source)window.open(g.source,"_blank","noopener,noreferrer");else alert("Game embed link is unavailable.");return}
-$("playerTitle").textContent="🎮 "+g.title;$("gameFrame").src=g.url;$("player").classList.add("open");document.body.style.overflow="hidden";
-try{localStorage.setItem("np_desktop_recent",JSON.stringify([g,...recent().filter(x=>x.id!==g.id)].slice(0,6)))}catch{}renderRecent()}
-function close(){ $("player").classList.remove("open");$("gameFrame").src="about:blank";document.body.style.overflow=""}
-document.addEventListener("click",e=>{const el=e.target.closest("[data-id]");if(el)play(games.find(g=>g.id===el.dataset.id)||recent().find(g=>g.id===el.dataset.id))});
-$("search").addEventListener("input",render);
-document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{cat=b.dataset.cat;document.querySelectorAll("[data-cat]").forEach(x=>x.classList.toggle("active",x===b));render()}));
-$("start").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});
-$("surprise").onclick=()=>{const a=filtered();if(a.length)play(a[Math.floor(Math.random()*a.length)])};
-$("more").onclick=()=>load();$("refresh").onclick=()=>load(true);$("retry").onclick=()=>load(true);$("viewAll").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});
-$("close").onclick=close;document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
-$("fullscreen").onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $("frameWrap").requestFullscreen()}catch{}};
-$("clear").onclick=()=>{localStorage.removeItem("np_desktop_recent");renderRecent()};
-$("year").textContent=new Date().getFullYear();renderRecent();load(true);
-
-/* Virtual-only daily spin. */
-const prizes=["🪙 20 Bonus Coins","💎 Diamond Points","🎁 Mystery Gift","⭐ Star Points","🍀 Lucky Surprise","⚡ Power Boost","🏆 Bonus Trophy","🎉 Super Surprise"];
-let angle=0,spinning=false;
+function save(){try{localStorage.setItem(stateKey,JSON.stringify(state))}catch{}}
+function level(){return Math.floor(Math.max(0,state.xp)/100)+1}
 function today(){const d=new Date();return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`}
-function check(){const used=localStorage.getItem("np_desktop_spin")===today();$("spin").disabled=used;$("spin").textContent=used?"✅ Come Back Tomorrow":"🎡 SPIN NOW!";$("limit").textContent=used?"🎉 Your daily spin is used.":"One spin per day on this device."}
-$("spin").onclick=()=>{
-if(spinning||$("spin").disabled)return;spinning=true;$("spin").disabled=true;
-const i=Math.floor(Math.random()*prizes.length);angle+=360*6+(360-(i*45+22.5));$("wheel").style.transform=`rotate(${angle}deg)`;$("result").textContent="✨ Spinning...";
-setTimeout(()=>{$("result").textContent="🎉 You got "+prizes[i]+"!";try{localStorage.setItem("np_desktop_spin",today())}catch{}spinning=false;check()},4100)
-};
-check();
+function categoryOf(g){const t=(g.title+" "+g.category+" "+g.description).toLowerCase();const map={racing:["race","car","driving","motorbike"],sports:["sport","football","soccer","basketball","billiard"],puzzle:["puzzle","match","brain","mahjong","block"],action:["action","battle","shooter","zombie"],arcade:["arcade","runner","platform"],strategy:["strategy","defense","tactics"],adventure:["adventure","quest","escape"],casual:["casual","idle","clicker","hyper"]};for(const [c,words] of Object.entries(map))if(words.some(w=>t.includes(w)))return c;return g.category||"casual"}
+function normalize(x){const slug=x.namespace||x.slug||"";return{id:String(x.id||slug||x.title||x.name),title:String(x.title||x.name||"Game"),image:String(x.image||x.thumbnail||x.image_url||x.cover||""),category:String(x.category||x.genre||"casual").toLowerCase(),description:String(x.description||""),url:String(x.embed_url||x.embed||x.game_url||(slug?`https://play.gamepix.com/${encodeURIComponent(slug)}/embed?sid=${encodeURIComponent(SID)}`:"")),source:String(x.url||x.link||"")}}
+function items(d){if(Array.isArray(d))return d;for(const k of ["items","games","results","data"])if(Array.isArray(d?.[k]))return d[k];return[]}
+async function load(reset=false){
+if(busy||(!reset&&page>lastPage))return;busy=true;
+if(reset){page=1;lastPage=Infinity;games=[];$("grid").innerHTML="";$("loading").hidden=false;$("error").hidden=true}
+try{const r=await fetch(`https://feeds.gamepix.com/v2/json?sid=${encodeURIComponent(SID)}&pagination=${PAGE_SIZE}&page=${page}`);if(!r.ok)throw Error("Feed HTTP "+r.status);const d=await r.json(),batch=items(d).map(normalize);const seen=new Set(games.map(g=>g.id));batch.forEach(g=>{if(!seen.has(g.id)){games.push(g);seen.add(g.id)}});const lp=Number(d.last_page||d.pagination?.last_page||d.meta?.last_page);if(lp>0)lastPage=lp;else if(batch.length<PAGE_SIZE)lastPage=page;page++;$("loading").hidden=true;renderGames();$("gamecount").textContent=games.length.toLocaleString();$("more").hidden=page>lastPage||!batch.length}catch(e){console.error(e);$("loading").hidden=true;if(!games.length)$("error").hidden=false}else{}finally{busy=false;$("more").textContent=page>lastPage?"All games loaded 🎉":"🎮 Load More Games ↓"}
+}
+function gameCard(g){const em={racing:"🏎️",sports:"⚽",puzzle:"🧩",action:"⚔️",arcade:"🕹️",strategy:"♟️",adventure:"🗺️",casual:"🌈"}[categoryOf(g)]||"🎮";return`<article class="game" tabindex="0" role="button" data-game="${esc(g.id)}" aria-label="Play ${esc(g.title)}"><div class="cover"><span class="emoji">${em}</span>${g.image?`<img src="${esc(g.image)}" alt="${esc(g.title)}" loading="lazy" onerror="this.remove()">`:""}</div><div class="info"><div class="title">${esc(g.title)}</div><div class="sub">${em} ${esc(categoryOf(g))}</div><div class="sub playlabel">▶ Play Game</div></div></article>`}
+function filtered(){const q=$("search").value.toLowerCase().trim();return games.filter(g=>(category==="all"||categoryOf(g)===category)&&(!q||(g.title+" "+g.category+" "+g.description).toLowerCase().includes(q)))}
+function renderGames(){const a=filtered();$("grid").innerHTML=a.map(gameCard).join("");$("empty").hidden=a.length>0||games.length===0;$("resulttext").textContent=`✨ ${a.length} games shown`}
+function renderRecent(){$("recentgrid").innerHTML=state.recent.map(gameCard).join("");$("norecent").hidden=state.recent.length>0}
+function renderLeaderboard(){const rows=[{name:state.name,xp:state.xp,level:level()},...(state.history||[])].sort((a,b)=>b.xp-a.xp).slice(0,10);$("leaderboard").innerHTML=rows.map((p,i)=>`<tr><td>${["🥇","🥈","🥉"][i]||i+1}</td><td>${esc(p.name)}</td><td>${Math.floor(p.xp/100)+1}</td><td>${p.xp}</td></tr>`).join("")}
+function renderState(){const lv=level(),xpIn=state.xp%100;["statxp","dashxp"].forEach(id=>$(id).textContent=state.xp);["statcoins","dashcoins"].forEach(id=>$(id).textContent=state.coins);["statlevel","dashlevel"].forEach(id=>$(id).textContent=lv);$("playername").textContent=state.name;$("dashgames").textContent=state.sessions;$("xpbar").style.width=xpIn+"%";$("xptext").textContent=`${xpIn} / 100 XP to next level`;$("progressText")&&($("progressText").textContent=`${xpIn} / 100 XP to next level`);$("xpBar")&&($("xpBar").style.width=xpIn+"%");renderLeaderboard();save()}
+function play(g){
+if(!g)return;if(!g.url){if(g.source)window.open(g.source,"_blank","noopener,noreferrer");else alert("This game has no embed URL.");return}
+activeGame=g;sessionAwarded=false;$("playertitle").textContent="🎮 "+g.title;$("gameframe").src=g.url;$("player").classList.add("open");document.body.style.overflow="hidden";
+state.recent=[g,...state.recent.filter(x=>x.id!==g.id)].slice(0,6);renderRecent();save();
+clearTimeout(sessionTimer);sessionTimer=setTimeout(()=>{if(activeGame?.id===g.id&&!sessionAwarded){state.xp+=10;state.sessions++;sessionAwarded=true;renderState();alert("⚡ +10 XP! Play-session bonus earned.")}},60000)
+}
+function closeGame(){clearTimeout(sessionTimer);activeGame=null;$("player").classList.remove("open");$("gameframe").src="about:blank";document.body.style.overflow=""}
+$("grid").addEventListener("click",e=>{const el=e.target.closest("[data-game]");if(el)play(games.find(g=>g.id===el.dataset.game)||state.recent.find(g=>g.id===el.dataset.game))});
+$("recentgrid").addEventListener("click",e=>{const el=e.target.closest("[data-game]");if(el)play(games.find(g=>g.id===el.dataset.game)||state.recent.find(g=>g.id===el.dataset.game))});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-game]")){e.preventDefault();const id=e.target.dataset.game;play(games.find(g=>g.id===id)||state.recent.find(g=>g.id===id))}if(e.key==="Escape")closeGame()});
+$("search").addEventListener("input",renderGames);document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.cat;document.querySelectorAll("[data-cat]").forEach(x=>x.classList.toggle("active",x===b));renderGames()}));
+$("start").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});$("surprise").onclick=()=>{const a=filtered();if(a.length)play(a[Math.floor(Math.random()*a.length)]);else $("games").scrollIntoView({behavior:"smooth"})};
+$("more").onclick=()=>load();$("refresh").onclick=()=>load(true);$("retry").onclick=()=>load(true);$("close").onclick=closeGame;
+$("fullscreen").onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $("framewrap").requestFullscreen()}catch{alert("Fullscreen is not supported by this browser.")}};
+$("clearrecent").onclick=()=>{state.recent=[];save();renderRecent()};
+$("rename").onclick=()=>{const n=prompt("Choose your gamer name (max 20 characters):",state.name);if(n&&n.trim()){state.name=n.trim().slice(0,20);renderState()}};
+$("year").textContent=new Date().getFullYear();
+
+/* Build a genuine 16-segment visual wheel. */
+$("wheel").style.background=`conic-gradient(${prizes.map((p,i)=>`${["#7c3aed","#ec4899","#2563eb","#06b6d4","#22c55e","#eab308","#f97316","#8b5cf6"][i%8]} ${i*22.5}deg ${(i+1)*22.5}deg`).join(",")})`;
+$("wheellabels").innerHTML=prizes.map((p,i)=>`<span class="wheel-label" style="--a:${i*22.5+11.25}deg">${p.emoji}</span>`).join("");
+$("rewardlist").innerHTML=prizes.map(p=>`<li>${p.emoji} ${p.name}</li>`).join("");
+function checkSpin(){const used=state.spinDay===today();$("spinbtn").disabled=used;$("spinbtn").textContent=used?"✅ Come Back Tomorrow":"🎡 SPIN NOW!";$("spinlimit").textContent=used?"Your daily spin is used.":"One spin per day on this device."}
+$("spinbtn").onclick=()=>{if(spinning||state.spinDay===today())return;spinning=true;$("spinbtn").disabled=true;$("spinresult").textContent="✨ Spinning...";const i=Math.floor(Math.random()*prizes.length);rotation+=360*6+(360-(i*22.5+11.25));$("wheel").style.transform=`rotate(${rotation}deg)`;setTimeout(()=>{const p=prizes[i];state.coins+=p.coins;state.xp+=p.xp;state.spinDay=today();$("spinresult").textContent=`🎉 ${p.emoji} ${p.name}!`;spinning=false;renderState();checkSpin()},4100)};
+renderState();renderRecent();checkSpin();load(true);
 })();
 </script>
 </body>
