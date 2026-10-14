@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nextplay-shell-v3';
+const CACHE_NAME = 'nextplay-shell-v2';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './app-icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)).catch(() => {}).then(() => self.skipWaiting()));
@@ -11,8 +11,6 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  // Game catalogue responses must always reach the live Vercel API, not an old cache.
-  if (url.pathname.startsWith('/api/')) { event.respondWith(fetch(request)); return; }
   if (request.mode === 'navigate') {
     event.respondWith(fetch(request).then(response => {
       const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put('./index.html', copy)); return response;
