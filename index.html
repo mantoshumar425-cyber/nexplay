@@ -9,9 +9,38 @@
 @media(max-width:760px){.community-layout{grid-template-columns:1fr}.chat-panel{max-height:480px;min-height:330px}.arena-layout{grid-template-columns:1fr;grid-template-rows:minmax(280px,48dvh) minmax(210px,1fr);overflow:auto}.arena-chat{max-height:none;min-height:230px}.arena-layout .game-frame{min-height:260px}.modal{max-height:98dvh}.modal.fullscreen-modal{padding:5px}}
 @media(max-width:900px){.game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.game-thumb{height:135px}}@media(max-width:620px){.install-btn{font-size:0!important;padding:9px!important}.install-btn::before{content:"📲";font-size:16px}header{padding:9px 4%}.brand{font-size:19px}.brand-mark{width:35px;height:35px}.head-actions .btn{padding:8px 10px;font-size:12px}main{width:92%}.hero{padding:24px 18px;border-radius:22px}.hero h1{letter-spacing:-2px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.game-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.game-thumb{height:125px}.game-info{padding:9px}.two-col{grid-template-columns:1fr}.profile-fields{grid-template-columns:1fr}.reward-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.reward-tile{padding:9px}.section-head h2{font-size:19px}.panel{padding:14px}.hero:after{right:0;top:29%;font-size:90px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 .game-rating{display:flex;align-items:center;gap:3px;flex-wrap:wrap;margin:7px 0 11px;font-size:11px;color:var(--muted)}.rating-stars{display:inline-flex;gap:2px}.rating-star{border:0;background:transparent;color:#625a70;padding:1px 2px;font-size:17px;line-height:1}.rating-star.on{color:#ffd166}.rating-star:focus-visible{outline:2px solid var(--purple);border-radius:4px}.rating-note{font-size:10px;color:var(--muted);margin-left:4px}.dialog-rating{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 12px;padding:9px 11px;background:var(--panel2);border:1px solid var(--line);border-radius:12px}.play-reward-banner{padding:10px 12px;margin:0 0 5px;border:1px solid #ffd16655;border-radius:12px;background:linear-gradient(100deg,#ffd16616,#a855f716);font-size:12px}.play-reward-banner strong{color:var(--gold)}.play-reward-status{font-size:11px;color:var(--muted);margin:0 0 10px}.dialog-rating strong{font-size:12px}.dialog-rating .rating-note{margin-left:auto}@media(max-width:760px){.game-rating{gap:2px}.rating-star{font-size:16px}}
+
+/* NEXTPLAY Aura splash screen */
+#appSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 38%,#6d28d955 0,transparent 38%),radial-gradient(ellipse at 20% 90%,#312e8150 0,transparent 35%),#090711;opacity:1;visibility:visible;transition:opacity .55s ease,visibility .55s ease;}
+#appSplash.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-inner{width:min(340px,100%);display:flex;flex-direction:column;align-items:center;text-align:center;gap:15px}
+.splash-logo{position:relative;width:94px;height:94px;display:grid;place-items:center;border-radius:28px;background:linear-gradient(140deg,#e879f9,#9333ea 48%,#4f46e5);box-shadow:0 0 28px #a855f766,0 0 80px #7c3aed44;animation:splashFloat 1.8s ease-in-out infinite}
+.splash-logo:before{content:"";position:absolute;inset:-8px;border:1px solid #c084fc66;border-radius:34px;animation:splashPulse 1.8s ease-out infinite}
+.splash-logo span{font-size:48px;filter:drop-shadow(0 3px 8px #220b35)}
+.splash-title{font-size:30px;font-weight:1000;letter-spacing:-1.5px;color:#fff;line-height:1.1}
+.splash-title em{font-style:normal;background:linear-gradient(90deg,#e9d5ff,#c084fc,#818cf8);background-clip:text;color:transparent}
+.splash-tagline{font-size:11px;letter-spacing:2.5px;font-weight:800;color:#bfb2dc;text-transform:uppercase}
+.splash-track{height:5px;width:min(220px,80%);overflow:hidden;border-radius:99px;background:#ffffff18;margin-top:8px}
+.splash-track span{display:block;width:38%;height:100%;border-radius:99px;background:linear-gradient(90deg,#d946ef,#a78bfa,#6366f1);box-shadow:0 0 16px #a855f7;animation:splashLoad 1.35s ease-in-out infinite}
+.splash-loading{font-size:11px;color:#a99abd;letter-spacing:.5px}
+@keyframes splashFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes splashPulse{0%{transform:scale(.92);opacity:.85}100%{transform:scale(1.18);opacity:0}}
+@keyframes splashLoad{0%{transform:translateX(-120%)}100%{transform:translateX(370%)}}
+@media(prefers-reduced-motion:reduce){.splash-logo,.splash-logo:before,.splash-track span{animation:none}#appSplash{transition:none}}
+
 </style>
 </head>
 <body>
+<div id="appSplash" role="status" aria-live="polite" aria-label="Loading NEXTPLAY">
+  <div class="splash-inner">
+    <div class="splash-logo" aria-hidden="true"><span>🎮</span></div>
+    <div class="splash-title">NEXT<em>PLAY</em></div>
+    <div class="splash-tagline">Play · Discover · Repeat</div>
+    <div class="splash-track" aria-hidden="true"><span></span></div>
+    <div class="splash-loading">Loading your gaming universe…</div>
+  </div>
+</div>
+
 <header><a class="brand" href="#home"><span class="brand-mark">🎮</span><span>NEXT<span>PLAY</span><small style="font-size:10px;letter-spacing:1px;vertical-align:top"> PRO</small></span></a><div class="head-actions"><button class="btn install-btn" id="installAppBtn" type="button">📲 Install App</button><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button><button class="btn primary" id="headerPlayer">🪪 Create Player ID</button></div></header>
 <main>
 <section class="hero" id="home"><span class="eyebrow">⚡ ULTIMATE AURA GAMING</span><h1>YOUR GAME.<br><span class="gradient-text">YOUR LEGACY.</span></h1><p>🎮 Discover your next obsession. 🏆 Complete quests, collect rewards and level up your gaming identity in one glowing arena.</p><div class="hero-actions"><button class="btn primary" onclick="goTo('games')">🚀 Explore Games</button><button class="btn" onclick="goTo('profile')">🪪 Create Player ID</button></div><div class="hero-foot"><span>✨ 100% gaming vibes</span><span>💜 Purple Aura</span><span>📱 Mobile ready</span></div></section>
@@ -125,5 +154,16 @@ function findReportedScore(data,depth=0){if(depth>4||data==null)return null;if(t
 window.addEventListener('message',event=>{const frame=$('gameFrame');if(!frame||event.source!==frame.contentWindow||!selectedGame)return;const score=findReportedScore(event.data);if(score===null)return;/* Only accept score messages originating from the currently embedded game frame. */if(score<=currentSessionScore)return;const delta=score-currentSessionRewarded;currentSessionScore=score;if(delta>0){state.coins+=delta;currentSessionRewarded+=delta;state.xp+=Math.floor(delta/10);saveState();updateUI();showToast(`🪙 Game score detected: +${delta} NEXTPLAY coins!`);playSound()}renderPlayRewardStatus();});
 let deferredInstallPrompt=null;const installButtons=[$('installAppBtn'),$('installSettingsBtn')];function showInstallFallback(){const ua=navigator.userAgent||'';if(/android/i.test(ua))showToast('📲 Chrome menu ⋮ → Install app or Add to Home screen');else if(/iphone|ipad|ipod/i.test(ua))showToast('📲 Safari Share button → Add to Home Screen');else showToast('📲 Use your browser menu and choose Install app / Create shortcut');}window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installButtons.forEach(b=>{if(b)b.hidden=false});});window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;installButtons.forEach(b=>{if(b)b.textContent='✅ App Installed'});showToast('🎉 NEXTPLAY installed successfully!');});async function installApp(){if(deferredInstallPrompt){deferredInstallPrompt.prompt();try{await deferredInstallPrompt.userChoice;}catch{}deferredInstallPrompt=null;}else if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone){showToast('✅ NEXTPLAY is already installed.');}else{showInstallFallback();}}installButtons.forEach(b=>{if(b)b.addEventListener('click',installApp)});if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 updateUI();document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.toggle('active',b.dataset.avatar===state.avatar));renderGames();renderChat();loadGames(true);
+
+// Splash screen: keep it brief, then reveal the app even if a feed request stalls.
+(function initAppSplash(){
+  const splash=document.getElementById('appSplash');
+  if(!splash)return;
+  let hidden=false;
+  const hide=()=>{if(hidden)return;hidden=true;splash.classList.add('is-hidden');window.setTimeout(()=>splash.remove(),650);};
+  window.setTimeout(hide,3200);
+  if(document.readyState==='complete')window.setTimeout(hide,1050);
+  else window.addEventListener('load',()=>window.setTimeout(hide,850),{once:true});
+})();
 </script>
 </body></html>
