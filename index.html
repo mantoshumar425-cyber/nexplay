@@ -1,1633 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-
-<!-- Google Search Console Verification -->
-<meta name="google-site-verification" content="fBdInNr_pxpZjApGXBXYnxqg6Dyy9HJ7jwQC1Yva0Tw">
-
-<!-- SEO -->
-<meta name="description" content="NEXTPLAY — Next generation game hub. Discover and play browser games instantly.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#07080c">
-
-<title>NEXTPLAY — Next Generation Game Hub</title>
-
-<!-- =====================================================
-     VERCEL WEB ANALYTICS
-     Vanilla HTML implementation
-===================================================== -->
-<script>
-window.va = window.va || function () {
-  (window.vaq = window.vaq || []).push(arguments);
-};
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-
-<!-- =====================================================
-     VERCEL SPEED INSIGHTS
-     Vanilla HTML implementation
-===================================================== -->
-<script>
-window.si = window.si || function () {
-  (window.siq = window.siq || []).push(arguments);
-};
-</script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050d29">
+<meta name="description" content="NEXTPLAY 🎮 Play free online games, discover popular games, and enjoy Spin & Win virtual rewards.">
+<title>🎮 NEXTPLAY — Play More, Be Happy!</title>
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0
-}
-
 :root{
-  --bg:#07080c;
-  --panel:#0d1017;
-  --panel2:#10141d;
-  --text:#f7f8fb;
-  --muted:#8e96a8;
-  --line:rgba(255,255,255,.09);
-  --accent:#8b5cf6;
-  --cyan:#06b6d4;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(
-      circle at 50% -10%,
-      rgba(139,92,246,.18),
-      transparent 35%
-    ),
-    var(--bg);
-  color:var(--text);
-  min-height:100vh;
-}
-
-button,
-input{
-  font:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* ================= NAV ================= */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  padding:0 5%;
-  background:rgba(7,8,12,.78);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
-}
-
-.logo{
-  font-size:22px;
-  font-weight:950;
-  letter-spacing:-1px;
-  white-space:nowrap;
-}
-
-.logo span{
-  color:var(--accent);
-}
-
-.nav-links{
-  display:flex;
-  gap:24px;
-  color:#aeb5c3;
-  font-size:14px;
-  font-weight:700;
-}
-
-.nav-links a{
-  transition:.2s;
-}
-
-.nav-links a:hover{
-  color:#fff;
-}
-
-.search-wrap{
-  width:min(310px,34vw);
-}
-
-.search-wrap input{
-  width:100%;
-  height:40px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:rgba(255,255,255,.05);
-  color:#fff;
-  outline:0;
-  padding:0 14px;
-}
-
-.search-wrap input::placeholder{
-  color:#747d8e;
-}
-
-.search-wrap input:focus{
-  border-color:rgba(139,92,246,.6);
-  box-shadow:0 0 0 3px rgba(139,92,246,.08);
-}
-
-/* ================= HERO ================= */
-
-.hero{
-  max-width:1200px;
-  margin:auto;
-  padding:92px 5% 65px;
-  text-align:center;
-}
-
-.eyebrow{
-  font-size:11px;
-  letter-spacing:3px;
-  color:#9c8cff;
-  font-weight:900;
-  margin-bottom:15px;
-}
-
-.hero h1{
-  font-size:clamp(45px,8vw,92px);
-  line-height:.92;
-  letter-spacing:-5px;
-  font-weight:950;
-}
-
-.hero h1 span{
-  background:linear-gradient(
-    90deg,
-    #fff,
-    #a78bfa,
-    #67e8f9
-  );
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.hero p{
-  max-width:620px;
-  margin:25px auto;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
-.btn{
-  border:1px solid var(--line);
-  background:#121621;
-  color:#fff;
-  padding:13px 20px;
-  border-radius:12px;
-  font-weight:850;
-  transition:.2s;
-}
-
-.btn:hover{
-  border-color:rgba(139,92,246,.5);
-  transform:translateY(-1px);
-}
-
-.btn.primary{
-  border:0;
-  background:linear-gradient(
-    135deg,
-    #7c3aed,
-    #06b6d4
-  );
-  box-shadow:
-    0 12px 35px
-    rgba(124,58,237,.25);
-}
-
-/* ================= MAIN ================= */
-
-main{
-  max-width:1250px;
-  margin:auto;
-  padding:0 5% 80px;
-}
-
-.section-head{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:18px;
-}
-
-.section-head h2{
-  font-size:28px;
-  letter-spacing:-1px;
-}
-
-.count{
-  font-size:12px;
-  color:var(--muted);
-}
-
-/* ================= FILTERS ================= */
-
-.filters{
-  display:flex;
-  gap:8px;
-  overflow:auto;
-  padding:4px 0 18px;
-  scrollbar-width:none;
-}
-
-.filters::-webkit-scrollbar{
-  display:none;
-}
-
-.filter{
-  white-space:nowrap;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.035);
-  color:#aeb5c3;
-  padding:9px 13px;
-  border-radius:10px;
-  font-size:12px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.filter.active,
-.filter:hover{
-  color:#fff;
-  background:rgba(139,92,246,.17);
-  border-color:rgba(139,92,246,.45);
-}
-
-/* ================= GAME GRID ================= */
-
-.games-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:16px;
-}
-
-.game{
-  overflow:hidden;
-  background:
-    linear-gradient(
-      180deg,
-      var(--panel2),
-      #0b0e14
-    );
-  border:1px solid var(--line);
-  border-radius:16px;
-  transition:.2s;
-}
-
-.game:hover{
-  transform:translateY(-4px);
-  border-color:rgba(139,92,246,.45);
-  box-shadow:
-    0 18px 40px
-    rgba(0,0,0,.28);
-}
-
-.cover{
-  aspect-ratio:16/9;
-  background:#080a0f;
-  overflow:hidden;
-}
-
-.cover img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:.25s;
-}
-
-.game:hover .cover img{
-  transform:scale(1.045);
-}
-
-.info{
-  padding:12px;
-}
-
-.title{
-  font-size:14px;
-  font-weight:850;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.category{
-  font-size:11px;
-  color:var(--muted);
-  margin-top:5px;
-  text-transform:capitalize;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.play{
-  width:100%;
-  margin-top:12px;
-  border:0;
-  border-radius:10px;
-  padding:10px;
-  background:#fff;
-  color:#07080c;
-  font-weight:950;
-  font-size:11px;
-  transition:.2s;
-}
-
-.play:hover{
-  background:#a78bfa;
-  transform:translateY(-1px);
-}
-
-/* ================= STATUS ================= */
-
-.status{
-  text-align:center;
-  color:var(--muted);
-  padding:35px;
-}
-
-.load-wrap{
-  text-align:center;
-  margin:28px 0;
-}
-
-/* ================= RECENT ================= */
-
-#recentSection{
-  display:none;
-  margin-top:58px;
-}
-
-.recent-grid{
-  display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
-  gap:12px;
-}
-
-.recent-card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:12px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.recent-card:hover{
-  border-color:rgba(139,92,246,.45);
-  transform:translateY(-2px);
-}
-
-.recent-card img{
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  display:block;
-}
-
-.recent-card div{
-  padding:9px;
-  font-size:12px;
-  font-weight:800;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  border-top:1px solid var(--line);
-  padding:30px 5%;
-  text-align:center;
-  color:#687080;
-  font-size:12px;
-}
-
-/* ================= PLAYER ================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  z-index:99999;
-  display:none;
-  background:#000;
-}
-
-.modal.show{
-  display:flex;
-  flex-direction:column;
-}
-
-.player{
-  width:100%;
-  height:100dvh;
-  background:#050507;
-  display:flex;
-  flex-direction:column;
-}
-
-.player-top{
-  height:58px;
-  flex-shrink:0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:0 16px;
-  background:rgba(10,11,16,.97);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.player-left{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width:0;
-}
-
-.player-back,
-.player-action{
-  height:38px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:10px;
-  background:rgba(255,255,255,.06);
-  color:#fff;
-  font-weight:850;
-}
-
-.player-back{
-  width:38px;
-  font-size:19px;
-}
-
-.player-title{
-  font-size:14px;
-  font-weight:850;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  max-width:50vw;
-}
-
-.player-actions{
-  display:flex;
-  gap:8px;
-}
-
-.player-action{
-  padding:0 13px;
-  font-size:11px;
-}
-
-.game-stage{
-  flex:1;
-  min-height:0;
-  position:relative;
-  background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.game-stage iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  background:#000;
-}
-
-.player-loading{
-  position:absolute;
-  inset:0;
-  z-index:2;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#050507;
-  color:#aaa;
-  font-size:13px;
-}
-
-.player-loading.hidden{
-  display:none;
-}
-
-.spinner{
-  width:30px;
-  height:30px;
-  border:3px solid rgba(255,255,255,.15);
-  border-top-color:#a78bfa;
-  border-radius:50%;
-  animation:spin .8s linear infinite;
-  margin-right:10px;
-}
-
-@keyframes spin{
-  to{
-    transform:rotate(360deg)
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1000px){
-
-  .games-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-  }
-
-  .recent-grid{
-    grid-template-columns:repeat(4,minmax(0,1fr));
-  }
-
-  .nav-links{
-    display:none;
-  }
-}
-
-@media(max-width:700px){
-
-  nav{
-    height:62px;
-    padding:0 4%;
-  }
-
-  .search-wrap{
-    width:43vw;
-  }
-
-  .hero{
-    padding:65px 4% 48px;
-  }
-
-  .hero h1{
-    letter-spacing:-3px;
-  }
-
-  main{
-    padding-left:4%;
-    padding-right:4%;
-  }
-
-  .games-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-  }
-
-  .game{
-    border-radius:13px;
-  }
-
-  .info{
-    padding:10px;
-  }
-
-  .section-head h2{
-    font-size:23px;
-  }
-
-  .recent-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .player-top{
-    height:54px;
-    padding:0 10px;
-  }
-
-  .player-title{
-    max-width:40vw;
-    font-size:12px;
-  }
-
-  .player-action{
-    width:38px;
-    padding:0;
-    font-size:0;
-  }
-
-  .player-action.fullscreen:before{
-    content:"⛶";
-    font-size:18px;
-  }
-}
-
-@media(max-width:420px){
-
-  .logo{
-    font-size:18px;
-  }
-
-  .search-wrap{
-    width:45vw;
-  }
-
-  .search-wrap input{
-    height:36px;
-  }
-
-  .hero h1{
-    font-size:43px;
-  }
+ --bg:#050d29;--panel:#081735;--panel2:#101e43;
+ --purple:#922fff;--cyan:#13c9ff;--pink:#f052e7;
+ --text:#f8faff;--muted:#a9b9e8;--line:#30477c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:radial-gradient(ellipse at 50% 0,#112b64 0,transparent 45%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.container{width:min(1450px,calc(100% - 46px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:#050c24f2;backdrop-filter:blur(18px);border-bottom:1px solid #283b69}
+.top{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo{font-size:27px;font-weight:1000;letter-spacing:-1.2px;white-space:nowrap}
+.logo span{color:#ae69ff}
+.logo small{display:block;font-size:10px;color:#b8c8ed;letter-spacing:0;font-weight:600}
+nav{display:flex;gap:12px;align-items:center}
+nav a{padding:13px 17px;border-radius:12px;font-size:14px;font-weight:800;white-space:nowrap}
+nav a:first-child,nav a:hover{background:linear-gradient(120deg,#8e27ff,#5625d9)}
+.search{display:flex;align-items:center;gap:9px;border:1px solid #30477c;background:#081331;border-radius:30px;padding:0 17px;width:300px}
+.search input{background:transparent;color:white;border:0;outline:0;width:100%;padding:13px 0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:365px;align-items:center;gap:20px;padding:20px 10px 28px}
+.hero-copy{padding:16px 8px}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.4px;color:#bda6ff}
+h1{font-size:clamp(54px,5.3vw,84px);line-height:.98;letter-spacing:-3px;margin:18px 0}
+.gradient{background:linear-gradient(100deg,#ffdf4d,#ff6bdf,#bba0ff);background-clip:text;color:transparent}
+.hero p{font-size:17px;line-height:1.65;color:#d5def8;max-width:610px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+.btn{border:1px solid #40518b;border-radius:12px;background:#111f45;color:white;padding:12px 18px;font-weight:850;transition:.2s}
+.btn:hover{filter:brightness(1.2);transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,#9a27ff,#503aff,#00bdf3);border:0;box-shadow:0 5px 24px #852bff55}
+.hero-art{height:330px;position:relative;display:grid;place-items:center;border:1px solid #2679df;border-radius:24px;overflow:hidden;background:radial-gradient(circle at 45% 45%,#2147a5,#091637 68%);box-shadow:inset 0 0 50px #2766ff33}
+.hero-art:before{content:"";position:absolute;width:340px;height:340px;border:1px solid #5d7aff66;border-radius:50%;box-shadow:0 0 45px #4b47ff44}
+.gamer{font-size:clamp(100px,11vw,160px);z-index:1;filter:drop-shadow(0 0 25px #1bcbff66);animation:float 3s ease-in-out infinite}
+.floating{position:absolute;z-index:2;background:#101b45eF;border:1px solid #8269ff;border-radius:12px;padding:12px 15px;font-weight:900}
+.f1{top:18px;left:14px}.f2{top:35px;right:14px}.f3{bottom:17px;left:20px}
+@keyframes float{50%{transform:translateY(-8px) rotate(3deg)}}
+.categories{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;padding:12px;background:#06132d;border:1px solid #213e73;border-radius:19px;margin:0 0 28px}
+.cat{display:grid;place-items:center;gap:7px;padding:12px 4px;border-radius:13px;background:transparent;color:#dfe8ff;border:0;font-size:12px;font-weight:800}
+.cat .emoji{font-size:28px}
+.cat.active,.cat:hover{background:linear-gradient(145deg,#7926ff,#3721b0);box-shadow:0 5px 18px #5b24ff44}
+.section{margin:26px 0 30px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}
+h2{font-size:28px;letter-spacing:-.7px;margin:0}
+.muted{font-size:12px;color:var(--muted);margin-top:5px}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:15px}
+.game{min-width:0;border:1px solid #213b70;border-radius:15px;overflow:hidden;background:linear-gradient(150deg,#0e1c40,#06112b);cursor:pointer;transition:.2s}
+.game:hover{transform:translateY(-4px);border-color:#22bfff;box-shadow:0 8px 22px #008cff20}
+.cover{aspect-ratio:1.16;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#153c78,#26175a);overflow:hidden}
+.cover img{position:absolute;width:100%;height:100%;object-fit:cover}
+.cover .fallback{font-size:44px}
+.info{padding:11px}
+.title{font-size:13px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub{font-size:11px;color:#bac8ed;margin-top:6px}
+.tag{display:inline-block;color:#ffe5a2;font-size:11px;font-weight:800;margin-top:7px}
+.ad-slot{min-height:70px;border:1px dashed #34466e;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#8494bb;font-size:11px;margin:20px 0}
+.spin-panel{display:grid;grid-template-columns:1fr 1.05fr 1fr;align-items:center;gap:20px;padding:23px 26px;border:1px solid #b32cff;border-radius:22px;background:radial-gradient(ellipse at center,#411183 0,transparent 70%),linear-gradient(105deg,#170744,#25075a,#081942);box-shadow:0 0 35px #841aff22}
+.spin-panel h2{font-size:35px;color:#e2c3ff}
+.spin-panel p{color:#e0d8ff;font-size:14px;line-height:1.7}
+.reward-list{list-style:none;padding:0;display:grid;gap:12px;font-size:14px;font-weight:750}
+.wheel-shell{width:min(280px,100%);aspect-ratio:1;position:relative;margin:auto}
+.wheel{width:100%;height:100%;border:8px solid #ffcf43;border-radius:50%;position:relative;background:conic-gradient(#00bbec 0 45deg,#df28c9 45deg 90deg,#7c39ff 90deg 135deg,#ff8d16 135deg 180deg,#17bb77 180deg 225deg,#1b5dff 225deg 270deg,#e93f9b 270deg 315deg,#28bf76 315deg);box-shadow:0 0 0 4px #f99c37,0 0 28px #ffb52d88;transition:transform 4s cubic-bezier(.12,.72,.12,1)}
+.wheel:after{content:"🎁";position:absolute;inset:0;display:grid;place-items:center;font-size:35px}
+.pointer{position:absolute;z-index:2;left:50%;top:-12px;transform:translateX(-50%);border-left:15px solid transparent;border-right:15px solid transparent;border-top:30px solid white}
+.wheel-btn{display:block;margin:18px auto 8px}
+.result{text-align:center;min-height:24px;font-size:13px;font-weight:850;color:#ffdf72}
+.note{text-align:center;color:#b9b8db;font-size:10px;line-height:1.5}
+.statsbar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #304d8e;background:#0b1a3c;border-radius:17px;margin:28px 0;padding:19px 0}
+.stat{text-align:center;border-right:1px solid #263a68}
+.stat:last-child{border:0}
+.stat strong{display:block;font-size:23px;color:#d18aff}
+.stat span{font-size:12px;color:#c1cbed}
+footer{border-top:1px solid #243b6c;padding:27px 0 35px;color:#bdc9e8;font-size:12px}
+.foot{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.status{text-align:center;padding:25px;color:var(--muted)}
+.player{display:none;position:fixed;inset:0;z-index:100;background:#030716;flex-direction:column}
+.player.open{display:flex}
+.player-bar{padding:12px;display:flex;justify-content:space-between;align-items:center;background:#101b3b}
+#frameWrap{flex:1;min-height:0}
+#gameFrame{width:100%;height:100%;border:0}
+.mobile-nav{display:none}
+@media(max-width:1100px){.container{width:calc(100% - 28px)}.top{gap:12px}.search{width:220px}nav{gap:2px}nav a{padding:11px 9px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.categories{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:650px){
+ .container{width:calc(100% - 20px)}.top{height:auto;padding:10px 0;flex-wrap:wrap}.logo{font-size:22px}nav{display:none}.search{order:3;width:100%}
+ .hero{grid-template-columns:1fr;padding-top:22px;gap:10px}.hero-copy{padding:5px 0}h1{font-size:48px;letter-spacing:-2px}.hero p{font-size:14px}.hero-art{height:210px}.gamer{font-size:105px}
+ .categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding:6px}.cat{font-size:10px;padding:10px 1px}.cat .emoji{font-size:22px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.section{margin:22px 0}h2{font-size:22px}.info{padding:9px}.title{font-size:12px}
+ .spin-panel{grid-template-columns:1fr;padding:18px;gap:12px}.spin-panel h2{text-align:center}.spin-copy{text-align:center}.reward-list{grid-template-columns:1fr 1fr;font-size:12px}.wheel-shell{width:230px}
+ .statsbar{grid-template-columns:repeat(2,1fr);gap:18px}.stat:nth-child(2){border:0}
+ .mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;justify-content:space-around;background:#070e25f5;border-top:1px solid #293b68;padding:8px 0 calc(8px + env(safe-area-inset-bottom))}
+ .mobile-nav a{text-align:center;font-size:10px;color:#d5dcf5}.mobile-nav span{display:block;font-size:19px}
+ footer{padding-bottom:100px}
 }
 </style>
 </head>
-
 <body>
+<header><div class="container top">
+ <a class="logo" href="#home">🎮 NEXT<span>PLAY</span><small>Play More 🎮 Be Happy 😊</small></a>
+ <nav><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#categories">▦ Categories</a><a href="#spin">🎁 Spin & Win</a></nav>
+ <label class="search">🔎 <input id="search" placeholder="Search games..." aria-label="Search games"></label>
+</div></header>
 
-<!-- ================= NAV ================= -->
+<main class="container" id="home">
+ <section class="hero">
+  <div class="hero-copy">
+   <span class="eyebrow">✨ YOUR ULTIMATE GAMING DESTINATION!</span>
+   <h1>PLAY 🎮<br><span class="gradient">• SPIN • WIN</span></h1>
+   <p>😎 Discover epic games, challenge yourself and unlock fun virtual rewards! 🎁🚀</p>
+   <div class="actions"><button class="btn primary" id="start">🚀 Start Playing Now!</button><button class="btn" id="surprise">🎲 Surprise Me!</button></div>
+   <div class="muted">🎮 1000+ Game discovery · ⚡ No download · 🌈 Play anytime</div>
+  </div>
+  <div class="hero-art"><span class="floating f1">😎 GAME ON!</span><span class="floating f2">🎁 Spin & Win</span><span class="gamer">🕹️</span><span class="floating f3">🏆 LEVEL UP!</span></div>
+ </section>
 
-<nav>
+ <div class="categories" id="categories">
+  <button class="cat active" data-cat="all"><span class="emoji">🏠</span>All Games</button>
+  <button class="cat" data-cat="action"><span class="emoji">🚀</span>Action</button>
+  <button class="cat" data-cat="racing"><span class="emoji">🏁</span>Racing</button>
+  <button class="cat" data-cat="puzzle"><span class="emoji">🧩</span>Puzzle</button>
+  <button class="cat" data-cat="sports"><span class="emoji">⚽</span>Sports</button>
+  <button class="cat" data-cat="arcade"><span class="emoji">🕹️</span>Arcade</button>
+  <button class="cat" data-cat="casual"><span class="emoji">💖</span>Casual</button>
+  <button class="cat" data-cat="adventure"><span class="emoji">🏕️</span>Adventure</button>
+  <button class="cat" data-cat="strategy"><span class="emoji">♟️</span>Strategy</button>
+  <button class="cat" data-cat="all"><span class="emoji">✨</span>More</button>
+ </div>
 
-<a class="logo" href="#">
-  NEXT<span>PLAY</span>
-</a>
+ <section class="section" id="games">
+  <div class="section-head"><div><h2>🔥 Popular Games</h2><div class="muted" id="resultText">Find your next favorite!</div></div><button class="btn" id="refresh">🔄 Refresh</button></div>
+  <div class="status" id="loading">⏳ Loading games...</div><div class="grid" id="grid"></div>
+  <div class="status" id="error" hidden>😕 Games couldn't load. Check your GamePix feed or network settings.<br><button class="btn" id="retry">Retry 🔄</button></div>
+  <div class="status" id="empty" hidden>No games found 😅</div>
+  <div style="text-align:center;margin-top:18px"><button class="btn primary" id="more">🎮 Load More Games ↓</button></div>
+ </section>
 
-<div class="nav-links">
-  <a href="#games">Games</a>
-  <a href="#categories">Categories</a>
-  <a href="#recentSection">Recent</a>
-</div>
+ <div class="ad-slot">📢 Advertisement · Adsterra Social Bar script is installed separately</div>
 
-<div class="search-wrap">
-  <input
-    id="search"
-    type="search"
-    placeholder="Search games..."
-    autocomplete="off"
-    aria-label="Search games">
-</div>
+ <section class="section" id="spin">
+  <div class="spin-panel">
+   <div class="spin-copy"><h2>🎁 Spin <span class="gradient">& Win!</span></h2><p>✨ Daily virtual spin! Try your luck and get a fun surprise. 🎉</p><ul class="reward-list"><li>🪙 Bonus Coins</li><li>💎 Diamond Points</li><li>🎁 Mystery Gift</li><li>🍀 Lucky Surprise</li></ul><div class="note">Virtual points only. No cash value or cash redemption.</div></div>
+   <div class="wheel-shell"><div class="pointer"></div><div class="wheel" id="wheel"></div></div>
+   <div><h2 style="text-align:center">🎉 Spin Now!</h2><p style="text-align:center">Your next surprise is waiting!</p><button class="btn primary wheel-btn" id="spin">🎡 SPIN NOW!</button><div class="result" id="result" aria-live="polite">🍀 Good luck!</div><div class="note" id="limit">One spin per day on this device.</div></div>
+  </div>
+ </section>
 
-</nav>
+ <section class="section" id="newgames"><div class="section-head"><div><h2>⭐ New Games</h2><div class="muted">Fresh discoveries for you 🆕</div></div><button class="btn" id="viewAll">View All →</button></div><div class="grid" id="newGrid"></div></section>
+ <section class="section" id="recent"><div class="section-head"><h2>🕹️ Recently Played</h2><button class="btn" id="clear">🗑️ Clear</button></div><div class="grid" id="recentGrid"></div><div class="muted" id="noRecent">Your recent games will appear here.</div></section>
 
-<!-- ================= HERO ================= -->
-
-<header class="hero">
-
-<div class="eyebrow">
-  NEXT GENERATION GAME HUB
-</div>
-
-<h1>
-  PLAY. <span>DISCOVER.</span><br>
-  REPEAT.
-</h1>
-
-<p>
-  Discover a constantly growing collection
-  of browser games. Pick a game, hit play
-  and start instantly.
-</p>
-
-<div class="hero-actions">
-
-<button
-  class="btn primary"
-  type="button"
-  onclick="scrollGames()">
-  START PLAYING
-</button>
-
-<button
-  class="btn"
-  type="button"
-  onclick="randomGame()">
-  SURPRISE ME
-</button>
-
-</div>
-
-</header>
-
-<!-- ================= MAIN ================= -->
-
-<main>
-
-<section id="games">
-
-<div class="section-head">
-
-<div>
-
-<div
-  class="eyebrow"
-  style="margin-bottom:7px">
-  GAME LIBRARY
-</div>
-
-<h2>
-  Explore Games
-</h2>
-
-</div>
-
-<div
-  id="gameCount"
-  class="count">
-  Loading...
-</div>
-
-</div>
-
-<!-- ================= CATEGORIES ================= -->
-
-<div
-  id="categories"
-  class="filters">
-
-<button
-  class="filter active"
-  data-category="all">
-  ALL
-</button>
-
-<button
-  class="filter"
-  data-category="action">
-  ACTION
-</button>
-
-<button
-  class="filter"
-  data-category="arcade">
-  ARCADE
-</button>
-
-<button
-  class="filter"
-  data-category="puzzle">
-  PUZZLE
-</button>
-
-<button
-  class="filter"
-  data-category="strategy">
-  STRATEGY
-</button>
-
-<button
-  class="filter"
-  data-category="sports">
-  SPORTS
-</button>
-
-<button
-  class="filter"
-  data-category="racing">
-  RACING
-</button>
-
-<button
-  class="filter"
-  data-category="casual">
-  CASUAL
-</button>
-
-</div>
-
-<div
-  id="gamesGrid"
-  class="games-grid">
-</div>
-
-<div
-  id="status"
-  class="status">
-  Loading games...
-</div>
-
-<div class="load-wrap">
-
-<button
-  id="loadMore"
-  class="btn"
-  type="button">
-  LOAD MORE GAMES
-</button>
-
-</div>
-
-</section>
-
-<!-- ================= RECENT ================= -->
-
-<section id="recentSection">
-
-<div class="section-head">
-
-<h2>
-  Recently Played
-</h2>
-
-<button
-  class="btn"
-  type="button"
-  onclick="clearRecent()">
-  CLEAR
-</button>
-
-</div>
-
-<div
-  id="recentGrid"
-  class="recent-grid">
-</div>
-
-</section>
-
+ <div class="statsbar"><div class="stat"><strong>🎮 <span id="count">—</span></strong><span>Games loaded</span></div><div class="stat"><strong>😊 FREE</strong><span>Browser games</span></div><div class="stat"><strong>⭐ Fun</strong><span>Virtual rewards</span></div><div class="stat"><strong>⚡ 24/7</strong><span>Play anytime</span></div></div>
 </main>
+<footer><div class="container foot"><div><a class="logo" href="#home">🎮 NEXT<span>PLAY</span></a><p>Play More 🎮 Be Happy 😊</p></div><div class="foot-links"><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#spin">🎁 Spin</a><a href="/privacy-policy.html">🔒 Privacy Policy</a></div><div>© <span id="year"></span> NEXTPLAY 💜</div></div></footer>
 
-<footer>
-  NEXTPLAY — Play. Discover. Repeat.
-</footer>
+<nav class="mobile-nav"><a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#categories"><span>🧩</span>Explore</a><a href="#spin"><span>🎡</span>Spin</a><a href="#recent"><span>🕹️</span>Recent</a></nav>
 
-<!-- ================= GAME PLAYER ================= -->
+<div class="player" id="player" role="dialog" aria-modal="true"><div class="player-bar"><strong id="playerTitle">🎮 NEXTPLAY</strong><div><button class="btn" id="fullscreen">⛶ Fullscreen</button> <button class="btn" id="close">✕ Close</button></div></div><div id="frameWrap"><iframe id="gameFrame" title="Game player" allow="fullscreen; autoplay; gamepad" allowfullscreen style="width:100%;height:100%"></iframe></div></div>
 
-<div
-  id="modal"
-  class="modal"
-  aria-hidden="true">
-
-<div
-  class="player"
-  id="playerBox">
-
-<div class="player-top">
-
-<div class="player-left">
-
-<button
-  class="player-back"
-  type="button"
-  onclick="closeGame()"
-  aria-label="Close game">
-  ←
-</button>
-
-<div
-  id="playerTitle"
-  class="player-title">
-  Game
-</div>
-
-</div>
-
-<div class="player-actions">
-
-<button
-  class="player-action fullscreen"
-  type="button"
-  onclick="toggleFullscreen()">
-  FULLSCREEN
-</button>
-
-<button
-  class="player-action"
-  type="button"
-  onclick="closeGame()">
-  CLOSE
-</button>
-
-</div>
-
-</div>
-
-<div
-  id="gameStage"
-  class="game-stage">
-
-<div
-  id="playerLoading"
-  class="player-loading">
-
-<div class="spinner"></div>
-
-Loading game...
-
-</div>
-
-<iframe
-  id="gameFrame"
-  title="NEXTPLAY Game"
-  allow="autoplay; fullscreen; gamepad"
-  allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- Paste the real Adsterra Social Bar code from your publisher dashboard here. -->
 <script>
-"use strict";
-
-/* =====================================================
-   GAMEPIX
-===================================================== */
-
-const GAMEPIX_BASE =
-  "https://feeds.gamepix.com/v2/json?sid=11ANT&pagination=96&page=";
-
-let page = 1;
-let allGames = [];
-let currentCategory = "all";
-let loading = false;
-let hasMore = true;
-
-
-/* =====================================================
-   HELPERS
-===================================================== */
-
-const $ = id =>
-  document.getElementById(id);
-
-const esc = value =>
-  String(value ?? "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-
-/* =====================================================
-   GAME CATEGORY NORMALIZER
-===================================================== */
-
-function getCategories(game){
-
-  const values = [];
-
-  if(Array.isArray(game.categories)){
-    values.push(...game.categories);
-  }
-
-  if(Array.isArray(game.category)){
-    values.push(...game.category);
-  }
-
-  if(typeof game.category === "string"){
-    values.push(
-      ...game.category.split(",")
-    );
-  }
-
-  if(typeof game.tags === "string"){
-    values.push(
-      ...game.tags.split(",")
-    );
-  }
-
-  return [
-    ...new Set(
-      values
-        .map(value =>
-          String(value)
-            .trim()
-            .toLowerCase()
-        )
-        .filter(Boolean)
-    )
-  ];
+(()=>{
+const $=id=>document.getElementById(id);
+const SID="MX192",SIZE=48;
+let games=[],page=1,last=Infinity,busy=false,cat="all";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function norm(x){
+const slug=x.namespace||x.slug||"";
+return {id:String(x.id||slug||x.title||x.name),title:String(x.title||x.name||"Game"),image:String(x.image||x.thumbnail||x.image_url||x.cover||""),category:String(x.category||x.genre||"casual").toLowerCase(),url:String(x.embed_url||x.embed||x.game_url||(slug?`https://play.gamepix.com/${encodeURIComponent(slug)}/embed?sid=${encodeURIComponent(SID)}`:"")),source:String(x.url||x.link||"")};
 }
-
-
-/* =====================================================
-   CATEGORY MATCH
-===================================================== */
-
-function categoryMatches(game){
-
-  if(currentCategory === "all"){
-    return true;
-  }
-
-  const categories =
-    getCategories(game);
-
-  return categories.some(category =>
-    category === currentCategory ||
-    category.includes(currentCategory)
-  );
+function categoryOf(g){
+const t=(g.title+" "+g.category).toLowerCase();
+for(const [c,words] of Object.entries({racing:["race","car","driving"],sports:["sport","football","soccer","basketball"],puzzle:["puzzle","match","brain","mahjong"],action:["action","battle","shooter","zombie"],arcade:["arcade","runner","platform"],strategy:["strategy","defense"],adventure:["adventure","quest"],casual:["casual","idle","clicker"]}))if(words.some(w=>t.includes(w)))return c;
+return g.category||"casual";
 }
-
-
-/* =====================================================
-   LOAD GAMEPIX GAMES
-===================================================== */
-
-async function loadGames(){
-
-  if(loading || !hasMore){
-    return;
-  }
-
-  loading = true;
-
-  $("status").textContent =
-    "Loading games...";
-
-  try{
-
-    const response =
-      await fetch(
-        GAMEPIX_BASE + page,
-        {
-          method:"GET",
-          cache:"no-store"
-        }
-      );
-
-    if(!response.ok){
-      throw new Error(
-        "GamePix request failed: " +
-        response.status
-      );
-    }
-
-    const data =
-      await response.json();
-
-    const items =
-      Array.isArray(data.items)
-        ? data.items
-        : [];
-
-    if(!items.length){
-
-      hasMore = false;
-
-      $("status").textContent =
-        "No more games available.";
-
-      $("loadMore").style.display =
-        "none";
-
-      return;
-    }
-
-    allGames.push(...items);
-
-    page++;
-
-    renderGames();
-
-    $("gameCount").textContent =
-      allGames.length +
-      " games loaded";
-
-    $("status").textContent = "";
-
-    if(
-      data.last_page_url &&
-      data.next_url === data.last_page_url
-    ){
-
-      hasMore = false;
-
-      $("loadMore").style.display =
-        "none";
-    }
-
-  }catch(error){
-
-    console.error(
-      "NEXTPLAY GamePix error:",
-      error
-    );
-
-    $("status").textContent =
-      "Unable to load games. Please refresh.";
-  }
-
-  finally{
-
-    loading = false;
-  }
+function list(d){if(Array.isArray(d))return d;for(const k of ["items","games","results","data"])if(Array.isArray(d?.[k]))return d[k];return []}
+async function load(reset=false){
+if(busy)return;if(!reset&&page>last)return;busy=true;
+if(reset){page=1;last=Infinity;games=[];$("grid").innerHTML="";$("newGrid").innerHTML="";$("loading").hidden=false;$("error").hidden=true}
+try{
+const r=await fetch(`https://feeds.gamepix.com/v2/json?sid=${encodeURIComponent(SID)}&pagination=${SIZE}&page=${page}`);
+if(!r.ok)throw Error("Feed error");
+const d=await r.json(),batch=list(d).map(norm);const seen=new Set(games.map(g=>g.id));
+batch.forEach(g=>{if(!seen.has(g.id)){games.push(g);seen.add(g.id)}});
+const lp=Number(d.last_page||d.pagination?.last_page);if(lp>0)last=lp;else if(batch.length<SIZE)last=page;
+page++;$("loading").hidden=true;$("count").textContent=games.length;render();
+}catch(e){console.error(e);$("loading").hidden=true;if(!games.length)$("error").hidden=false}
+finally{busy=false;$("more").textContent=page>last?"All games loaded 🎉":"🎮 Load More Games ↓"}
 }
-
-
-/* =====================================================
-   RENDER GAMES
-===================================================== */
-
-function renderGames(){
-
-  const search =
-    $("search")
-      .value
-      .toLowerCase()
-      .trim();
-
-  const games =
-    allGames.filter(game => {
-
-      const title =
-        String(game.title || "")
-          .toLowerCase();
-
-      const categories =
-        getCategories(game)
-          .join(" ");
-
-      const searchMatch =
-        !search ||
-        title.includes(search) ||
-        categories.includes(search);
-
-      return (
-        searchMatch &&
-        categoryMatches(game)
-      );
-    });
-
-  $("gamesGrid").innerHTML =
-    games.length
-
-    ? games.map(game => {
-
-        const image =
-          game.banner_image ||
-          game.image ||
-          game.thumbnail ||
-          "";
-
-        const title =
-          esc(
-            game.title ||
-            "Game"
-          );
-
-        const categories =
-          getCategories(game)
-            .slice(0,3)
-            .join(" • ") ||
-          "Game";
-
-        return `
-          <article class="game">
-
-            <div class="cover">
-
-              <img
-                src="${esc(image)}"
-                alt="${title}"
-                loading="lazy"
-                onerror="this.style.display='none'">
-
-            </div>
-
-            <div class="info">
-
-              <div class="title">
-                ${title}
-              </div>
-
-              <div class="category">
-                ${esc(categories)}
-              </div>
-
-              <button
-                class="play"
-                type="button"
-                onclick='playGame(
-                  ${JSON.stringify(game.url || "")},
-                  ${JSON.stringify(game.title || "Game")},
-                  ${JSON.stringify(image)}
-                )'>
-
-                PLAY NOW
-
-              </button>
-
-            </div>
-
-          </article>
-        `;
-
-      }).join("")
-
-    :
-
-      `
-        <div
-          class="status"
-          style="grid-column:1/-1">
-
-          No games found.
-
-        </div>
-      `;
+function card(g){const em={racing:"🏎️",sports:"⚽",puzzle:"🧩",action:"⚔️",arcade:"🕹️",strategy:"♟️",adventure:"🗺️",casual:"🌈"}[categoryOf(g)]||"🎮";return `<article class="game" tabindex="0" role="button" data-id="${esc(g.id)}"><div class="cover"><span class="fallback">${em}</span>${g.image?`<img src="${esc(g.image)}" alt="${esc(g.title)}" loading="lazy" onerror="this.remove()">`:""}</div><div class="info"><div class="title">${esc(g.title)}</div><div class="sub">${em} ${esc(categoryOf(g))}</div><div class="tag">🔥 PLAY NOW</div></div></article>`}
+function filtered(){const q=$("search").value.toLowerCase().trim();return games.filter(g=>(cat==="all"||categoryOf(g)===cat)&&(!q||(g.title+" "+g.category).toLowerCase().includes(q)))}
+function render(){
+const a=filtered();$("grid").innerHTML=a.map(card).join("");$("resultText").textContent=`🎮 ${a.length} games available`;$("empty").hidden=a.length>0||!games.length;
+$("newGrid").innerHTML=games.slice(-6).reverse().map(card).join("");
 }
-
-
-/* =====================================================
-   PLAY GAME
-===================================================== */
-
-function playGame(
-  url,
-  title,
-  image
-){
-
-  if(!url){
-    return;
-  }
-
-  $("playerTitle").textContent =
-    title || "Game";
-
-  $("playerLoading")
-    .classList
-    .remove("hidden");
-
-  $("gameFrame").src = "";
-
-  $("modal")
-    .classList
-    .add("show");
-
-  $("modal")
-    .setAttribute(
-      "aria-hidden",
-      "false"
-    );
-
-  document.body.style.overflow =
-    "hidden";
-
-  saveRecent({
-    title:title || "Game",
-    url:url,
-    image:image || ""
-  });
-
-  setTimeout(() => {
-
-    $("gameFrame").src =
-      url;
-
-  },80);
-}
-
-
-/* =====================================================
-   IFRAME LOAD
-===================================================== */
-
-$("gameFrame")
-  .addEventListener(
-    "load",
-    () => {
-
-      $("playerLoading")
-        .classList
-        .add("hidden");
-
-    }
-  );
-
-
-/* =====================================================
-   CLOSE GAME
-===================================================== */
-
-function closeGame(){
-
-  if(document.fullscreenElement){
-
-    document
-      .exitFullscreen()
-      .catch(() => {});
-
-  }
-
-  $("gameFrame").src = "";
-
-  $("modal")
-    .classList
-    .remove("show");
-
-  $("modal")
-    .setAttribute(
-      "aria-hidden",
-      "true"
-    );
-
-  document.body.style.overflow =
-    "";
-}
-
-
-/* =====================================================
-   FULLSCREEN
-===================================================== */
-
-async function toggleFullscreen(){
-
-  try{
-
-    if(!document.fullscreenElement){
-
-      await $("playerBox")
-        .requestFullscreen();
-
-    }else{
-
-      await document
-        .exitFullscreen();
-
-    }
-
-  }catch(error){
-
-    console.error(
-      "Fullscreen error:",
-      error
-    );
-  }
-}
-
-
-/* =====================================================
-   ESC KEY
-===================================================== */
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if(
-      event.key === "Escape" &&
-      $("modal")
-        .classList
-        .contains("show")
-    ){
-
-      closeGame();
-
-    }
-
-  }
-);
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
-
-$("search")
-  .addEventListener(
-    "input",
-    renderGames
-  );
-
-
-/* =====================================================
-   CATEGORY FILTER
-===================================================== */
-
-document
-  .querySelectorAll(".filter")
-  .forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        document
-          .querySelectorAll(".filter")
-          .forEach(item =>
-            item.classList
-              .remove("active")
-          );
-
-        button
-          .classList
-          .add("active");
-
-        currentCategory =
-          button.dataset.category;
-
-        renderGames();
-
-      }
-    );
-
-  });
-
-
-/* =====================================================
-   LOAD MORE
-===================================================== */
-
-$("loadMore")
-  .addEventListener(
-    "click",
-    loadGames
-  );
-
-
-/* =====================================================
-   RANDOM GAME
-===================================================== */
-
-function randomGame(){
-
-  if(!allGames.length){
-    return;
-  }
-
-  const game =
-    allGames[
-      Math.floor(
-        Math.random() *
-        allGames.length
-      )
-    ];
-
-  playGame(
-    game.url,
-    game.title || "Game",
-    game.banner_image ||
-    game.image ||
-    game.thumbnail ||
-    ""
-  );
-}
-
-
-/* =====================================================
-   SCROLL TO GAMES
-===================================================== */
-
-function scrollGames(){
-
-  $("games")
-    .scrollIntoView({
-      behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================================
-   RECENT GAMES
-===================================================== */
-
-function getRecent(){
-
-  try{
-
-    return JSON.parse(
-      localStorage.getItem(
-        "nextplay_recent"
-      ) || "[]"
-    );
-
-  }catch{
-
-    return [];
-
-  }
-}
-
-
-function saveRecent(game){
-
-  try{
-
-    let recent =
-      getRecent()
-        .filter(
-          item =>
-            item.url !== game.url
-        );
-
-    recent.unshift(game);
-
-    localStorage.setItem(
-      "nextplay_recent",
-      JSON.stringify(
-        recent.slice(0,10)
-      )
-    );
-
-    renderRecent();
-
-  }catch(error){
-
-    console.error(
-      "Recent games error:",
-      error
-    );
-
-  }
-}
-
-
-function renderRecent(){
-
-  const recent =
-    getRecent();
-
-  $("recentSection")
-    .style
-    .display =
-      recent.length
-        ? "block"
-        : "none";
-
-  $("recentGrid")
-    .innerHTML =
-      recent.map(game => `
-
-        <div
-          class="recent-card"
-          onclick='playGame(
-            ${JSON.stringify(game.url)},
-            ${JSON.stringify(game.title)},
-            ${JSON.stringify(game.image || "")}
-          )'>
-
-          <img
-            src="${esc(game.image || "")}"
-            alt="${esc(game.title)}"
-            loading="lazy">
-
-          <div>
-            ${esc(game.title)}
-          </div>
-
-        </div>
-
-      `).join("");
-}
-
-
-function clearRecent(){
-
-  localStorage.removeItem(
-    "nextplay_recent"
-  );
-
-  renderRecent();
-}
-
-
-/* =====================================================
-   INITIALIZE
-===================================================== */
-
-renderRecent();
-
-loadGames();
-
+function recent(){try{return JSON.parse(localStorage.getItem("np_desktop_recent")||"[]")}catch{return []}}
+function renderRecent(){const a=recent();$("noRecent").hidden=a.length>0;$("recentGrid").innerHTML=a.map(card).join("")}
+function play(g){if(!g)return;if(!g.url){if(g.source)window.open(g.source,"_blank","noopener,noreferrer");else alert("Game embed link is unavailable.");return}
+$("playerTitle").textContent="🎮 "+g.title;$("gameFrame").src=g.url;$("player").classList.add("open");document.body.style.overflow="hidden";
+try{localStorage.setItem("np_desktop_recent",JSON.stringify([g,...recent().filter(x=>x.id!==g.id)].slice(0,6)))}catch{}renderRecent()}
+function close(){ $("player").classList.remove("open");$("gameFrame").src="about:blank";document.body.style.overflow=""}
+document.addEventListener("click",e=>{const el=e.target.closest("[data-id]");if(el)play(games.find(g=>g.id===el.dataset.id)||recent().find(g=>g.id===el.dataset.id))});
+$("search").addEventListener("input",render);
+document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{cat=b.dataset.cat;document.querySelectorAll("[data-cat]").forEach(x=>x.classList.toggle("active",x===b));render()}));
+$("start").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});
+$("surprise").onclick=()=>{const a=filtered();if(a.length)play(a[Math.floor(Math.random()*a.length)])};
+$("more").onclick=()=>load();$("refresh").onclick=()=>load(true);$("retry").onclick=()=>load(true);$("viewAll").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});
+$("close").onclick=close;document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+$("fullscreen").onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $("frameWrap").requestFullscreen()}catch{}};
+$("clear").onclick=()=>{localStorage.removeItem("np_desktop_recent");renderRecent()};
+$("year").textContent=new Date().getFullYear();renderRecent();load(true);
+
+/* Virtual-only daily spin. */
+const prizes=["🪙 20 Bonus Coins","💎 Diamond Points","🎁 Mystery Gift","⭐ Star Points","🍀 Lucky Surprise","⚡ Power Boost","🏆 Bonus Trophy","🎉 Super Surprise"];
+let angle=0,spinning=false;
+function today(){const d=new Date();return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`}
+function check(){const used=localStorage.getItem("np_desktop_spin")===today();$("spin").disabled=used;$("spin").textContent=used?"✅ Come Back Tomorrow":"🎡 SPIN NOW!";$("limit").textContent=used?"🎉 Your daily spin is used.":"One spin per day on this device."}
+$("spin").onclick=()=>{
+if(spinning||$("spin").disabled)return;spinning=true;$("spin").disabled=true;
+const i=Math.floor(Math.random()*prizes.length);angle+=360*6+(360-(i*45+22.5));$("wheel").style.transform=`rotate(${angle}deg)`;$("result").textContent="✨ Spinning...";
+setTimeout(()=>{$("result").textContent="🎉 You got "+prizes[i]+"!";try{localStorage.setItem("np_desktop_spin",today())}catch{}spinning=false;check()},4100)
+};
+check();
+})();
 </script>
-
 </body>
 </html>
