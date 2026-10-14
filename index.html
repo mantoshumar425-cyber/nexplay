@@ -3,249 +3,653 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080719">
-<meta name="description" content="NEXTPLAY Pro — discover free online games, earn virtual XP, level up and enjoy Spin & Win.">
-<meta name="robots" content="index,follow">
-<title>NEXTPLAY PRO 🎮 | Play • Spin • Level Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="NEXTPLAY — Discover free online games, complete missions, earn XP and explore your next favorite game.">
+<title>NEXTPLAY PRO — Free Online Games</title>
+
 <style>
-:root{--bg:#080719;--panel:#11112b;--panel2:#19173b;--purple:#9333ea;--pink:#ec4899;--cyan:#22d3ee;--text:#fff;--muted:#b5b4d5;--line:#ffffff19}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:radial-gradient(ellipse at 10% 0%,#30206a66,transparent 35%),radial-gradient(ellipse at 90% 20%,#082d6b44,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif}
-button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}
-.container{width:min(1400px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:30;background:#09081bf2;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.top{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.logo{font-size:25px;font-weight:1000;letter-spacing:-1px;white-space:nowrap}.logo span{color:#bb83ff}.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:0}
-nav{display:flex;align-items:center;gap:5px}nav a{padding:11px;border-radius:11px;font-size:13px;font-weight:800}nav a:hover{background:#9333ea44}
-.search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid #7770ca55;border-radius:13px;padding:0 12px;min-width:190px}
-.search input{background:transparent;color:white;border:0;outline:0;padding:12px 0;width:100%;min-width:0}
-.btn{border:1px solid var(--line);background:#1b1939;color:white;border-radius:12px;padding:11px 15px;font-weight:850;transition:.2s}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.15)}
-.primary{background:linear-gradient(105deg,#9333ea,#6d28d9,#2563eb);border:0;box-shadow:0 5px 24px #9333ea33}
-button:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center;padding:36px 5px}
-.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.3px;color:#d8b4fe}
-h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-3px;margin:17px 0}
-.gradient{background:linear-gradient(100deg,#f0abfc,#a78bfa,#22d3ee);background-clip:text;color:transparent}
-.hero p{color:#d2d0ed;line-height:1.8;max-width:560px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
-.hero-art{height:320px;position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid #a855f766;border-radius:25px;background:radial-gradient(circle at center,#54219b88,transparent 60%),linear-gradient(135deg,#11113b,#090d26)}
-.hero-emoji{font-size:145px;filter:drop-shadow(0 0 25px #a855f7aa);animation:float 3s ease-in-out infinite}
-.float-tag{position:absolute;background:#191339;border:1px solid #a855f766;border-radius:12px;padding:10px;font-size:12px;font-weight:900}
-.tag1{top:17px;left:14px}.tag2{top:40px;right:14px}.tag3{bottom:17px;left:20px}
-@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}
-.statsbar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:16px;background:#11112b;margin:8px 0 28px;padding:18px 0}
-.stat{text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}
-.stat strong{display:block;font-size:23px;color:#d8b4fe}.stat span{font-size:11px;color:var(--muted)}
-.section{margin:28px 0}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
-h2{font-size:25px;letter-spacing:-.6px;margin:0}.muted{font-size:12px;color:var(--muted);margin-top:5px}
-.chips{display:flex;gap:9px;overflow-x:auto;padding:2px 0 14px}
-.chip{flex-shrink:0;background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:11px;padding:10px 14px;font-size:12px;font-weight:850}
-.chip.active,.chip:hover{color:white;border-color:#a855f7;background:#9333ea44}
-.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
-.game{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(150deg,#171634,#0c0d22);cursor:pointer;transition:.2s}
-.game:hover{transform:translateY(-4px);border-color:#a855f7}
-.cover{aspect-ratio:1.13;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#272051,#101b40);overflow:hidden}
-.cover img{position:absolute;width:100%;height:100%;object-fit:cover}.cover .emoji{font-size:40px}
-.info{padding:10px}.title{font-size:12px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sub{font-size:10px;color:var(--muted);margin-top:5px}.playlabel{color:#f0abfc;font-weight:900}
-.status{text-align:center;color:var(--muted);padding:22px}
-.ad-slot{min-height:70px;margin:20px 0;border:1px dashed #ffffff24;border-radius:12px;display:grid;place-items:center;text-align:center;color:#77758e;font-size:11px}
-.panel{border:1px solid #a855f755;border-radius:20px;padding:23px;background:radial-gradient(ellipse at center,#41118366,transparent 65%),linear-gradient(120deg,#170d38,#100b29,#071a35)}
-.spin-layout{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:25px}
-.reward-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px}
-.wheel-shell{width:min(285px,100%);aspect-ratio:1;position:relative;margin:auto}
-.pointer{position:absolute;z-index:3;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:29px solid white;filter:drop-shadow(0 2px 5px black)}
-.wheel{width:100%;height:100%;border:8px solid #facc15;border-radius:50%;position:relative;box-shadow:0 0 0 4px #f9731688,0 0 28px #f59e0b66;transition:transform 4s cubic-bezier(.12,.72,.12,1)}
-.wheel-labels{position:absolute;inset:0}.wheel-label{position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px;display:grid;place-items:center;font-size:21px;transform:rotate(var(--a)) translateY(-94px) rotate(calc(-1 * var(--a)))}
-.wheel-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;border:5px solid #f0abfc;background:linear-gradient(135deg,#a21caf,#6d28d9);display:grid;place-items:center;font-weight:1000;box-shadow:0 0 20px #e879f9aa}
-.result{min-height:23px;text-align:center;color:#f0abfc;font-size:13px;font-weight:850;margin-top:10px}
-.note{font-size:10px;line-height:1.6;color:var(--muted)}
-.dashboard{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.box{border:1px solid var(--line);border-radius:17px;padding:20px;background:#10132e;min-width:0}
-.profile{display:flex;align-items:center;gap:14px}.avatar{width:60px;height:60px;display:grid;place-items:center;font-size:32px;background:#2b1858;border-radius:17px}
-.progress{height:10px;background:#050d29;border-radius:20px;overflow:hidden;margin:12px 0}
-.progress div{height:100%;width:0;background:linear-gradient(90deg,#922fff,#13c9ff);transition:width .3s}
-table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid var(--line)}th{color:#d8b4fe;background:#171638}td{color:#e9e9fa}
-.tablewrap{overflow-x:auto;border-radius:10px}
-.donate{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-footer{border-top:1px solid var(--line);margin-top:35px;padding:28px 0 40px;color:var(--muted);font-size:12px;line-height:1.8}
-.footerrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.links{display:flex;gap:16px;flex-wrap:wrap}
-.player{display:none;position:fixed;inset:0;z-index:100;background:#05040b;flex-direction:column}.player.open{display:flex}
-.playerbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;background:#11112b}
-#framewrap{flex:1;min-height:0}#gameframe{width:100%;height:100%;border:0;background:#090719}
-.mobile-nav{display:none}
-@media(max-width:1150px){nav a{padding:9px 6px;font-size:12px}.search{min-width:160px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(max-width:700px){
-.container{width:calc(100% - 22px)}.top{padding:10px 0;flex-wrap:wrap}.logo{font-size:22px}nav{display:none}.search{order:3;width:100%}
-.hero{grid-template-columns:1fr;padding:24px 0;gap:12px}h1{font-size:49px;letter-spacing:-2px}.hero-art{height:205px}.hero-emoji{font-size:100px}
-.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.spin-layout{grid-template-columns:1fr;gap:15px}.panel{padding:16px}
-.reward-list{grid-template-columns:1fr 1fr}.wheel-shell{width:250px}.wheel-label{transform:rotate(var(--a)) translateY(-81px) rotate(calc(-1 * var(--a)))}
-.dashboard{grid-template-columns:1fr}.donate{grid-template-columns:1fr;text-align:center}.statsbar{grid-template-columns:repeat(2,1fr);gap:16px}.stat:nth-child(2){border:0}
-.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:40;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));background:#0b0a1af5;border-top:1px solid var(--line)}
-.mobile-nav a{text-align:center;font-size:10px;color:var(--muted)}.mobile-nav span{display:block;font-size:19px;margin-bottom:2px}footer{padding-bottom:105px}
+:root {
+  --bg:#090711; --panel:#141120; --panel2:#1c1730;
+  --text:#f8f6ff; --muted:#aaa3bd; --purple:#a855f7;
+  --blue:#6366f1; --border:#ffffff12; --green:#4ade80;
 }
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Inter,system-ui,-apple-system,sans-serif;padding-bottom:85px}
+body.light{--bg:#f5f3ff;--panel:#fff;--panel2:#e9e3fa;
+--text:#201533;--muted:#6c627c;--border:#00000012}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--purple)}
+header{position:sticky;top:0;z-index:20;background:var(--bg);
+border-bottom:1px solid var(--border);padding:13px 4%;
+display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:23px;font-weight:950;letter-spacing:-1px}
+.logo span{color:var(--purple)}
+.header-actions{display:flex;gap:8px}
+.btn,.icon-btn{background:var(--panel2);color:var(--text);
+border:1px solid var(--border);padding:10px 13px;border-radius:12px}
+.btn.primary{background:linear-gradient(110deg,#9333ea,#6366f1);
+border:0;color:white;font-weight:800}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+main{max-width:1200px;margin:auto;padding:22px 4%}
+.hero{position:relative;overflow:hidden;border:1px solid #a855f738;
+border-radius:25px;padding:27px;
+background:radial-gradient(ellipse at 85% 20%,#7c3aed55,transparent 48%),
+linear-gradient(125deg,#19112d,#0d1023 75%)}
+.hero h1{font-size:clamp(31px,6vw,56px);line-height:1.05;
+margin:12px 0;letter-spacing:-2px}
+.hero p{color:#d0c7e7;max-width:530px;line-height:1.7}
+.pill{display:inline-block;background:#a855f722;color:#d8b4fe;
+border:1px solid #a855f755;padding:6px 10px;border-radius:99px;font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:17px 0}
+.stat{background:var(--panel);border:1px solid var(--border);
+border-radius:15px;padding:14px;min-width:0}
+.stat strong{display:block;font-size:22px;overflow-wrap:anywhere}
+.stat small{color:var(--muted)}
+.section{margin-top:30px;scroll-margin-top:85px}
+.section-head{display:flex;align-items:center;justify-content:space-between;
+gap:12px;margin-bottom:14px}
+.section h2{font-size:21px;margin:0}
+.muted{color:var(--muted);font-size:13px}
+.searchbar{display:flex;gap:8px;margin:18px 0 12px}
+.searchbar input{width:100%;min-width:0;background:var(--panel);
+border:1px solid var(--border);color:var(--text);padding:13px;
+border-radius:13px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
+.chip{white-space:nowrap;border:1px solid var(--border);
+background:var(--panel);color:var(--muted);padding:9px 13px;border-radius:99px}
+.chip.active{background:#9333ea;color:white;border-color:#a855f7}
+.games{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.game{background:var(--panel);border:1px solid var(--border);
+border-radius:17px;overflow:hidden;min-width:0;transition:.18s}
+.game:hover{transform:translateY(-3px);border-color:#a855f766}
+.thumb{height:145px;background:linear-gradient(135deg,#30204b,#171b37);
+position:relative;display:flex;align-items:center;justify-content:center;
+overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.game-body{padding:12px}
+.game-title{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.game-cat{font-size:12px;color:var(--muted);margin:6px 0 12px}
+.game-actions{display:flex;gap:6px}
+.game-actions .btn{padding:9px 7px;flex:1;font-size:12px}
+.game-actions .icon-btn{padding:8px}
+.panel{background:var(--panel);border:1px solid var(--border);
+border-radius:18px;padding:17px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.progress{height:8px;border-radius:99px;background:var(--panel2);overflow:hidden;margin:10px 0}
+.progress div{height:100%;background:linear-gradient(90deg,#a855f7,#6366f1);
+width:0;transition:width .3s}
+.reward-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.reward{background:var(--panel2);border-radius:13px;padding:13px}
+.reward button{margin-top:10px;width:100%}
+.task{display:flex;align-items:center;gap:10px;padding:12px 0;
+border-bottom:1px solid var(--border)}
+.task:last-child{border:0}
+.task>div{flex:1;min-width:0}
+.task button{padding:8px}
+.badges{display:flex;gap:9px;flex-wrap:wrap}
+.badge{border:1px solid var(--border);border-radius:12px;padding:11px;
+background:var(--panel2);font-size:13px}
+.badge.locked{opacity:.42;filter:grayscale(1)}
+.profile-row{display:flex;align-items:center;gap:13px}
+.avatar{width:55px;height:55px;border-radius:17px;display:grid;
+place-items:center;font-size:26px;background:linear-gradient(135deg,#9333ea,#4f46e5)}
+input.profile-input{width:100%;padding:11px;background:var(--bg);
+border:1px solid var(--border);border-radius:10px;color:var(--text)}
+.empty{padding:35px 12px;text-align:center;color:var(--muted);
+background:var(--panel);border-radius:15px;grid-column:1/-1}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
+nav.bottom{position:fixed;bottom:0;left:0;right:0;z-index:30;
+display:flex;justify-content:space-around;background:var(--bg);
+border-top:1px solid var(--border);padding:9px 3% calc(9px + env(safe-area-inset-bottom))}
+nav.bottom a{color:var(--muted);text-decoration:none;font-size:11px;
+display:flex;flex-direction:column;align-items:center;gap:4px}
+nav.bottom a span{font-size:19px}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);
+z-index:60;background:#251b38;border:1px solid #a855f7;color:white;
+border-radius:12px;padding:12px 18px;display:none;max-width:90%;text-align:center}
+dialog{width:min(900px,96%);max-height:92vh;background:var(--panel);
+color:var(--text);border:1px solid #a855f766;border-radius:18px;padding:14px}
+dialog::backdrop{background:#000c}
+#gameFrame{width:100%;height:min(65vh,650px);border:0;border-radius:10px;background:#000}
+.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+@media(max-width:850px){.games{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){
+ header{padding:11px 4%}.logo{font-size:20px}
+ .header-actions .btn{padding:9px}
+ main{padding:15px 4%}.hero{padding:21px 17px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .games{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .thumb{height:125px}.game-body{padding:9px}
+ .two-col{grid-template-columns:1fr}
+ .reward-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .section h2{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{
+scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="container top">
-<a class="logo" href="#home">🎮 NEXT<span>PLAY</span><small>PRO GAMING ARENA 🚀</small></a>
-<nav><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#dashboard">🏆 Players</a><a href="#spin">🎡 Spin</a><a href="#donate">💜 Support</a></nav>
-<label class="search">🔎 <input id="search" type="search" placeholder="Search games..." aria-label="Search games"></label>
-</div></header>
 
-<main class="container" id="home">
-<section class="hero">
-<div>
-<div class="eyebrow">✨ YOUR NEXT GAMING ADVENTURE STARTS HERE</div>
-<h1>PLAY 🎮<br><span class="gradient">SPIN • WIN</span><br>LEVEL UP! ⚡</h1>
-<p>🔥 Discover free games, collect virtual rewards, track your play sessions and climb your personal XP leaderboard!</p>
-<div class="actions"><button class="btn primary" id="start">🚀 Start Playing</button><button class="btn" id="surprise">🎲 Surprise Me!</button></div>
-<div class="muted">🎮 Browser games · 🏆 XP levels · 🎁 Virtual rewards</div>
-</div>
-<div class="hero-art"><span class="float-tag tag1">🔥 GAME ON!</span><span class="float-tag tag2">🏆 LEVEL UP</span><span class="hero-emoji">🕹️</span><span class="float-tag tag3">💜 NEXTPLAY PRO</span></div>
+<header>
+  <a href="#home" class="logo" style="color:inherit;text-decoration:none">NEXT<span>PLAY</span><sup style="font-size:10px"> PRO</sup></a>
+  <div class="header-actions">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+    <button class="btn primary" onclick="go('profile')">👤 <span id="headerXP">0 XP</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <span class="pill">⚡ YOUR NEXT LEVEL STARTS HERE</span>
+  <h1>PLAY MORE.<br><span style="color:#c084fc">LEVEL UP.</span></h1>
+  <p>Discover exciting games, complete daily missions, earn XP and build your own gaming journey.</p>
+  <div style="display:flex;gap:9px;flex-wrap:wrap">
+    <button class="btn primary" onclick="go('games')">▶ Explore Games</button>
+    <button class="btn" onclick="go('rewards')">🎁 Daily Rewards</button>
+  </div>
 </section>
 
-<div class="statsbar">
-<div class="stat"><strong id="gamecount">—</strong><span>🎮 Games Loaded</span></div>
-<div class="stat"><strong id="statxp">0</strong><span>⚡ Your XP</span></div>
-<div class="stat"><strong id="statcoins">100</strong><span>🪙 Virtual Coins</span></div>
-<div class="stat"><strong id="statlevel">1</strong><span>⭐ Your Level</span></div>
+<div class="stats">
+  <div class="stat"><strong id="statGames">—</strong><small>Games loaded</small></div>
+  <div class="stat"><strong id="statXP">0</strong><small>Total XP</small></div>
+  <div class="stat"><strong id="statLevel">1</strong><small>Player level</small></div>
+  <div class="stat"><strong id="statCoins">0</strong><small>Demo coins</small></div>
 </div>
-
-<section class="section" id="categories">
-<div class="head"><div><h2>🧩 Pick Your Vibe!</h2><div class="muted">Find your next favorite game.</div></div></div>
-<div class="chips">
-<button class="chip active" data-cat="all">🎮 All Games</button><button class="chip" data-cat="action">⚔️ Action</button><button class="chip" data-cat="racing">🏎️ Racing</button><button class="chip" data-cat="puzzle">🧩 Puzzle</button><button class="chip" data-cat="sports">⚽ Sports</button><button class="chip" data-cat="arcade">🕹️ Arcade</button><button class="chip" data-cat="strategy">♟️ Strategy</button><button class="chip" data-cat="adventure">🗺️ Adventure</button><button class="chip" data-cat="casual">🌈 Casual</button>
-</div>
-</section>
 
 <section class="section" id="games">
-<div class="head"><div><h2>🔥 Popular Games</h2><div class="muted" id="resulttext">Discover your next adventure.</div></div><button class="btn" id="refresh">🔄 Refresh</button></div>
-<div class="status" id="loading">⏳ Loading games...</div><div class="grid" id="grid"></div>
-<div class="status" id="empty" hidden>😅 No games found. Try another search.</div>
-<div class="status" id="error" hidden>😕 Games could not load. Check your feed settings or connection.<br><button class="btn primary" id="retry">🔄 Retry</button></div>
-<div style="text-align:center;margin-top:18px"><button class="btn primary" id="more">🎮 Load More Games ↓</button></div>
+  <div class="section-head">
+    <div><h2>🎮 Game Arena</h2><div class="muted">Find your next favorite</div></div>
+    <button class="btn" id="refreshBtn">↻ Refresh</button>
+  </div>
+  <div class="searchbar">
+    <input id="search" type="search" placeholder="Search hundreds of games..." aria-label="Search games">
+    <button class="btn primary" onclick="renderGames()">Search</button>
+  </div>
+  <div class="chips" id="categories">
+    <button class="chip active" data-cat="All">All Games</button>
+    <button class="chip" data-cat="Trending">🔥 Trending</button>
+    <button class="chip" data-cat="Action">Action</button>
+    <button class="chip" data-cat="Puzzle">🧩 Puzzle</button>
+    <button class="chip" data-cat="Racing">🏎 Racing</button>
+    <button class="chip" data-cat="Sports">⚽ Sports</button>
+    <button class="chip" data-cat="Arcade">🕹 Arcade</button>
+    <button class="chip" data-cat="Adventure">Adventure</button>
+    <button class="chip" data-cat="Favorites">❤️ Favorites</button>
+    <button class="chip" data-cat="Recent">🕘 Recent</button>
+  </div>
+  <div class="muted" id="feedStatus" role="status" style="margin:6px 0 12px">Connecting to game feed...</div>
+  <div class="games" id="gameGrid"><div class="empty">Loading games...</div></div>
+  <div style="text-align:center;margin-top:18px">
+    <button class="btn primary" id="loadMore">Load More Games ↓</button>
+  </div>
 </section>
 
-<div class="ad-slot">📢 Advertisement area · Insert your real Adsterra Social Bar code separately.</div>
-
-<section class="section panel" id="spin">
-<div class="head"><div><h2>🎡 Spin & Win Rewards!</h2><div class="muted">16 virtual prizes · Daily fun · No purchase needed</div></div></div>
-<div class="spin-layout">
-<div><h2>🎁 Spin for surprises!</h2><p class="muted" style="line-height:1.8">Collect virtual coins and XP bonuses. Rewards are for fun only and have no cash value.</p>
-<ul class="reward-list" id="rewardlist"></ul></div>
-<div class="wheel-shell"><div class="pointer"></div><div class="wheel" id="wheel"><div class="wheel-labels" id="wheellabels"></div></div><div class="wheel-center">SPIN!</div></div>
-<div style="text-align:center"><h2>🍀 Try Your Luck</h2><p class="muted">Your next surprise is waiting!</p><button class="btn primary" id="spinbtn">🎡 SPIN NOW!</button><div class="result" id="spinresult" aria-live="polite">✨ Good luck, gamer!</div><p class="note" id="spinlimit">One spin per day on this device.</p></div>
-</div>
+<section class="section" id="rewards">
+  <div class="section-head"><h2>🎁 Rewards Center</h2><span class="pill">DEMO REWARDS</span></div>
+  <div class="panel">
+    <div style="font-size:19px;font-weight:850">Daily Login Bonus</div>
+    <p class="muted">Claim once per calendar day on this device.</p>
+    <div class="reward-grid">
+      <div class="reward">🌟<div><b>Daily XP</b></div><small class="muted">50 XP</small></div>
+      <div class="reward">🪙<div><b>Bonus Coins</b></div><small class="muted">25 coins</small></div>
+      <div class="reward">🎯<div><b>Spin Reward</b></div><small class="muted">Random demo prize</small></div>
+    </div>
+    <button class="btn primary" id="dailyBtn" style="margin-top:14px;width:100%">Claim Daily Reward</button>
+  </div>
+  <div class="panel" style="margin-top:14px;text-align:center">
+    <div class="muted">LUCKY SPIN</div>
+    <div id="wheel" style="font-size:82px;margin:8px">🎡</div>
+    <h3>Try Your Luck!</h3>
+    <p class="muted">Win demo XP or coins. One spin per day.</p>
+    <button class="btn primary" id="spinBtn">🎰 Spin the Wheel</button>
+    <p id="spinResult" class="muted" aria-live="polite"></p>
+  </div>
 </section>
 
-<section class="section" id="dashboard">
-<div class="head"><div><h2>🏆 Gamer Dashboard</h2><div class="muted">Your progress on this device.</div></div></div>
-<div class="dashboard">
-<div class="box">
-<div class="profile"><div class="avatar">😎</div><div><strong id="playername">NEXTPLAY Gamer</strong><div class="muted">🎮 Local Player Profile</div></div><button class="btn" id="rename" style="margin-left:auto">✏️ Edit</button></div>
-<div class="statsbar" style="margin:20px 0">
-<div class="stat"><strong id="dashlevel">1</strong><span>⭐ Level</span></div><div class="stat"><strong id="dashxp">0</strong><span>⚡ XP</span></div><div class="stat"><strong id="dashcoins">100</strong><span>🪙 Coins</span></div><div class="stat"><strong id="dashgames">0</strong><span>🎮 Sessions</span></div>
-</div>
-<strong>⚡ Level Progress</strong><div class="progress"><div id="xpbar"></div></div><div class="muted" id="xptext">0 / 100 XP to next level</div>
-<p class="note">XP comes from tracked play sessions, not verified scores inside third-party games. Closing a game early may not count as a completed session.</p>
-</div>
-<div class="box"><h2>🥇 Local Leaderboard</h2><p class="muted">This device only — not a global ranking.</p><div class="tablewrap"><table><thead><tr><th>Rank</th><th>Gamer</th><th>Level</th><th>XP</th></tr></thead><tbody id="leaderboard"></tbody></table></div><p class="note">Rankings stored in your browser can be changed and are not verified.</p></div>
-</div>
+<section class="section" id="missions">
+  <div class="section-head"><h2>🎯 Missions & Quests</h2><span class="pill">LEVEL UP</span></div>
+  <div class="panel" id="missionList"></div>
 </section>
 
-<section class="section" id="recent"><div class="head"><div><h2>🕹️ Recently Played</h2><div class="muted">Jump back into your adventures.</div></div><button class="btn" id="clearrecent">🗑️ Clear</button></div><div class="grid" id="recentgrid"></div><div class="muted" id="norecent">Play a game and it will appear here.</div></section>
+<section class="section" id="achievements">
+  <div class="section-head"><h2>🏆 Achievements</h2></div>
+  <div class="panel">
+    <div class="badges" id="achievementList"></div>
+  </div>
+</section>
 
-<section class="section" id="donate"><div class="panel donate">
-<div><div class="eyebrow">💜 SUPPORT NEXTPLAY</div><h2 style="margin-top:10px">❤️ Help Us Build More!</h2><p class="muted" style="line-height:1.8">Support future gaming features and improvements with an optional donation. No purchase is needed to play.</p><p class="note">Only use a legitimate payment provider and publish accurate payment and refund information where applicable.</p></div>
-<div style="text-align:center"><div style="font-size:55px">💜🎮</div><a class="btn primary" href="#donation-info">❤️ Donation Setup</a><div class="note" id="donation-info" style="margin-top:12px">Payment link not configured. Add your real verified provider URL in the code before accepting donations.</div></div>
-</div></section>
+<section class="section" id="profile">
+  <div class="section-head"><h2>👤 Player Profile</h2></div>
+  <div class="panel">
+    <div class="profile-row">
+      <div class="avatar">🎮</div>
+      <div style="flex:1">
+        <div style="font-size:20px;font-weight:850" id="profileName">Player One</div>
+        <div class="muted" id="profileLevel">Level 1 Gamer</div>
+      </div>
+    </div>
+    <label for="playerName" class="muted" style="display:block;margin-top:18px">Gamer Tag</label>
+    <input class="profile-input" id="playerName" maxlength="24" placeholder="Enter your gamer tag">
+    <button class="btn primary" id="saveProfile" style="margin-top:10px">Save Gamer Tag</button>
+    <div style="margin-top:22px;display:flex;justify-content:space-between;gap:8px">
+      <b>XP Progress</b><span class="muted" id="xpProgressText">0 / 100 XP</span>
+    </div>
+    <div class="progress"><div id="xpProgress"></div></div>
+    <p class="muted">XP and profile data are stored on this browser only.</p>
+    <button class="btn" id="exportBtn">Export My Progress</button>
+    <button class="btn" id="resetBtn" style="margin-left:5px">Reset Progress</button>
+  </div>
+</section>
 
-<section class="section" id="privacy"><div class="box"><h2>🔒 Privacy & Data</h2><p class="muted" style="line-height:1.8">This demo stores player name, XP, coins, spin date and recent games in this browser's local storage. Clearing browser data can remove progress. Game providers and advertising providers may process data under their own policies. Publish a complete privacy policy that accurately describes your actual services before launching advertising.</p><p><a href="#home" style="color:#d8b4fe">⬆ Back to top</a></p></div></section>
+<section class="section" id="settings">
+  <div class="section-head"><h2>⚙️ Settings</h2></div>
+  <div class="panel">
+    <div class="task"><div><b>Appearance</b><div class="muted">Switch light and dark themes</div></div><button class="btn" id="themeSetting">Toggle Theme</button></div>
+    <div class="task"><div><b>Sound Effects</b><div class="muted">Optional sound for actions</div></div><button class="btn" id="soundBtn">Sound: Off</button></div>
+    <div class="task"><div><b>Privacy</b><div class="muted">Clear locally stored player data</div></div><button class="btn" onclick="go('profile')">Manage</button></div>
+  </div>
+</section>
 </main>
 
-<footer><div class="container footerrow"><div><a class="logo" href="#home">🎮 NEXT<span>PLAY</span></a><p>Play More. Be Happy. 💜</p></div><div class="links"><a href="#home">🏠 Home</a><a href="#games">🎮 Games</a><a href="#spin">🎡 Spin</a><a href="#dashboard">🏆 Leaderboard</a><a href="#privacy">🔒 Privacy</a></div><div>© <span id="year"></span> NEXTPLAY PRO</div></div></footer>
+<footer>
+  NEXTPLAY PRO · Play responsibly · Demo rewards have no cash value.<br>
+  Game content and trademarks belong to their respective owners.
+</footer>
 
-<nav class="mobile-nav"><a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#categories"><span>🧩</span>Explore</a><a href="#spin"><span>🎡</span>Spin</a><a href="#dashboard"><span>🏆</span>Profile</a></nav>
+<nav class="bottom" aria-label="Main navigation">
+  <a href="#home"><span>⌂</span>Home</a>
+  <a href="#games"><span>🎮</span>Games</a>
+  <a href="#rewards"><span>🎁</span>Rewards</a>
+  <a href="#missions"><span>🎯</span>Missions</a>
+  <a href="#profile"><span>👤</span>Profile</a>
+</nav>
 
-<div class="player" id="player" role="dialog" aria-modal="true" aria-label="Game player"><div class="playerbar"><strong id="playertitle">🎮 NEXTPLAY</strong><div><button class="btn" id="fullscreen">⛶ Fullscreen</button> <button class="btn" id="close">✕ Close</button></div></div><div id="framewrap"><iframe id="gameframe" title="Game" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
-<!-- ADSTERRA: Paste the exact Social Bar script from your Adsterra publisher dashboard here. -->
+<dialog id="gameDialog">
+  <div class="dialog-head">
+    <div><b id="dialogTitle">Game</b><div class="muted" id="dialogCategory"></div></div>
+    <button class="icon-btn" id="closeGame">✕ Close</button>
+  </div>
+  <div id="frameMessage" class="muted" style="padding:8px 0">
+    Game content is supplied by the game publisher.
+  </div>
+  <iframe id="gameFrame" title="Selected game" allow="fullscreen; autoplay; gamepad"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="muted">If the game cannot load here, use its official play page where available.</p>
+</dialog>
 
 <script>
-(()=>{
 "use strict";
-const $=id=>document.getElementById(id);
-const SID="MX192",PAGE_SIZE=48;
-const prizes=[
-{emoji:"🪙",name:"10 Bonus Coins",coins:10,xp:0},
-{emoji:"💎",name:"Diamond Points",coins:0,xp:15},
-{emoji:"🎁",name:"Mystery Gift",coins:20,xp:5},
-{emoji:"⭐",name:"10 Star XP",coins:0,xp:10},
-{emoji:"🍀",name:"Lucky Bonus",coins:15,xp:5},
-{emoji:"⚡",name:"25 XP Boost",coins:0,xp:25},
-{emoji:"🏆",name:"Trophy Bonus",coins:30,xp:5},
-{emoji:"🎉",name:"Party Reward",coins:15,xp:10},
-{emoji:"🚀",name:"Power Boost",coins:10,xp:15},
-{emoji:"💜",name:"Purple Bonus",coins:25,xp:5},
-{emoji:"🌟",name:"Mega Star",coins:0,xp:20},
-{emoji:"🎮",name:"Gamer Reward",coins:20,xp:10},
-{emoji:"🪙",name:"50 Bonus Coins",coins:50,xp:0},
-{emoji:"💎",name:"Rare Gem",coins:0,xp:30},
-{emoji:"🔥",name:"Fire XP",coins:10,xp:20},
-{emoji:"👑",name:"Royal Reward",coins:40,xp:10}
-];
-const stateKey="nextplay_pro_v1";
-function readState(){try{return JSON.parse(localStorage.getItem(stateKey))||{name:"NEXTPLAY Gamer",xp:0,coins:100,sessions:0,spinDay:"",recent:[],history:[]}}catch{return{name:"NEXTPLAY Gamer",xp:0,coins:100,sessions:0,spinDay:"",recent:[],history:[]}}}
-let state=readState(),games=[],page=1,lastPage=Infinity,busy=false,category="all",rotation=0,spinning=false,activeGame=null,sessionTimer=null,sessionAwarded=false;
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function save(){try{localStorage.setItem(stateKey,JSON.stringify(state))}catch{}}
-function level(){return Math.floor(Math.max(0,state.xp)/100)+1}
-function today(){const d=new Date();return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`}
-function categoryOf(g){const t=(g.title+" "+g.category+" "+g.description).toLowerCase();const map={racing:["race","car","driving","motorbike"],sports:["sport","football","soccer","basketball","billiard"],puzzle:["puzzle","match","brain","mahjong","block"],action:["action","battle","shooter","zombie"],arcade:["arcade","runner","platform"],strategy:["strategy","defense","tactics"],adventure:["adventure","quest","escape"],casual:["casual","idle","clicker","hyper"]};for(const [c,words] of Object.entries(map))if(words.some(w=>t.includes(w)))return c;return g.category||"casual"}
-function normalize(x){const slug=x.namespace||x.slug||"";return{id:String(x.id||slug||x.title||x.name),title:String(x.title||x.name||"Game"),image:String(x.image||x.thumbnail||x.image_url||x.cover||""),category:String(x.category||x.genre||"casual").toLowerCase(),description:String(x.description||""),url:String(x.embed_url||x.embed||x.game_url||(slug?`https://play.gamepix.com/${encodeURIComponent(slug)}/embed?sid=${encodeURIComponent(SID)}`:"")),source:String(x.url||x.link||"")}}
-function items(d){if(Array.isArray(d))return d;for(const k of ["items","games","results","data"])if(Array.isArray(d?.[k]))return d[k];return[]}
-async function load(reset=false){
-if(busy||(!reset&&page>lastPage))return;busy=true;
-if(reset){page=1;lastPage=Infinity;games=[];$("grid").innerHTML="";$("loading").hidden=false;$("error").hidden=true}
-try{const r=await fetch(`https://feeds.gamepix.com/v2/json?sid=${encodeURIComponent(SID)}&pagination=${PAGE_SIZE}&page=${page}`);if(!r.ok)throw Error("Feed HTTP "+r.status);const d=await r.json(),batch=items(d).map(normalize);const seen=new Set(games.map(g=>g.id));batch.forEach(g=>{if(!seen.has(g.id)){games.push(g);seen.add(g.id)}});const lp=Number(d.last_page||d.pagination?.last_page||d.meta?.last_page);if(lp>0)lastPage=lp;else if(batch.length<PAGE_SIZE)lastPage=page;page++;$("loading").hidden=true;renderGames();$("gamecount").textContent=games.length.toLocaleString();$("more").hidden=page>lastPage||!batch.length}catch(e){console.error(e);$("loading").hidden=true;if(!games.length)$("error").hidden=false}else{}finally{busy=false;$("more").textContent=page>lastPage?"All games loaded 🎉":"🎮 Load More Games ↓"}
-}
-function gameCard(g){const em={racing:"🏎️",sports:"⚽",puzzle:"🧩",action:"⚔️",arcade:"🕹️",strategy:"♟️",adventure:"🗺️",casual:"🌈"}[categoryOf(g)]||"🎮";return`<article class="game" tabindex="0" role="button" data-game="${esc(g.id)}" aria-label="Play ${esc(g.title)}"><div class="cover"><span class="emoji">${em}</span>${g.image?`<img src="${esc(g.image)}" alt="${esc(g.title)}" loading="lazy" onerror="this.remove()">`:""}</div><div class="info"><div class="title">${esc(g.title)}</div><div class="sub">${em} ${esc(categoryOf(g))}</div><div class="sub playlabel">▶ Play Game</div></div></article>`}
-function filtered(){const q=$("search").value.toLowerCase().trim();return games.filter(g=>(category==="all"||categoryOf(g)===category)&&(!q||(g.title+" "+g.category+" "+g.description).toLowerCase().includes(q)))}
-function renderGames(){const a=filtered();$("grid").innerHTML=a.map(gameCard).join("");$("empty").hidden=a.length>0||games.length===0;$("resulttext").textContent=`✨ ${a.length} games shown`}
-function renderRecent(){$("recentgrid").innerHTML=state.recent.map(gameCard).join("");$("norecent").hidden=state.recent.length>0}
-function renderLeaderboard(){const rows=[{name:state.name,xp:state.xp,level:level()},...(state.history||[])].sort((a,b)=>b.xp-a.xp).slice(0,10);$("leaderboard").innerHTML=rows.map((p,i)=>`<tr><td>${["🥇","🥈","🥉"][i]||i+1}</td><td>${esc(p.name)}</td><td>${Math.floor(p.xp/100)+1}</td><td>${p.xp}</td></tr>`).join("")}
-function renderState(){const lv=level(),xpIn=state.xp%100;["statxp","dashxp"].forEach(id=>$(id).textContent=state.xp);["statcoins","dashcoins"].forEach(id=>$(id).textContent=state.coins);["statlevel","dashlevel"].forEach(id=>$(id).textContent=lv);$("playername").textContent=state.name;$("dashgames").textContent=state.sessions;$("xpbar").style.width=xpIn+"%";$("xptext").textContent=`${xpIn} / 100 XP to next level`;$("progressText")&&($("progressText").textContent=`${xpIn} / 100 XP to next level`);$("xpBar")&&($("xpBar").style.width=xpIn+"%");renderLeaderboard();save()}
-function play(g){
-if(!g)return;if(!g.url){if(g.source)window.open(g.source,"_blank","noopener,noreferrer");else alert("This game has no embed URL.");return}
-activeGame=g;sessionAwarded=false;$("playertitle").textContent="🎮 "+g.title;$("gameframe").src=g.url;$("player").classList.add("open");document.body.style.overflow="hidden";
-state.recent=[g,...state.recent.filter(x=>x.id!==g.id)].slice(0,6);renderRecent();save();
-clearTimeout(sessionTimer);sessionTimer=setTimeout(()=>{if(activeGame?.id===g.id&&!sessionAwarded){state.xp+=10;state.sessions++;sessionAwarded=true;renderState();alert("⚡ +10 XP! Play-session bonus earned.")}},60000)
-}
-function closeGame(){clearTimeout(sessionTimer);activeGame=null;$("player").classList.remove("open");$("gameframe").src="about:blank";document.body.style.overflow=""}
-$("grid").addEventListener("click",e=>{const el=e.target.closest("[data-game]");if(el)play(games.find(g=>g.id===el.dataset.game)||state.recent.find(g=>g.id===el.dataset.game))});
-$("recentgrid").addEventListener("click",e=>{const el=e.target.closest("[data-game]");if(el)play(games.find(g=>g.id===el.dataset.game)||state.recent.find(g=>g.id===el.dataset.game))});
-document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-game]")){e.preventDefault();const id=e.target.dataset.game;play(games.find(g=>g.id===id)||state.recent.find(g=>g.id===id))}if(e.key==="Escape")closeGame()});
-$("search").addEventListener("input",renderGames);document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.cat;document.querySelectorAll("[data-cat]").forEach(x=>x.classList.toggle("active",x===b));renderGames()}));
-$("start").onclick=()=>$("games").scrollIntoView({behavior:"smooth"});$("surprise").onclick=()=>{const a=filtered();if(a.length)play(a[Math.floor(Math.random()*a.length)]);else $("games").scrollIntoView({behavior:"smooth"})};
-$("more").onclick=()=>load();$("refresh").onclick=()=>load(true);$("retry").onclick=()=>load(true);$("close").onclick=closeGame;
-$("fullscreen").onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $("framewrap").requestFullscreen()}catch{alert("Fullscreen is not supported by this browser.")}};
-$("clearrecent").onclick=()=>{state.recent=[];save();renderRecent()};
-$("rename").onclick=()=>{const n=prompt("Choose your gamer name (max 20 characters):",state.name);if(n&&n.trim()){state.name=n.trim().slice(0,20);renderState()}};
-$("year").textContent=new Date().getFullYear();
 
-/* Build a genuine 16-segment visual wheel. */
-$("wheel").style.background=`conic-gradient(${prizes.map((p,i)=>`${["#7c3aed","#ec4899","#2563eb","#06b6d4","#22c55e","#eab308","#f97316","#8b5cf6"][i%8]} ${i*22.5}deg ${(i+1)*22.5}deg`).join(",")})`;
-$("wheellabels").innerHTML=prizes.map((p,i)=>`<span class="wheel-label" style="--a:${i*22.5+11.25}deg">${p.emoji}</span>`).join("");
-$("rewardlist").innerHTML=prizes.map(p=>`<li>${p.emoji} ${p.name}</li>`).join("");
-function checkSpin(){const used=state.spinDay===today();$("spinbtn").disabled=used;$("spinbtn").textContent=used?"✅ Come Back Tomorrow":"🎡 SPIN NOW!";$("spinlimit").textContent=used?"Your daily spin is used.":"One spin per day on this device."}
-$("spinbtn").onclick=()=>{if(spinning||state.spinDay===today())return;spinning=true;$("spinbtn").disabled=true;$("spinresult").textContent="✨ Spinning...";const i=Math.floor(Math.random()*prizes.length);rotation+=360*6+(360-(i*22.5+11.25));$("wheel").style.transform=`rotate(${rotation}deg)`;setTimeout(()=>{const p=prizes[i];state.coins+=p.coins;state.xp+=p.xp;state.spinDay=today();$("spinresult").textContent=`🎉 ${p.emoji} ${p.name}!`;spinning=false;renderState();checkSpin()},4100)};
-renderState();renderRecent();checkSpin();load(true);
-})();
+/* NEXTPLAY PRO: single-file browser implementation.
+   Feed access depends on the publisher's CORS and response format. */
+
+const FEED = "https://feeds.gamepix.com/v2/json?sid=MX192&pagination=96&page=";
+const $ = id => document.getElementById(id);
+const STORE = "nextplay_pro_v1";
+
+const freshState = () => ({
+  xp:0, coins:100, name:"Player One",
+  favorites:[], recent:[], played:0, spins:[],
+  dailyClaim:"", theme:"dark", sound:false,
+  claimedMissions:[], achievements:[],
+  gameOpens:0, sessionDate:""
+});
+
+let state = loadState();
+let allGames = [];
+let currentPage = 1;
+let lastPage = 1;
+let currentCategory = "All";
+let loading = false;
+let toastTimer;
+let audioContext = null;
+
+function loadState(){
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE));
+    return saved && typeof saved === "object"
+      ? {...freshState(), ...saved} : freshState();
+  } catch { return freshState(); }
+}
+function saveState(){
+  try { localStorage.setItem(STORE,JSON.stringify(state)); }
+  catch { toast("Browser storage is unavailable."); }
+}
+function escapeHTML(value){
+  return String(value ?? "").replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[c]);
+}
+function toast(message){
+  $("toast").textContent=message;
+  $("toast").style.display="block";
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>$("toast").style.display="none",2600);
+}
+function go(id){$(id)?.scrollIntoView({behavior:"smooth",block:"start"});}
+
+function addXP(amount){
+  state.xp+=amount;
+  saveState(); updateUI();
+}
+function addCoins(amount){
+  state.coins+=amount;
+  saveState(); updateUI();
+}
+function getLevel(){return Math.floor(state.xp/100)+1;}
+function progressInLevel(){return state.xp%100;}
+
+function updateUI(){
+  const level=getLevel();
+  $("statGames").textContent=allGames.length || "—";
+  $("statXP").textContent=state.xp;
+  $("headerXP").textContent=state.xp+" XP";
+  $("statLevel").textContent=level;
+  $("statCoins").textContent=state.coins;
+  $("profileName").textContent=state.name;
+  $("playerName").value=state.name;
+  $("profileLevel").textContent="Level "+level+" Gamer";
+  $("xpProgressText").textContent=progressInLevel()+" / 100 XP";
+  $("xpProgress").style.width=progressInLevel()+"%";
+  $("dailyBtn").disabled=state.dailyClaim===today();
+  $("dailyBtn").textContent=state.dailyClaim===today()
+    ?"✓ Today's Reward Claimed":"Claim Daily Reward";
+  $("spinBtn").disabled=state.spins.includes(today());
+  $("spinBtn").textContent=state.spins.includes(today())
+    ?"✓ Today's Spin Used":"🎰 Spin the Wheel";
+  $("themeBtn").textContent=state.theme==="dark"?"☀️":"🌙";
+  $("soundBtn").textContent="Sound: "+(state.sound?"On":"Off");
+  document.body.classList.toggle("light",state.theme==="light");
+  renderMissions();
+  renderAchievements();
+}
+function today(){return new Date().toLocaleDateString("en-CA");}
+
+function normalizeGame(raw,index){
+  const title=raw.title || raw.name || raw.game_name || "Untitled Game";
+  const image=raw.image || raw.thumbnail || raw.cover ||
+    raw.image_url || raw.thumb || "";
+  const category=raw.category || raw.genre || raw.categories?.[0] || "Arcade";
+  const playUrl=raw.url || raw.embed_url || raw.embed ||
+    raw.game_url || raw.play_url || "";
+  return {
+    id:String(raw.id || raw.slug || raw.namespace || title+"-"+index),
+    title:String(title),
+    category:String(Array.isArray(category)?category[0]:category),
+    image:String(image),
+    url:String(playUrl),
+    description:String(raw.description || "")
+  };
+}
+function normalizeCategory(category){
+  const c=String(category).toLowerCase();
+  if(/race|driv|car/.test(c))return "Racing";
+  if(/sport|football|soccer|basketball/.test(c))return "Sports";
+  if(/puzz|match|brain|logic/.test(c))return "Puzzle";
+  if(/action|fight|shooter|war|zombie/.test(c))return "Action";
+  if(/adventure|quest|explor/.test(c))return "Adventure";
+  return "Arcade";
+}
+function extractItems(json){
+  if(Array.isArray(json))return json;
+  for(const key of ["items","games","results","data"]){
+    if(Array.isArray(json?.[key]))return json[key];
+    if(Array.isArray(json?.[key]?.items))return json[key].items;
+  }
+  return [];
+}
+function extractLastPage(json){
+  const n=Number(json?.last_page || json?.lastPage ||
+    json?.pagination?.last_page || json?.meta?.last_page);
+  return Number.isFinite(n)&&n>0?n:1;
+}
+
+async function loadGames(reset=false){
+  if(loading)return;
+  if(reset){
+    currentPage=1;lastPage=1;allGames=[];
+    $("gameGrid").innerHTML='<div class="empty">Loading games...</div>';
+  }
+  if(currentPage>lastPage && allGames.length)return;
+  loading=true;
+  $("loadMore").disabled=true;
+  $("feedStatus").textContent="Loading game feed...";
+  try{
+    const response=await fetch(FEED+currentPage,{headers:{Accept:"application/json"}});
+    if(!response.ok)throw new Error("Feed returned HTTP "+response.status);
+    const json=await response.json();
+    const items=extractItems(json);
+    lastPage=extractLastPage(json);
+    if(!items.length && !allGames.length)
+      throw new Error("No games found in the feed response.");
+    const seen=new Set(allGames.map(g=>g.id));
+    items.map(normalizeGame).forEach(g=>{
+      if(!seen.has(g.id)){allGames.push(g);seen.add(g.id);}
+    });
+    currentPage++;
+    $("feedStatus").textContent=
+      allGames.length+" games loaded"+(currentPage<=lastPage?" · More available":" · Feed complete");
+    renderGames();updateUI();
+  }catch(error){
+    console.error("NEXTPLAY feed error:",error);
+    $("feedStatus").textContent="Could not load the live feed. Check feed access or proxy/CORS settings.";
+    if(!allGames.length){
+      $("gameGrid").innerHTML=
+        '<div class="empty">Unable to load live games.<br><br>'+
+        '<button class="btn primary" onclick="loadGames(true)">Try Again</button>'+
+        '<p class="muted">The publisher feed may block browser requests. A server-side proxy may be needed.</p></div>';
+    }
+  }finally{
+    loading=false;
+    $("loadMore").disabled=currentPage>lastPage;
+    $("loadMore").textContent=currentPage>lastPage
+      ?"All Available Games Loaded":"Load More Games ↓";
+  }
+}
+
+function gameById(id){return allGames.find(g=>g.id===id);}
+function isFavorite(id){return state.favorites.includes(id);}
+function renderGames(){
+  const query=$("search").value.trim().toLowerCase();
+  let games=allGames.filter(g=>
+    g.title.toLowerCase().includes(query)||
+    g.category.toLowerCase().includes(query)||
+    g.description.toLowerCase().includes(query)
+  );
+  if(currentCategory==="Favorites")games=games.filter(g=>isFavorite(g.id));
+  else if(currentCategory==="Recent")games=state.recent.map(gameById).filter(Boolean);
+  else if(currentCategory==="Trending")games=games.slice().sort((a,b)=>
+    (state.recent.includes(b.id)?1:0)-(state.recent.includes(a.id)?1:0));
+  else if(currentCategory!=="All"){
+    games=games.filter(g=>normalizeCategory(g.category)===currentCategory);
+  }
+
+  if(!games.length){
+    $("gameGrid").innerHTML='<div class="empty">No matching games yet. Try another category or search.</div>';
+    return;
+  }
+  $("gameGrid").innerHTML=games.map(g=>{
+    const fav=isFavorite(g.id);
+    const image=g.image
+      ?'<img src="'+escapeHTML(g.image)+'" alt="'+escapeHTML(g.title)+'" loading="lazy" onerror="this.style.display=\'none\'">'
+      :'';
+    return '<article class="game"><div class="thumb">'+image+
+      '<span style="position:absolute;font-size:36px;z-index:0;pointer-events:none">🎮</span>'+
+      '</div><div class="game-body"><div class="game-title" title="'+escapeHTML(g.title)+'">'+escapeHTML(g.title)+'</div>'+
+      '<div class="game-cat">'+escapeHTML(g.category)+'</div><div class="game-actions">'+
+      '<button class="btn primary" onclick="playGame(\''+encodeURIComponent(g.id)+'\')">▶ Play</button>'+
+      '<button class="icon-btn" aria-label="'+(fav?"Remove favorite":"Add favorite")+
+      '" onclick="toggleFavorite(\''+encodeURIComponent(g.id)+'\')">'+(fav?"❤️":"♡")+'</button>'+
+      '</div></div></article>';
+  }).join("");
+}
+
+function toggleFavorite(encoded){
+  const id=decodeURIComponent(encoded);
+  if(isFavorite(id))state.favorites=state.favorites.filter(x=>x!==id);
+  else state.favorites.unshift(id);
+  saveState();renderGames();
+  toast(isFavorite(id)?"Added to favorites":"Removed from favorites");
+}
+
+function playGame(encoded){
+  const id=decodeURIComponent(encoded);
+  const game=gameById(id);
+  if(!game)return;
+  state.recent=[id,...state.recent.filter(x=>x!==id)].slice(0,30);
+  state.gameOpens++;
+  state.played++;
+  saveState();
+  $("dialogTitle").textContent=game.title;
+  $("dialogCategory").textContent=game.category;
+  const frame=$("gameFrame");
+  frame.src="about:blank";
+  if(game.url && /^https?:\/\//i.test(game.url)){
+    frame.src=game.url;
+    $("frameMessage").textContent="Loading publisher game...";
+  }else{
+    $("frameMessage").textContent="No playable URL was provided in the feed for this game.";
+  }
+  if(!$("gameDialog").open)$("gameDialog").showModal();
+  renderGames();renderMissions();renderAchievements();
+}
+$("closeGame").addEventListener("click",()=>{
+  $("gameFrame").src="about:blank";
+  $("gameDialog").close();
+});
+$("gameDialog").addEventListener("close",()=>{$("gameFrame").src="about:blank";});
+
+const missions=[
+ {id:"open3",name:"Explore the Arena",desc:"Open 3 games",xp:30,check:()=>state.gameOpens>=3},
+ {id:"favorite3",name:"Build Your Collection",desc:"Favorite 3 games",xp:20,check:()=>state.favorites.length>=3},
+ {id:"xp100",name:"XP Hunter",desc:"Earn 100 XP",xp:25,check:()=>state.xp>=100},
+ {id:"profile",name:"Identity Created",desc:"Choose a gamer tag",xp:15,check:()=>state.name!=="Player One"}
+];
+function renderMissions(){
+  $("missionList").innerHTML=missions.map(m=>{
+    const claimed=state.claimedMissions.includes(m.id);
+    const ready=m.check();
+    return '<div class="task"><div><b>'+escapeHTML(m.name)+'</b>'+
+      '<div class="muted">'+escapeHTML(m.desc)+' · Reward '+m.xp+' XP</div></div>'+
+      '<button class="btn '+(ready&&!claimed?'primary':'')+'" '+
+      (!ready||claimed?'disabled':'')+' onclick="claimMission(\''+m.id+'\')">'+
+      (claimed?'✓ Claimed':ready?'Claim':'In progress')+'</button></div>';
+  }).join("");
+}
+function claimMission(id){
+  const m=missions.find(x=>x.id===id);
+  if(!m||state.claimedMissions.includes(id)||!m.check())return;
+  state.claimedMissions.push(id);addXP(m.xp);saveState();
+  toast("Mission complete! +"+m.xp+" XP");
+}
+const achievements=[
+ {id:"first",name:"First Steps",icon:"🎮",check:()=>state.gameOpens>=1},
+ {id:"explorer",name:"Explorer",icon:"🧭",check:()=>state.gameOpens>=5},
+ {id:"collector",name:"Collector",icon:"❤️",check:()=>state.favorites.length>=5},
+ {id:"century",name:"Century XP",icon:"🌟",check:()=>state.xp>=100},
+ {id:"veteran",name:"Level 5",icon:"🏆",check:()=>getLevel()>=5},
+ {id:"spinner",name:"Lucky Player",icon:"🎰",check:()=>state.spins.length>=1}
+];
+function renderAchievements(){
+  $("achievementList").innerHTML=achievements.map(a=>{
+    const unlocked=a.check();
+    return '<div class="badge '+(unlocked?'':'locked')+'">'+a.icon+' '+
+      escapeHTML(a.name)+(unlocked?' ✓':' 🔒')+'</div>';
+  }).join("");
+}
+
+function claimDaily(){
+  if(state.dailyClaim===today())return;
+  state.dailyClaim=today();state.coins+=25;state.xp+=50;
+  saveState();updateUI();toast("Daily reward claimed: +50 XP, +25 coins!");
+}
+function spin(){
+  if(state.spins.includes(today()))return;
+  $("spinBtn").disabled=true;
+  $("wheel").style.transition="transform 1.5s ease-out";
+  $("wheel").style.transform="rotate(1080deg)";
+  const rewards=[
+    {xp:10,coins:0,label:"+10 XP"},
+    {xp:20,coins:0,label:"+20 XP"},
+    {xp:0,coins:15,label:"+15 coins"},
+    {xp:30,coins:0,label:"+30 XP"},
+    {xp:0,coins:25,label:"+25 coins"}
+  ];
+  const prize=rewards[Math.floor(Math.random()*rewards.length)];
+  state.spins.push(today());
+  state.xp+=prize.xp;state.coins+=prize.coins;
+  saveState();
+  setTimeout(()=>{
+    $("wheel").style.transform="rotate(0deg)";
+    $("spinResult").textContent="You won "+prize.label+"!";
+    updateUI();toast("Lucky Spin: "+prize.label);
+  },1500);
+}
+
+function toggleTheme(){
+  state.theme=state.theme==="dark"?"light":"dark";
+  saveState();updateUI();
+}
+function toggleSound(){
+  state.sound=!state.sound;saveState();updateUI();
+  toast("Sound effects "+(state.sound?"enabled":"disabled"));
+}
+function playSound(){
+  if(!state.sound)return;
+  try{
+    audioContext ||= new (window.AudioContext||window.webkitAudioContext)();
+    const oscillator=audioContext.createOscillator();
+    const gain=audioContext.createGain();
+    oscillator.frequency.value=660;
+    gain.gain.value=.035;
+    oscillator.connect(gain);gain.connect(audioContext.destination);
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime+.09);
+  }catch{}
+}
+
+$("dailyBtn").addEventListener("click",()=>{claimDaily();playSound();});
+$("spinBtn").addEventListener("click",()=>{spin();playSound();});
+$("themeBtn").addEventListener("click",toggleTheme);
+$("themeSetting").addEventListener("click",toggleTheme);
+$("soundBtn").addEventListener("click",toggleSound);
+$("loadMore").addEventListener("click",()=>loadGames());
+$("refreshBtn").addEventListener("click",()=>loadGames(true));
+$("search").addEventListener("input",renderGames);
+$("categories").addEventListener("click",e=>{
+  const btn=e.target.closest("[data-cat]");
+  if(!btn)return;
+  currentCategory=btn.dataset.cat;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("active",c===btn));
+  renderGames();
+});
+$("saveProfile").addEventListener("click",()=>{
+  const name=$("playerName").value.trim().slice(0,24);
+  if(!name){toast("Enter a gamer tag first.");return;}
+  state.name=name;saveState();updateUI();
+  toast("Gamer tag saved!");
+});
+$("exportBtn").addEventListener("click",()=>{
+  const data=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(data);
+  const a=document.createElement("a");
+  a.href=url;a.download="nextplay-progress.json";a.click();
+  URL.revokeObjectURL(url);
+});
+$("resetBtn").addEventListener("click",()=>{
+  if(!confirm("Reset all locally stored NEXTPLAY progress? This cannot be undone."))return;
+  state=freshState();saveState();updateUI();renderGames();
+  toast("Local progress reset.");
+});
+
+updateUI();
+renderGames();
+loadGames(true);
 </script>
 </body>
 </html>
