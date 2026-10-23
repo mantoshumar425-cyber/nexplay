@@ -400,5 +400,60 @@ updateUI();document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.to
  byId('saveProfile')?.addEventListener('click',()=>{if(currentUser)window.setTimeout(syncCloudProfile,0);});
  if(window.supabase?.createClient){try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});client.auth.getSession().then(async({data,error})=>{if(error)console.warn(error.message);const user=data?.session?.user||null;paintAuth(user);if(user)await loadCloudProfile(user);});client.auth.onAuthStateChange((event,session)=>{const user=session?.user||null;paintAuth(user);if(user&&event==='SIGNED_IN')setTimeout(()=>loadCloudProfile(user),0);});}catch(e){paintAuth(null);console.error('Supabase initialization failed:',e);}}else{paintAuth(null);console.error('Supabase JS SDK unavailable.');}
 })();
+
+<link rel="stylesheet" href="/chat-widget.css">
+
+<button
+  id="nextplay-chat-button"
+  type="button"
+  aria-controls="nextplay-chat"
+  aria-expanded="false"
+>
+  ✦ Ask Nextplay AI
+</button>
+
+<section
+  id="nextplay-chat"
+  role="dialog"
+  aria-label="Nextplay AI chat"
+  aria-modal="false"
+>
+  <header class="np-chat-header">
+    <div>
+      <strong>✦ Nextplay AI</strong>
+      <small>Your all-in-one assistant</small>
+    </div>
+    <button id="np-chat-close" type="button" aria-label="Close chat">
+      ×
+    </button>
+  </header>
+
+  <div
+    id="np-chat-messages"
+    role="log"
+    aria-live="polite"
+    aria-label="Chat messages"
+  ></div>
+
+  <div id="np-chat-status" class="np-chat-status">
+    Ready
+  </div>
+
+  <form id="np-chat-form">
+    <input
+      id="np-chat-input"
+      type="text"
+      maxlength="4000"
+      placeholder="Ask anything..."
+      autocomplete="off"
+      aria-label="Your message"
+      required
+    >
+    <button id="np-chat-send" type="submit">Send</button>
+  </form>
+</section>
+
+<script src="/chat-widget.js" defer></script>
+</body>
 </script>
 </body></html>
