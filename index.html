@@ -551,7 +551,9 @@ updateUI();document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.to
  byId('saveProfile')?.addEventListener('click',()=>{if(currentUser)window.setTimeout(syncCloudProfile,0);});
  if(window.supabase?.createClient){try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});client.auth.getSession().then(async({data,error})=>{if(error)console.warn(error.message);const user=data?.session?.user||null;paintAuth(user);if(user)await loadCloudProfile(user);});client.auth.onAuthStateChange((event,session)=>{const user=session?.user||null;paintAuth(user);if(user&&event==='SIGNED_IN')setTimeout(()=>loadCloudProfile(user),0);});}catch(e){paintAuth(null);console.error('Supabase initialization failed:',e);}}else{paintAuth(null);console.error('Supabase JS SDK unavailable.');}
 })();
-</script>
+<!-- Elfsight Spinning Wheel | Untitled Spinning Wheel -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-ba41c48c-fa85-42b0-9503-3c0a6a83cdfc" data-elfsight-app-lazy></div></script>
 
 <script>
 
