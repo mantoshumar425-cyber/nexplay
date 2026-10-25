@@ -142,24 +142,26 @@ footer{margin-top:36px}
 @media(max-width:1000px){#nextplay-new-features .feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){#nextplay-new-features .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.battle-options{grid-template-columns:1fr 1fr}.battle-option{padding:8px}.battle-option img{height:70px}}
 
-</style>
-<style id="nextplay-more-button-visibility-fix">
-/* Keep the More/three-dot control visible above the bottom navigation on small phones. */
-#bottomMoreBtn{
-  position:fixed!important;right:12px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;
-  z-index:90!important;flex:none!important;width:58px!important;height:50px!important;min-height:50px!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;
-  gap:1px!important;border:1px solid #d8b4fe!important;border-radius:15px!important;
-  background:linear-gradient(135deg,#a855f7,#4f46e5)!important;color:#fff!important;
-  box-shadow:0 5px 24px #7c3aed77!important;padding:4px!important;
-}
-#bottomMoreBtn span{font-size:23px!important;line-height:20px!important;letter-spacing:2px!important;font-weight:1000!important}
-#bottomMoreBtn small{font-size:10px!important;line-height:13px!important;color:#fff!important}
-#bottomMoreBtn:focus-visible{outline:3px solid #fde68a!important;outline-offset:3px!important}
-#bottomMoreMenu{z-index:95!important;bottom:calc(72px + env(safe-area-inset-bottom))!important}
-#bottomMenuBackdrop{z-index:94!important}
-@media(min-width:761px){#bottomMoreBtn{right:max(18px,calc((100vw - 1180px)/2))!important;bottom:18px!important}}
-</style>
+<!-- Navigation Drawer Button & Sidebar -->
+<button id="npMenuBtn" class="np-menu-btn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+<div id="npDrawerBackdrop" class="np-drawer-backdrop"></div>
+<aside id="npDrawer" class="np-drawer" aria-label="Main navigation">
+  <div class="np-drawer-header">
+    <div class="np-brand">⚡ NEXTPLAY</div>
+    <button id="npDrawerClose" class="np-close-btn" aria-label="Close navigation">✕</button>
+  </div>
+  <p class="np-menu-label">MAIN MENU</p>
+  <a href="#home" class="np-drawer-link">🏠 Home</a>
+  <a href="#games" class="np-drawer-link">🎮 Games Explorer</a>
+  <a href="#dashboard" class="np-drawer-link">📊 Smart Dashboard</a>
+  <a href="#rewards" class="np-drawer-link">🎁 Rewards & Spin</a>
+  <a href="#missions" class="np-drawer-link">🎯 Quests & Missions</a>
+  <a href="#proprofile" class="np-drawer-link">🪪 Pro Identity Card</a>
+  <a href="#profile" class="np-drawer-link">👤 Player ID</a>
+  <div class="np-drawer-divider"></div>
+  <button id="npAskAI" class="np-ai-link">✨ Ask NOVA AI</button>
+  <p class="np-drawer-footer">PLAY • EXPLORE • LEVEL UP</p>
+</aside></style>
 <style id="nextplay-nova-theme">
 /* NEXTPLAY NOVA: custom Arctic Pulse palette — deep navy, electric cyan and mint. */
 :root{color-scheme:dark;--bg:#06111c;--panel:#0c1c2b;--panel2:#12283a;--text:#effaff;--muted:#9db7c9;--purple:#48dfff;--violet:#16b8d4;--blue:#627dff;--line:#8cecff22;--green:#75f0bd;--gold:#ffd36b;--shadow:0 18px 48px #0008}
