@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07131f"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="app-icon.svg" type="image/svg+xml"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="NEXTPLAY"><meta name="description" content="NEXTPLAY NOVA — discover games, build your player identity, earn rewards, and explore your gaming universe."><title>NEXTPLAY NOVA — Ultimate Gaming Universe</title>
+<style>
+:root{color-scheme:dark;--bg:#090711;--panel:#131020;--panel2:#201832;--text:#f8f5ff;--muted:#aaa1c1;--purple:#b35cff;--violet:#7c3aed;--blue:#626bff;--line:#ffffff16;--green:#55e6a5;--gold:#ffd166;--shadow:0 12px 38px #0005}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#32135444,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;padding-bottom:86px}body.light{color-scheme:light;--bg:#f5f1ff;--panel:#fff;--panel2:#eee7ff;--text:#211433;--muted:#6d617e;--line:#21143319;--shadow:0 12px 35px #51327c15;background:radial-gradient(ellipse at 20% 0%,#d9bcff55,transparent 40%),var(--bg)}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--purple);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}a{color:inherit}header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px max(4%,calc((100% - 1180px)/2));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:22px;font-weight:1000;letter-spacing:-1px}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,#d946ef,#7c3aed,#4f46e5);box-shadow:0 0 25px #9333ea55}.brand span:last-child{color:var(--purple)}.head-actions{display:flex;align-items:center;gap:8px}.install-btn{white-space:nowrap}.install-btn[hidden]{display:none}.btn,.icon-btn{border:1px solid var(--line);border-radius:12px;padding:10px 13px;background:var(--panel2);color:var(--text);transition:transform .16s,border-color .16s}.btn:hover,.icon-btn:hover{transform:translateY(-1px);border-color:#b35cff77}.btn.primary{background:linear-gradient(110deg,#a21caf,#7c3aed 55%,#4f46e5);border:0;color:white;font-weight:800;box-shadow:0 5px 22px #9333ea30}.btn.small{padding:7px 10px;font-size:12px}.icon-btn{padding:9px 11px}main{width:min(1180px,92%);margin:0 auto}.hero{position:relative;isolation:isolate;overflow:hidden;margin:23px 0 17px;padding:clamp(23px,5vw,46px);border:1px solid #b35cff42;border-radius:28px;background:radial-gradient(ellipse at 82% 15%,#9333ea66,transparent 40%),radial-gradient(ellipse at 65% 100%,#4f46e544,transparent 48%),linear-gradient(125deg,#1b102d,#0d1021 75%);box-shadow:0 0 55px #7c3aed13}.hero:after{content:'🎮';position:absolute;right:7%;top:20%;font-size:clamp(75px,14vw,145px);opacity:.14;transform:rotate(12deg);z-index:-1}.eyebrow{display:inline-flex;gap:7px;align-items:center;padding:6px 11px;border:1px solid #c084fc55;background:#a855f722;color:#e9d5ff;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.8px}.hero h1{font-size:clamp(38px,7vw,70px);line-height:.99;letter-spacing:-3px;margin:18px 0 12px;max-width:720px}.gradient-text{background:linear-gradient(95deg,#e9d5ff,#c084fc 48%,#818cf8);background-clip:text;color:transparent}.hero p{color:#d0c6e5;max-width:570px;line-height:1.8}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.hero-foot{display:flex;gap:16px;flex-wrap:wrap;color:#ddd0f3;font-size:12px;margin-top:20px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:17px 0}.stat{position:relative;overflow:hidden;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.stat .stat-icon{font-size:22px}.stat strong{display:block;font-size:25px;letter-spacing:-.5px;overflow-wrap:anywhere}.stat small{color:var(--muted)}.section{margin-top:31px;scroll-margin-top:85px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.section-head h2{font-size:21px;letter-spacing:-.5px;margin:0}.section-sub{color:var(--muted);font-size:12px;margin-top:3px}.panel{padding:18px;border:1px solid var(--line);border-radius:19px;background:var(--panel);box-shadow:var(--shadow)}.searchbar{display:flex;gap:8px;margin:15px 0 11px}.field{min-width:0;width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text)}.chips{display:flex;gap:8px;overflow:auto;padding:3px 0 11px;scrollbar-width:thin}.chip{white-space:nowrap;padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:var(--panel);color:var(--muted);font-size:12px}.chip.active{background:#8b5cf6;color:#fff;border-color:#a78bfa}.feed-status{font-size:12px;color:var(--muted);margin:7px 0 12px}.game-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.game-card{overflow:hidden;min-width:0;border:1px solid var(--line);border-radius:17px;background:var(--panel);transition:transform .18s,border-color .18s,box-shadow .18s}.game-card:hover{transform:translateY(-4px);border-color:#b35cff77;box-shadow:0 12px 30px #9333ea15}.game-thumb{height:148px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 30% 25%,#8b5cf655,transparent 55%),linear-gradient(135deg,#2b1748,#14172f)}.game-thumb .placeholder-icon{font-size:44px;filter:drop-shadow(0 0 13px #b35cff55)}.game-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}.game-tag{position:absolute;left:9px;top:9px;z-index:2;background:#090711bb;color:white;border:1px solid #ffffff22;border-radius:99px;padding:4px 8px;font-size:10px;backdrop-filter:blur(8px)}.game-info{padding:12px}.game-title{font-size:14px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.game-meta{font-size:11px;color:var(--muted);margin:4px 0 12px}.game-actions{display:flex;gap:6px}.game-actions .btn{flex:1;padding:8px 7px;font-size:12px}.game-actions .icon-btn{padding:7px 9px}.empty{grid-column:1/-1;text-align:center;padding:35px 15px;color:var(--muted);background:var(--panel);border:1px dashed var(--line);border-radius:16px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.reward-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.reward-tile{padding:13px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}.reward-tile .big{font-size:26px}.reward-tile strong{display:block;font-size:13px}.reward-tile small{color:var(--muted)}.wheel-wrap{display:grid;place-items:center;padding:7px}.wheel{width:150px;height:150px;display:grid;place-items:center;border-radius:50%;font-size:65px;background:conic-gradient(#a855f7,#4f46e5,#ec4899,#7c3aed,#a855f7);border:5px solid #e9d5ff66;box-shadow:0 0 30px #9333ea40;transition:transform 1.4s cubic-bezier(.12,.75,.16,1)}.progress{height:9px;border-radius:99px;background:var(--panel2);overflow:hidden;margin:9px 0}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#d946ef,#8b5cf6,#6366f1);border-radius:99px;transition:width .3s}.task{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.task-icon{font-size:23px}.task-copy{flex:1;min-width:0}.task-copy strong{display:block;font-size:13px}.task-copy small{display:block;color:var(--muted);font-size:11px}.badge-grid{display:flex;gap:9px;flex-wrap:wrap}.badge{padding:11px 12px;border:1px solid #a855f744;background:#a855f713;border-radius:13px;font-size:12px}.badge.locked{opacity:.42;filter:grayscale(1)}.profile-top{display:flex;align-items:center;gap:13px}.avatar{width:62px;height:62px;flex:none;display:grid;place-items:center;border-radius:20px;background:linear-gradient(135deg,#d946ef,#7c3aed,#4f46e5);font-size:31px;box-shadow:0 0 25px #9333ea33}.profile-name{font-size:20px;font-weight:900;overflow-wrap:anywhere}.player-id{font-size:11px;color:var(--muted);overflow-wrap:anywhere}.profile-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}.field-label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.avatar-options{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.avatar-choice{font-size:21px;padding:7px;border-radius:11px;background:var(--panel2);border:1px solid var(--line)}.avatar-choice.active{border-color:var(--purple);background:#a855f733}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-weight:700}.rank{font-weight:900;color:var(--gold)}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.setting-row:last-child{border:0}.setting-row small{display:block;color:var(--muted);font-size:11px}.switch{accent-color:var(--purple);width:19px;height:19px}.toast{position:fixed;z-index:100;left:50%;bottom:98px;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:90%;padding:12px 17px;border:1px solid #c084fc88;border-radius:13px;background:#211332;color:#fff;box-shadow:0 10px 35px #0006;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+/* NEXTPLAY v2 polish: compact navigation drawer + cosmic daily spin */
+nav.bottom{justify-content:center;gap:10px;padding-left:12px;padding-right:12px}
+nav.bottom>a{flex:0 1 86px;min-height:42px}
+.bottom-more{flex:0 1 86px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;border:0;background:transparent;color:var(--muted);font:inherit;cursor:pointer;border-radius:12px;min-height:42px}
+.bottom-more span{font-size:22px;letter-spacing:2px;line-height:20px;font-weight:900}.bottom-more small{font-size:10px}.bottom-more:hover,.bottom-more[aria-expanded="true"]{color:var(--purple);background:var(--panel2)}
+.bottom-menu-backdrop{position:fixed;inset:0;z-index:80;background:#05030bb8;backdrop-filter:blur(4px)}
+.bottom-more-menu{position:fixed;z-index:81;left:12px;right:12px;bottom:calc(76px + env(safe-area-inset-bottom));max-width:560px;margin-left:auto;margin-right:auto;padding:16px;border:1px solid #b35cff66;border-radius:22px;background:var(--panel);color:var(--text);box-shadow:0 22px 70px #0009;max-height:min(72dvh,620px);overflow:auto;animation:menuRise .18s ease-out}
+.bottom-more-menu[hidden],.bottom-menu-backdrop[hidden]{display:none!important}@keyframes menuRise{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.bottom-menu-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.bottom-menu-head strong{display:block;font-size:15px}.bottom-menu-head small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.bottom-menu-head button{width:36px;height:36px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);color:var(--text);font-size:24px;cursor:pointer}
+.bottom-menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.bottom-menu-grid a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:76px;text-align:center;text-decoration:none;color:var(--text);background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:9px 5px;font-size:11px;font-weight:750}.bottom-menu-grid a span{font-size:23px}.bottom-menu-grid a:hover{border-color:var(--purple);transform:translateY(-1px)}.bottom-menu-note{font-size:10px;color:var(--muted);text-align:center;margin:13px 0 0}
+.cosmic-wheel-wrap{position:relative;width:210px;height:210px;margin:10px auto 8px;padding:0;isolation:isolate}.cosmic-wheel-wrap:before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#f9d976,#9b5cff,#38d9ff,#ff69b4,#9b5cff,#f9d976);filter:blur(1px);box-shadow:0 0 0 5px #b35cff22,0 0 32px #8b5cf666;animation:cosmicGlow 3s ease-in-out infinite alternate}.cosmic-wheel{position:absolute;inset:8px;width:auto;height:auto;border:5px solid #fff8;background:conic-gradient(#7c3aed 0deg 30deg,#15102b 30deg 60deg,#db2777 60deg 90deg,#15102b 90deg 120deg,#0891b2 120deg 150deg,#15102b 150deg 180deg,#7c3aed 180deg 210deg,#15102b 210deg 240deg,#db2777 240deg 270deg,#15102b 270deg 300deg,#0891b2 300deg 330deg,#15102b 330deg 360deg);box-shadow:inset 0 0 0 3px #fff3,0 12px 28px #0006;font-size:35px;color:#fff;display:grid;place-items:center;transition:transform 1.4s cubic-bezier(.12,.75,.16,1);z-index:1}.cosmic-wheel:after{content:"";position:absolute;width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#e9d5ff 25%,#7c3aed 65%,#312e81);border:3px solid #fff9;box-shadow:0 0 20px #c084fc99;z-index:-1}.wheel-pointer{position:absolute;z-index:3;top:-7px;left:50%;transform:translateX(-50%);color:#fde68a;text-shadow:0 2px 5px #000;font-size:25px;filter:drop-shadow(0 0 7px #fbbf24)}@keyframes cosmicGlow{from{filter:brightness(.95);transform:scale(.99)}to{filter:brightness(1.2);transform:scale(1.015)}}.spin-chip-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:6px 0 12px}.spin-chip-row span{font-size:9px;font-weight:850;letter-spacing:.6px;padding:6px 8px;border-radius:99px;border:1px solid var(--line);background:var(--panel2);color:var(--muted)}.spin-result{min-height:20px;font-weight:800;color:var(--purple)}
+@media(max-width:420px){.bottom-menu-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.bottom-more-menu{left:8px;right:8px;padding:12px}.cosmic-wheel-wrap{width:190px;height:190px}}
+
+nav.bottom{position:fixed;z-index:25;bottom:0;left:0;right:0;display:flex;justify-content:space-around;gap:4px;padding:9px 3% calc(9px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(20px);border-top:1px solid var(--line)}nav.bottom a{flex:1;display:flex;align-items:center;flex-direction:column;gap:2px;text-decoration:none;color:var(--muted);font-size:10px}nav.bottom a span{font-size:20px}nav.bottom a:hover{color:var(--purple)}footer{text-align:center;color:var(--muted);font-size:11px;padding:28px 15px}.modal{width:min(1000px,96vw);max-width:1000px;max-height:94dvh;padding:14px;border:1px solid #b35cff77;border-radius:20px;background:var(--panel);color:var(--text);box-shadow:0 0 70px #9333ea22}.modal::backdrop{background:#05030bcc;backdrop-filter:blur(7px)}.modal.fullscreen-modal{width:100vw;height:100dvh;max-width:none;max-height:none;border:0;border-radius:0;padding:8px}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 10px}.modal-title{font-weight:900}.game-frame{display:block;width:100%;height:min(68dvh,690px);border:0;border-radius:12px;background:#050505}.fullscreen-modal .game-frame{height:calc(100dvh - 74px)}.frame-note{font-size:11px;color:var(--muted);padding:8px 2px}.spinner{animation:spin 1.3s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+/* Local community chat: browser-only, no database */
+.community-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:14px;align-items:stretch}.chat-panel{display:flex;flex-direction:column;min-height:360px;max-height:560px}.chat-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--line)}.chat-feed{flex:1;min-height:180px;overflow:auto;display:flex;flex-direction:column;gap:9px;padding:12px 2px}.chat-msg{border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:9px 11px;overflow-wrap:anywhere}.chat-msg .chat-meta{display:flex;gap:7px;align-items:center;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:3px}.chat-msg .chat-name{font-weight:850;color:var(--purple)}.chat-msg .chat-body{font-size:13px;white-space:pre-wrap;word-break:break-word}.chat-compose{display:flex;gap:7px;margin-top:8px}.chat-compose .field{min-width:0}.chat-compose .btn{white-space:nowrap}.chat-hint{font-size:10px;color:var(--muted);margin-top:7px}.arena-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px;min-height:0;flex:1}.arena-game{display:flex;flex-direction:column;min-width:0;min-height:0}.arena-layout .game-frame{height:100%;min-height:260px;flex:1}.arena-chat{min-height:0;max-height:calc(100dvh - 105px);border:1px solid var(--line);border-radius:14px;padding:10px;background:var(--panel);display:flex;flex-direction:column}.arena-chat .chat-feed{min-height:100px}.arena-chat .chat-compose{flex-direction:column}.arena-chat .chat-compose .btn{width:100%}.arena-chat .field{width:100%}.chat-score-btn{width:100%;margin-top:7px}.community-status{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:11px}.local-dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}
+@media(max-width:760px){.community-layout{grid-template-columns:1fr}.chat-panel{max-height:480px;min-height:330px}.arena-layout{grid-template-columns:1fr;grid-template-rows:minmax(280px,48dvh) minmax(210px,1fr);overflow:auto}.arena-chat{max-height:none;min-height:230px}.arena-layout .game-frame{min-height:260px}.modal{max-height:98dvh}.modal.fullscreen-modal{padding:5px}}
+@media(max-width:900px){.game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.game-thumb{height:135px}}@media(max-width:620px){.install-btn{font-size:0!important;padding:9px!important}.install-btn::before{content:"📲";font-size:16px}header{padding:9px 4%}.brand{font-size:19px}.brand-mark{width:35px;height:35px}.head-actions .btn{padding:8px 10px;font-size:12px}main{width:92%}.hero{padding:24px 18px;border-radius:22px}.hero h1{letter-spacing:-2px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.game-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.game-thumb{height:125px}.game-info{padding:9px}.two-col{grid-template-columns:1fr}.profile-fields{grid-template-columns:1fr}.reward-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.reward-tile{padding:9px}.section-head h2{font-size:19px}.panel{padding:14px}.hero:after{right:0;top:29%;font-size:90px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+.game-rating{display:flex;align-items:center;gap:3px;flex-wrap:wrap;margin:7px 0 11px;font-size:11px;color:var(--muted)}.rating-stars{display:inline-flex;gap:2px}.rating-star{border:0;background:transparent;color:#625a70;padding:1px 2px;font-size:17px;line-height:1}.rating-star.on{color:#ffd166}.rating-star:focus-visible{outline:2px solid var(--purple);border-radius:4px}.rating-note{font-size:10px;color:var(--muted);margin-left:4px}.dialog-rating{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 12px;padding:9px 11px;background:var(--panel2);border:1px solid var(--line);border-radius:12px}.play-reward-banner{padding:10px 12px;margin:0 0 5px;border:1px solid #ffd16655;border-radius:12px;background:linear-gradient(100deg,#ffd16616,#a855f716);font-size:12px}.play-reward-banner strong{color:var(--gold)}.play-reward-status{font-size:11px;color:var(--muted);margin:0 0 10px}.dialog-rating strong{font-size:12px}.dialog-rating .rating-note{margin-left:auto}@media(max-width:760px){.game-rating{gap:2px}.rating-star{font-size:16px}}
+
+/* NEXTPLAY Aura splash screen */
+#appSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 38%,#6d28d955 0,transparent 38%),radial-gradient(ellipse at 20% 90%,#312e8150 0,transparent 35%),#090711;opacity:1;visibility:visible;transition:opacity .55s ease,visibility .55s ease;}
+#appSplash.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-inner{width:min(340px,100%);display:flex;flex-direction:column;align-items:center;text-align:center;gap:15px}
+.splash-logo{position:relative;width:94px;height:94px;display:grid;place-items:center;border-radius:28px;background:linear-gradient(140deg,#e879f9,#9333ea 48%,#4f46e5);box-shadow:0 0 28px #a855f766,0 0 80px #7c3aed44;animation:splashFloat 1.8s ease-in-out infinite}
+.splash-logo:before{content:"";position:absolute;inset:-8px;border:1px solid #c084fc66;border-radius:34px;animation:splashPulse 1.8s ease-out infinite}
+.splash-logo span{font-size:48px;filter:drop-shadow(0 3px 8px #220b35)}
+.splash-title{font-size:30px;font-weight:1000;letter-spacing:-1.5px;color:#fff;line-height:1.1}
+.splash-title em{font-style:normal;background:linear-gradient(90deg,#e9d5ff,#c084fc,#818cf8);background-clip:text;color:transparent}
+.splash-tagline{font-size:11px;letter-spacing:2.5px;font-weight:800;color:#bfb2dc;text-transform:uppercase}
+.splash-track{height:5px;width:min(220px,80%);overflow:hidden;border-radius:99px;background:#ffffff18;margin-top:8px}
+.splash-track span{display:block;width:38%;height:100%;border-radius:99px;background:linear-gradient(90deg,#d946ef,#a78bfa,#6366f1);box-shadow:0 0 16px #a855f7;animation:splashLoad 1.35s ease-in-out infinite}
+.splash-loading{font-size:11px;color:#a99abd;letter-spacing:.5px}
+@keyframes splashFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes splashPulse{0%{transform:scale(.92);opacity:.85}100%{transform:scale(1.18);opacity:0}}
+@keyframes splashLoad{0%{transform:translateX(-120%)}100%{transform:translateX(370%)}}
+@media(prefers-reduced-motion:reduce){.splash-logo,.splash-logo:before,.splash-track span{animation:none}#appSplash{transition:none}}
+
+
+/* NEXTPLAY social hub additions */
+.collection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.collection-card{padding:16px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,var(--panel2),var(--panel));text-align:left;color:var(--text);min-width:0}.collection-card .collection-icon{font-size:26px}.collection-card strong{display:block;margin-top:7px}.collection-card small{display:block;color:var(--muted);margin-top:3px}.collection-card:hover{border-color:#b35cff88;transform:translateY(-2px)}.weekly-board{width:100%;border-collapse:collapse}.weekly-board td,.weekly-board th{padding:12px 8px;border-bottom:1px solid var(--line);text-align:left}.weekly-player{display:flex;align-items:center;gap:10px}.weekly-avatar{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#a855f7,#4f46e5);font-size:20px}.tagline-preview{color:var(--muted);font-size:12px;margin-top:3px;overflow-wrap:anywhere}.achievement-pop{position:fixed;z-index:120;top:78px;left:50%;transform:translate(-50%,-18px) scale(.96);opacity:0;pointer-events:none;width:min(360px,92vw);padding:14px 16px;border:1px solid #facc15aa;border-radius:17px;background:linear-gradient(130deg,#251638,#111024);box-shadow:0 12px 44px #0008;transition:opacity .25s,transform .25s}.achievement-pop.show{opacity:1;transform:translate(-50%,0) scale(1)}.achievement-pop strong{display:block;color:#fde68a}.achievement-pop span{display:block;color:#eee2ff;font-size:12px;margin-top:3px}@media(max-width:680px){.collection-grid{grid-template-columns:1fr}.weekly-board td,.weekly-board th{padding:9px 5px;font-size:11px}.profile-fields{grid-template-columns:1fr}}
+
+.game-of-day{display:grid;grid-template-columns:minmax(110px,190px) minmax(0,1fr);gap:18px;align-items:center;margin:10px 0 18px;padding:15px;border:1px solid #b35cff66;border-radius:20px;background:radial-gradient(ellipse at 8% 0%,#a855f733,transparent 45%),linear-gradient(120deg,var(--panel),var(--panel2));box-shadow:0 12px 32px #7c3aed18;overflow:hidden}.game-of-day[hidden]{display:none}.god-art{position:relative;display:grid;place-items:center;min-height:135px;border-radius:15px;background:linear-gradient(135deg,#321454,#171b3b);overflow:hidden}.god-art>span{font-size:54px;filter:drop-shadow(0 0 15px #c084fc66)}.god-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.god-kicker{font-size:10px;font-weight:900;letter-spacing:1.3px;color:#d8b4fe}.god-copy h3{margin:5px 0;font-size:clamp(20px,3vw,27px);line-height:1.15}.god-copy p{margin:5px 0 11px;color:var(--muted);font-size:12px}.god-copy #gameOfDayDescription{max-width:620px;line-height:1.55}.god-copy .btn{margin-top:3px}@media(max-width:600px){.game-of-day{grid-template-columns:100px minmax(0,1fr);gap:12px;padding:11px}.god-art{min-height:115px}.god-art>span{font-size:39px}.god-copy h3{font-size:19px}.god-copy p{font-size:11px}.god-copy .btn{padding:8px 10px;font-size:12px}}
+
+
+/* NEXTPLAY vNext: streak, rare badges, theme shop, weekly challenges, recommendations */
+body[data-accent="ocean"]{--purple:#38bdf8;--violet:#2563eb;--blue:#06b6d4}
+body[data-accent="ember"]{--purple:#fb923c;--violet:#ea580c;--blue:#eab308}
+body[data-accent="mint"]{--purple:#34d399;--violet:#059669;--blue:#14b8a6}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.feature-tile{padding:13px;border:1px solid var(--line);background:var(--panel2);border-radius:14px;min-width:0}.feature-tile strong{display:block;font-size:13px}.feature-tile small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.feature-tile .big{font-size:25px}.streak-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:13px 0}.streak-day{padding:9px 3px;text-align:center;border:1px solid var(--line);background:var(--panel2);border-radius:11px;font-size:10px;color:var(--muted)}.streak-day strong{display:block;font-size:18px;color:var(--text)}.streak-day.done{border-color:#fbbf24aa;background:#f59e0b20;color:var(--gold)}.streak-day.today{outline:2px solid var(--purple);outline-offset:1px}.theme-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.theme-card{padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);min-width:0}.theme-preview{height:44px;border-radius:10px;margin-bottom:10px;background:linear-gradient(120deg,#d946ef,#7c3aed,#4f46e5)}.theme-preview.ocean{background:linear-gradient(120deg,#38bdf8,#2563eb,#06b6d4)}.theme-preview.ember{background:linear-gradient(120deg,#fb923c,#ea580c,#eab308)}.theme-preview.mint{background:linear-gradient(120deg,#34d399,#059669,#14b8a6)}.theme-card strong{display:block;font-size:12px}.theme-card small{display:block;color:var(--muted);font-size:11px;margin:3px 0 9px}.theme-card .btn{width:100%;padding:7px 5px;font-size:11px}.recommend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.recommend-card{display:flex;gap:10px;align-items:center;padding:11px;border:1px solid var(--line);background:var(--panel);border-radius:14px;min-width:0}.recommend-art{width:66px;height:66px;flex:none;display:grid;place-items:center;overflow:hidden;border-radius:11px;background:linear-gradient(135deg,#321454,#171b3b);font-size:27px}.recommend-art img{width:100%;height:100%;object-fit:cover}.recommend-copy{min-width:0;flex:1}.recommend-copy strong{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.recommend-copy small{display:block;color:var(--muted);font-size:10px;margin:3px 0 7px}.challenge-progress{height:7px;background:var(--panel);border-radius:99px;overflow:hidden;margin:8px 0}.challenge-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:99px}.rare-badge{display:flex;align-items:center;gap:9px;padding:11px;border:1px solid #fbbf2438;border-radius:13px;background:linear-gradient(120deg,#f59e0b10,var(--panel));min-width:0}.rare-badge.locked{opacity:.55;filter:grayscale(.8)}.rare-badge .rare-icon{font-size:25px}.rare-badge strong{display:block;font-size:12px}.rare-badge small{display:block;color:var(--muted);font-size:10px}.rare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.section[id="recommendations"]{margin-top:22px}
+@media(max-width:680px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.theme-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.recommend-grid{grid-template-columns:1fr}.streak-day{font-size:9px;padding:7px 1px}.streak-day strong{font-size:16px}.rare-grid{grid-template-columns:1fr}}
+
+
+/* Smart Gaming Dashboard */
+.dashboard-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.dash-tile{padding:15px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,var(--panel2),var(--panel));min-width:0}.dash-tile .dash-icon{font-size:21px}.dash-tile strong{display:block;font-size:24px;line-height:1.25;margin:5px 0;overflow-wrap:anywhere}.dash-tile small{color:var(--muted);font-size:11px}.dashboard-bottom{display:grid;grid-template-columns:1.15fr .85fr;gap:13px;margin-top:13px}.activity-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:end;min-height:140px;margin-top:15px}.activity-day{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;min-width:0;height:130px}.activity-bar-wrap{height:94px;width:100%;display:flex;align-items:flex-end;justify-content:center;border-radius:9px;background:var(--panel2);overflow:hidden}.activity-bar{width:68%;min-height:3px;border-radius:7px 7px 3px 3px;background:linear-gradient(180deg,#d946ef,#7c3aed,#4f46e5);transition:height .3s}.activity-day strong{font-size:11px}.activity-day small{font-size:10px;color:var(--muted)}.dash-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.dash-level{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px;margin-top:12px}.dash-note{font-size:11px;color:var(--muted);margin:12px 0 0}@media(max-width:760px){.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-bottom{grid-template-columns:1fr}.activity-chart{gap:5px}}@media(max-width:380px){.dash-tile{padding:12px}.dash-tile strong{font-size:21px}}
+
+
+/* NEXTPLAY Aura UI polish: richer depth, consistent surfaces, accessible mobile layout */
+:root{--bg:#070610;--panel:#100d1d;--panel2:#19142a;--text:#fbf8ff;--muted:#b5abc9;--purple:#c084fc;--violet:#8b5cf6;--blue:#6366f1;--line:#c4b5fd20;--shadow:0 18px 48px #0007}
+body{background:radial-gradient(ellipse at 12% -8%,#6d28d933,transparent 34%),radial-gradient(ellipse at 94% 12%,#4338ca22,transparent 29%),linear-gradient(180deg,#080611 0%,var(--bg) 58%,#090715 100%);letter-spacing:.005em}
+header{border-bottom-color:#c4b5fd26;box-shadow:0 8px 32px #0002}
+.brand-mark{border-radius:14px;background:linear-gradient(145deg,#f0abfc 0%,#a855f7 40%,#4f46e5 100%);box-shadow:0 0 0 1px #ffffff20 inset,0 0 28px #9333ea66}
+.hero{border-color:#c084fc55;border-radius:30px;background:radial-gradient(ellipse at 83% 5%,#9333ea55,transparent 36%),radial-gradient(ellipse at 72% 100%,#4f46e533,transparent 45%),linear-gradient(130deg,#211133 0%,#111026 52%,#0b0c1b 100%);box-shadow:0 24px 65px #0005,0 0 55px #7c3aed13}
+.hero h1{letter-spacing:-.055em;text-wrap:balance}.hero p{font-size:clamp(14px,1.5vw,16px)}
+.stat,.panel,.game-card,.collection-card,.theme-card,.feature-tile,.dash-tile{box-shadow:0 10px 32px #0002;backdrop-filter:blur(8px)}
+.stat{border-radius:19px;background:linear-gradient(145deg,#171126,var(--panel));border-color:#c4b5fd24}
+.panel{border-radius:21px;border-color:#c4b5fd25;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 96%,#7c3aed 4%),var(--panel))}
+.section-head h2{letter-spacing:-.035em}.eyebrow,.pill{box-shadow:0 0 18px #8b5cf622}
+.btn,.icon-btn,.chip{transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease}
+.btn{border-color:#c4b5fd2b}.btn:hover,.icon-btn:hover{box-shadow:0 8px 22px #7c3aed20}.btn.primary{background:linear-gradient(115deg,#c026d3 0%,#8b5cf6 52%,#4f46e5 100%);box-shadow:0 7px 24px #8b5cf640}.btn.primary:hover{filter:brightness(1.08)}
+.field{border-color:#c4b5fd2b;background:color-mix(in srgb,var(--panel) 92%,#7c3aed 8%)}.field:focus{border-color:var(--purple);box-shadow:0 0 0 3px #a855f722}
+.game-card{border-radius:19px;border-color:#c4b5fd26}.game-thumb{background:radial-gradient(circle at 20% 15%,#c084fc55,transparent 45%),linear-gradient(135deg,#30154d,#11152e)}.game-card:hover{transform:translateY(-5px);border-color:#c084fc88;box-shadow:0 18px 35px #0005,0 0 26px #8b5cf61b}
+.game-of-day{border-radius:23px;border-color:#c084fc66;background:radial-gradient(ellipse at 10% 0%,#a855f733,transparent 44%),linear-gradient(120deg,var(--panel),var(--panel2))}
+nav.bottom{background:color-mix(in srgb,var(--bg) 90%,transparent);border-top-color:#c4b5fd2a;backdrop-filter:blur(20px) saturate(1.3)}nav.bottom a{border-radius:12px;transition:background .18s,color .18s}nav.bottom a:hover,nav.bottom a:focus-visible{background:#a855f71c;color:#e9d5ff}
+body.light{background:radial-gradient(ellipse at 12% -8%,#c4b5fd66,transparent 35%),linear-gradient(180deg,#faf7ff,#f2edff)}body.light .hero{background:radial-gradient(ellipse at 83% 5%,#a78bfa55,transparent 38%),linear-gradient(130deg,#f0e5ff,#e9eaff)}body.light .hero p,body.light .hero-foot{color:#514263}body.light .stat{background:linear-gradient(145deg,#fff,#f7f2ff)}
+.pro-identity-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px;align-items:stretch}
+.gamer-card{position:relative;overflow:hidden;isolation:isolate;min-height:245px;padding:22px;border:1px solid #c4b5fd66;border-radius:24px;background:radial-gradient(ellipse at 90% 0%,#a855f766,transparent 38%),radial-gradient(ellipse at 0% 100%,#4f46e544,transparent 48%),linear-gradient(130deg,#211033,#111128 62%,#0c1020);box-shadow:0 20px 45px #0004}
+.gamer-card:after{content:'NP';position:absolute;right:8px;bottom:-43px;z-index:-1;font-size:150px;font-weight:1000;letter-spacing:-12px;color:#ffffff08;line-height:1}
+.gamer-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.gamer-card-brand{font-size:11px;letter-spacing:2px;font-weight:1000;color:#e9d5ff}.gamer-card-rank{border:1px solid #f0abfc77;background:#a855f72b;border-radius:99px;padding:6px 10px;font-size:10px;font-weight:900;color:#f5d0fe}
+.gamer-card-main{display:flex;align-items:center;gap:15px;margin:25px 0 19px}.gamer-card-avatar{display:grid;place-items:center;width:76px;height:76px;flex:none;border:1px solid #ffffff55;border-radius:22px;background:linear-gradient(145deg,#d946ef,#7c3aed,#4f46e5);font-size:38px;box-shadow:0 8px 26px #0004}.gamer-card-name{font-size:clamp(22px,4vw,32px);font-weight:1000;letter-spacing:-1px;overflow-wrap:anywhere;line-height:1.08}.gamer-card-tagline{margin-top:7px;color:#d8cbe9;font-size:12px;overflow-wrap:anywhere}.gamer-card-id{margin-top:7px;color:#c4b5fd;font-size:10px;letter-spacing:.5px;overflow-wrap:anywhere}
+.gamer-card-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.gamer-card-stat{padding:10px;border:1px solid #ffffff1a;border-radius:12px;background:#ffffff0b}.gamer-card-stat strong{display:block;font-size:18px}.gamer-card-stat small{color:#c7bbdb;font-size:10px}.pro-action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.rank-ladder{display:grid;gap:8px;margin-top:12px}.rank-step{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:13px;background:var(--panel2);opacity:.64}.rank-step.active{opacity:1;border-color:#c084fc88;background:linear-gradient(100deg,#a855f722,var(--panel2));box-shadow:0 0 22px #8b5cf615}.rank-step-icon{font-size:22px}.rank-step-copy{flex:1;min-width:0}.rank-step-copy strong{display:block;font-size:12px}.rank-step-copy small{display:block;color:var(--muted);font-size:10px}.rank-step .rank-state{font-size:10px;color:var(--muted)}.rank-step.active .rank-state{color:#d8b4fe;font-weight:900}.challenge-box{padding:16px;margin-top:14px;border:1px solid #60a5fa35;border-radius:17px;background:linear-gradient(125deg,#2563eb12,#8b5cf612)}.challenge-box h3{margin:0 0 5px;font-size:16px}.challenge-box p{margin:0;color:var(--muted);font-size:12px}
+@media(max-width:760px){.pro-identity-grid{grid-template-columns:1fr}.gamer-card{padding:18px;min-height:230px}.gamer-card-main{margin:20px 0 15px}.gamer-card-avatar{width:66px;height:66px;border-radius:19px;font-size:32px}}
+@media(max-width:420px){header{padding-left:4%;padding-right:4%;gap:6px}.brand{font-size:18px;gap:7px}.brand-mark{width:34px;height:34px}.head-actions{gap:5px}.head-actions .btn,.head-actions .icon-btn{padding:8px 9px;font-size:11px}.hero{border-radius:22px}.gamer-card-stats{gap:5px}.gamer-card-stat{padding:8px}.gamer-card-stat strong{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+
+/* NEXTPLAY GAME-PORTAL TEMPLATE: game-first layout, clear navigation, richer card art */
+header{min-height:66px;gap:18px}
+.top-nav{display:flex;align-items:center;justify-content:center;gap:7px;flex:1;min-width:0}
+.top-nav a{padding:9px 11px;border-radius:11px;text-decoration:none;color:var(--muted);font-size:12px;font-weight:800;white-space:nowrap;transition:background .18s,color .18s}
+.top-nav a:hover,.top-nav a:focus-visible{background:#a855f71c;color:var(--text)}
+.hero{min-height:300px;display:flex;flex-direction:column;justify-content:center}
+.hero h1{max-width:780px;font-size:clamp(38px,6.5vw,72px)}
+.hero-actions .btn{min-height:44px;padding-inline:17px}
+#games{margin-top:27px}
+#games>.section-head{align-items:end}
+#games .section-head h2{font-size:clamp(23px,3vw,30px)}
+#games .searchbar{padding:8px;border:1px solid #c4b5fd20;border-radius:16px;background:linear-gradient(110deg,#171126cc,#0d0b19cc);box-shadow:0 10px 30px #0002}
+#games .searchbar .field{border:0;background:transparent;min-height:42px}
+#games .searchbar .btn{min-width:92px}
+#categories{padding:6px 0 13px;scrollbar-width:none}
+#categories::-webkit-scrollbar{display:none}
+#categories .chip{padding:9px 14px;background:#100d1d;border-color:#c4b5fd24;color:#bdb2d1;font-weight:750}
+#categories .chip.active{background:linear-gradient(110deg,#a21caf,#7c3aed);border-color:#c084fc;color:#fff;box-shadow:0 5px 20px #8b5cf633}
+.game-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.game-card{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(155deg,#171126,#0f0c19);border-color:#c4b5fd24}
+.game-thumb{height:auto;aspect-ratio:1.38/1;min-height:115px;background:radial-gradient(circle at 24% 20%,#d946ef5c,transparent 45%),radial-gradient(circle at 82% 90%,#4f46e55c,transparent 44%),linear-gradient(135deg,#271341,#111326)}
+.game-thumb:after{content:"";position:absolute;inset:45% 0 0;z-index:1;background:linear-gradient(transparent,#08061170);pointer-events:none}
+.game-thumb img{transition:transform .35s ease;z-index:0}
+.game-card:hover .game-thumb img{transform:scale(1.06)}
+.game-tag{z-index:2;left:8px;top:8px;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#080611d9;border-color:#ffffff30}
+.game-info{padding:12px}
+.game-title{font-size:13px;min-height:20px}
+.game-meta{min-height:17px}
+.game-actions .btn{min-height:35px}
+.game-card:hover{transform:translateY(-4px);border-color:#c084fc8a;box-shadow:0 16px 35px #0005,0 0 24px #8b5cf61b}
+.game-of-day{grid-template-columns:minmax(150px,240px) minmax(0,1fr);padding:17px;border-radius:22px}
+.god-art{min-height:160px}
+#dashboard{margin-top:37px}
+nav.bottom{justify-content:flex-start;overflow-x:auto;overflow-y:hidden;gap:5px;padding-left:12px;padding-right:12px;scrollbar-width:none}
+nav.bottom::-webkit-scrollbar{display:none}
+nav.bottom a{flex:0 0 auto;min-width:62px;padding:7px 9px}
+footer{margin-top:36px}
+@media(min-width:1450px){main{width:min(1320px,92%)}.game-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:1120px){.game-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.top-nav{gap:1px}.top-nav a{padding:8px}}
+@media(max-width:820px){header{gap:8px}.top-nav{display:none}.hero{min-height:280px}.game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){#authOpenBtn{font-size:10px;padding:7px 8px}.head-actions{gap:5px}.hero{min-height:265px;margin-top:14px}.hero h1{font-size:clamp(34px,10vw,48px);letter-spacing:-.06em}.hero p{font-size:13px;line-height:1.7}.hero-foot{gap:8px 12px;font-size:10px}.game-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.game-thumb{aspect-ratio:1.2/1;min-height:110px}.game-info{padding:9px}.game-title{font-size:12px}.game-meta{font-size:10px;margin-bottom:9px}.game-actions{gap:5px}.game-actions .btn{font-size:11px;padding:7px 5px}.game-actions .icon-btn{padding:6px 8px}.game-of-day{grid-template-columns:94px minmax(0,1fr);padding:10px}.god-art{min-height:105px}.god-copy h3{font-size:17px}#games .searchbar{padding:5px}#games .searchbar .btn{min-width:70px;padding-inline:10px}}
+@media(max-width:360px){.game-grid{gap:8px}.game-thumb{min-height:98px}.game-info{padding:8px}.game-actions .btn{font-size:10px}.hero-actions .btn{padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){.game-thumb img{transition:none}}
+
+
+/* NEXTPLAY Discovery Lab feature pack */
+#nextplay-new-features .feature-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+#nextplay-new-features .feature-tile{display:flex;flex-direction:column;align-items:stretch}
+#nextplay-new-features .feature-tile small{min-height:34px}
+#nextplay-new-features .feature-tile .btn{margin-top:auto}
+#nextplay-new-features .empty{font-size:12px}
+.feature-game-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.feature-game-row:last-child{border-bottom:0}
+.feature-game-art{width:48px;height:48px;flex:none;border-radius:10px;object-fit:cover;background:var(--panel2);display:grid;place-items:center;font-size:22px;overflow:hidden}
+.feature-game-art img{width:100%;height:100%;object-fit:cover}
+.feature-game-copy{flex:1;min-width:0}.feature-game-copy strong{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.feature-game-copy small{display:block;color:var(--muted);font-size:10px}
+.feature-game-row .btn{padding:7px 9px;font-size:11px}
+.battle-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.battle-option{padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);color:var(--text);min-width:0}
+.battle-option img{width:100%;height:90px;object-fit:cover;border-radius:9px;margin-bottom:8px}
+.battle-option strong{display:block;font-size:12px;margin-bottom:8px}
+.review-item{padding:11px 0;border-bottom:1px solid var(--line)}.review-item:last-child{border-bottom:0}.review-item strong{font-size:13px}.review-item p{font-size:12px;margin:5px 0;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:1000px){#nextplay-new-features .feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){#nextplay-new-features .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.battle-options{grid-template-columns:1fr 1fr}.battle-option{padding:8px}.battle-option img{height:70px}}
+
+</style>
+<style id="nextplay-more-button-visibility-fix">
+/* Keep the More/three-dot control visible above the bottom navigation on small phones. */
+#bottomMoreBtn{
+  position:fixed!important;right:12px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;
+  z-index:90!important;flex:none!important;width:58px!important;height:50px!important;min-height:50px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;
+  gap:1px!important;border:1px solid #d8b4fe!important;border-radius:15px!important;
+  background:linear-gradient(135deg,#a855f7,#4f46e5)!important;color:#fff!important;
+  box-shadow:0 5px 24px #7c3aed77!important;padding:4px!important;
+}
+#bottomMoreBtn span{font-size:23px!important;line-height:20px!important;letter-spacing:2px!important;font-weight:1000!important}
+#bottomMoreBtn small{font-size:10px!important;line-height:13px!important;color:#fff!important}
+#bottomMoreBtn:focus-visible{outline:3px solid #fde68a!important;outline-offset:3px!important}
+#bottomMoreMenu{z-index:95!important;bottom:calc(72px + env(safe-area-inset-bottom))!important}
+#bottomMenuBackdrop{z-index:94!important}
+@media(min-width:761px){#bottomMoreBtn{right:max(18px,calc((100vw - 1180px)/2))!important;bottom:18px!important}}
+</style>
+<style id="nextplay-nova-theme">
+/* NEXTPLAY NOVA: custom Arctic Pulse palette — deep navy, electric cyan and mint. */
+:root{color-scheme:dark;--bg:#06111c;--panel:#0c1c2b;--panel2:#12283a;--text:#effaff;--muted:#9db7c9;--purple:#48dfff;--violet:#16b8d4;--blue:#627dff;--line:#8cecff22;--green:#75f0bd;--gold:#ffd36b;--shadow:0 18px 48px #0008}
+body{background:radial-gradient(ellipse at 12% -8%,#0ea5e933,transparent 36%),radial-gradient(ellipse at 92% 10%,#14b8a622,transparent 28%),linear-gradient(180deg,#06111c 0%,#071522 55%,#08101d 100%)}
+body.light{--bg:#f1fbff;--panel:#fff;--panel2:#e3f5fb;--text:#102536;--muted:#557386;--line:#0d53651c;--purple:#087f9b;--violet:#0891b2;--blue:#4f63dc;--shadow:0 12px 35px #164e6315;background:radial-gradient(ellipse at 10% 0%,#67e8f955,transparent 36%),linear-gradient(180deg,#f6fdff,#edf9ff)}
+.brand{letter-spacing:-.8px}.brand-mark{width:42px;height:42px;border-radius:14px;color:#e9fdff;background:linear-gradient(145deg,#0e7490,#06b6d4 52%,#6366f1);box-shadow:0 0 0 1px #a5f3fc55 inset,0 0 28px #06b6d455}.brand-mark svg{width:30px;height:30px;filter:drop-shadow(0 2px 5px #00101866)}
+.brand span:last-child{color:#effaff}.brand span:last-child span{color:#48dfff}
+.btn.primary{background:linear-gradient(115deg,#0891b2,#06b6d4 52%,#6366f1);box-shadow:0 7px 24px #0891b244}.btn:hover,.icon-btn:hover{border-color:#48dfff88}
+.hero{border-color:#48dfff44;background:radial-gradient(ellipse at 83% 5%,#0891b255,transparent 37%),radial-gradient(ellipse at 72% 100%,#6366f133,transparent 45%),linear-gradient(130deg,#0d2638 0%,#0a1929 52%,#07111e 100%);box-shadow:0 24px 65px #0006,0 0 55px #0891b212}.hero:after{content:'✦';color:#67e8f9;text-shadow:0 0 35px #22d3ee}.gradient-text{background:linear-gradient(95deg,#ecfeff,#67e8f9 45%,#a5b4fc);background-clip:text;color:transparent}.eyebrow{border-color:#67e8f955;background:#0891b222;color:#cffafe}
+.stat{background:linear-gradient(145deg,#10283a,var(--panel));border-color:#67e8f922}.panel{background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 94%,#0891b2 6%),var(--panel));border-color:#67e8f922}.game-card{border-color:#67e8f922}.game-card:hover{border-color:#48dfff88;box-shadow:0 18px 35px #0005,0 0 26px #06b6d41b}.game-thumb{background:radial-gradient(circle at 20% 15%,#22d3ee44,transparent 45%),linear-gradient(135deg,#10384a,#101a35)}
+.chip.active{background:linear-gradient(120deg,#0891b2,#4f63dc);border-color:#67e8f9;color:#fff}.progress>div{background:linear-gradient(90deg,#22d3ee,#06b6d4,#818cf8)}.wheel{background:conic-gradient(#22d3ee,#6366f1,#75f0bd,#0891b2,#22d3ee);border-color:#cffafe88;box-shadow:0 0 30px #06b6d455}.avatar,.gamer-card-avatar{background:linear-gradient(145deg,#06b6d4,#0891b2,#6366f1);box-shadow:0 0 25px #06b6d433}.badge{border-color:#48dfff44;background:#06b6d411}.toast{border-color:#67e8f988;background:#0c2637}
+nav.bottom{border-top-color:#67e8f92a}nav.bottom a:hover,nav.bottom a:focus-visible{background:#06b6d41b;color:#cffafe}#bottomMoreBtn{border-color:#a5f3fc!important;background:linear-gradient(135deg,#0891b2,#4f46e5)!important;box-shadow:0 5px 24px #0891b277!important}
+#bottomMoreMenu{border-color:#48dfff55!important;background:linear-gradient(145deg,#0c1c2b,#0d2032)!important}
+.gamer-card{border-color:#67e8f955;background:radial-gradient(ellipse at 90% 0%,#06b6d455,transparent 38%),radial-gradient(ellipse at 0% 100%,#6366f133,transparent 48%),linear-gradient(130deg,#103044,#10192c 62%,#0b1321)}.gamer-card-brand{color:#cffafe}.gamer-card-rank{border-color:#67e8f977;background:#06b6d422;color:#cffafe}.rank-step.active{border-color:#48dfff88;background:linear-gradient(100deg,#06b6d422,var(--panel2))}.rank-step.active .rank-state{color:#a5f3fc}
+.splash-logo{background:linear-gradient(145deg,#0891b2,#06b6d4 52%,#6366f1)!important;color:#e9fdff!important;box-shadow:0 0 35px #06b6d455!important}.splash-logo svg{width:44px;height:44px}
+@media(max-width:620px){.brand-mark{width:35px;height:35px}.brand-mark svg{width:26px;height:26px}}
+
+/* NEXTPLAY Premium Drawer */
+.np-menu-btn {
+  position: fixed;
+  top: 16px;
+  left: 14px;
+  z-index: 10020;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(180, 100, 255, .55);
+  border-radius: 14px;
+  background: #171126;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(151, 71, 255, .22);
+}
+
+.np-drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(300px, 84vw);
+  padding: 22px 16px;
+  box-sizing: border-box;
+  background: linear-gradient(165deg, #19112d, #090711 75%);
+  border-right: 1px solid rgba(179, 92, 255, .35);
+  z-index: 10030;
+  transform: translateX(-105%);
+  transition: transform .28s ease;
+  visibility: hidden;
+  overflow-y: auto;
+  color: #fff;
+}
+
+.np-drawer.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.np-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10025;
+  background: rgba(0, 0, 0, .68);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease;
+}
+
+.np-drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.np-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 36px 0 30px;
+}
+
+.np-brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #c18aff;
+}
+
+.np-close-btn {
+  background: #2a1c40;
+  color: white;
+  border: 1px solid #604080;
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.np-menu-label {
+  color: #a69ab9;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 0 0 12px 8px;
+}
+
+.np-drawer-link,
+.np-ai-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 12px;
+  padding: 15px 13px;
+  margin: 7px 0;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: transparent;
+  color: #eee5ff;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.np-drawer-link:hover,
+.np-ai-link:hover {
+  background: rgba(179, 92, 255, .14);
+  border-color: rgba(179, 92, 255, .35);
+}
+
+.np-ai-link {
+  background: linear-gradient(100deg, #7136b9, #4930a0);
+  color: #fff;
+  font-weight: 700;
+}
+
+.np-drawer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, .12);
+  margin: 22px 0;
+}
+
+.np-drawer-footer {
+  margin-top: 35px;
+  color: #9282aa;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+body.np-drawer-open {
+  overflow: hidden;
+}
+
+/* Keep page content below the fixed menu button */
+header {
+  padding-left: 58px;
+}
+
+@media (max-width: 600px) {
+  .np-menu-btn {
+    top: 12px;
+    left: 10px;
+    width: 42px;
+    height: 42px;
+  }
+
+  header {
+    padding-left: 48px;
+  }
+  }
+</style>
+</head>
+<body>
+<!-- NEXTPLAY Hamburger Menu -->
+<button id="npMenuBtn" class="np-menu-btn"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+  ☰
+</button>
+
+<div id="npDrawerBackdrop" class="np-drawer-backdrop"></div>
+
+<aside id="npDrawer" class="np-drawer" aria-label="Main navigation">
+  <div class="np-drawer-header">
+    <div class="np-brand">⚡ NEXTPLAY</div>
+    <button id="npDrawerClose" class="np-close-btn"
+            aria-label="Close navigation">✕</button>
+  </div>
+
+  <p class="np-menu-label">MAIN MENU</p>
+
+  <a href="#home" class="np-drawer-link">🏠 Home</a>
+  <a href="#games" class="np-drawer-link">🎮 Games</a>
+  <a href="#rewards" class="np-drawer-link">🎁 Rewards</a>
+  <a href="#tasks" class="np-drawer-link">🎯 Tasks</a>
+  <a href="#profile" class="np-drawer-link">👤 Profile</a>
+
+  <div class="np-drawer-divider"></div>
+
+  <button id="npAskAI" class="np-ai-link">
+    ✨ Ask Nextplay AI
+  </button>
+
+  <p class="np-drawer-footer">PLAY • EXPLORE • LEVEL UP</p>
+</aside>
+  
+<div id="appSplash" role="status" aria-live="polite" aria-label="Loading NEXTPLAY">
+  <div class="splash-inner">
+    <div class="splash-logo" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3 43 14v20L24 45 5 34V14Z" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15 16h8l-5 16h-5l5-16Zm12 0h7l-5 16h-7l5-16Z" fill="currentColor"/><path d="M8 24h7M33 24h7" stroke="#a7f3d0" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+    <div class="splash-title">NEXT<em>PLAY</em></div>
+    <div class="splash-tagline">Play · Discover · Repeat</div>
+    <div class="splash-track" aria-hidden="true"><span></span></div>
+    <div class="splash-loading">Loading your gaming universe…</div>
+  </div>
+</div>
+
+<header><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" role="img" aria-label=""><path d="M24 3 43 14v20L24 45 5 34V14Z" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15 16h8l-5 16h-5l5-16Zm12 0h7l-5 16h-7l5-16Z" fill="currentColor"/><path d="M8 24h7M33 24h7" stroke="#a7f3d0" stroke-width="2.2" stroke-linecap="round"/></svg></span><span>NEXT<span>PLAY</span><small style="font-size:10px;letter-spacing:1px;vertical-align:top"> NOVA</small></span></a><nav class="top-nav" aria-label="Quick navigation"><a href="#games">Discover</a><a href="#collections">Collections</a><a href="#rewards">Rewards</a><a href="#nextplay-new-features">Discovery Lab</a><a href="#profile">Player ID</a></nav><div class="head-actions"><button class="btn install-btn" id="installAppBtn" type="button">📲 Install App</button><button class="btn small" id="authOpenBtn" type="button">🔐 Login / Sign up</button><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button><button class="btn primary" id="headerPlayer">🪪 Create Player ID</button></div></header>
+<main>
+<section class="hero" id="home"><span class="eyebrow">⚡ ULTIMATE AURA GAMING</span><h1>FIND YOUR NEXT<br><span class="gradient-text">FAVORITE GAME.</span></h1><p>Jump into browser games, explore new genres, save your favorites and build your NEXTPLAY profile — all in one fast gaming hub.</p><div class="hero-actions"><button class="btn primary" onclick="goTo('games')">🚀 Explore Games</button><button class="btn" onclick="goTo('profile')">🪪 Create Player ID</button></div><div class="hero-foot"><span>⚡ Instant browser play</span><span>🎯 New games to discover</span><span>📱 Built for mobile</span></div></section>
+<div class="stats"><div class="stat"><div class="stat-icon">🎮</div><strong id="statGames">—</strong><small>Games loaded</small></div><div class="stat"><div class="stat-icon">⭐</div><strong id="statXP">0</strong><small>Total XP</small></div><div class="stat"><div class="stat-icon">🏆</div><strong id="statLevel">1</strong><small>Player level</small></div><div class="stat"><div class="stat-icon">🪙</div><strong id="statCoins">100</strong><small>Coins saved locally</small></div></div>
+<section class="section" id="games"><div class="section-head"><div><h2>🎮 Game Explorer</h2><div class="section-sub">🔎 Search, discover and play</div></div><button class="btn small" id="refreshBtn">🔄 Refresh</button></div><div class="searchbar"><input class="field" id="search" type="search" placeholder="🔍 Search games, genres..." aria-label="Search games"><button class="btn primary" id="searchBtn">Search</button></div><div style="display:flex;gap:8px;align-items:center;margin:-2px 0 10px"><label for="gameSort" class="field-label" style="margin:0;white-space:nowrap">↕️ Sort games</label><select class="field" id="gameSort" style="max-width:230px;padding:9px 11px"><option value="default">Recommended</option><option value="az">Name: A–Z</option><option value="recent">Recently played</option><option value="favorites">Favorites first</option></select></div><div class="chips" id="categories"><button class="chip active" data-cat="All">🎮 All Games</button><button class="chip" data-cat="Trending">🔥 Trending</button><button class="chip" data-cat="Action">⚔️ Action</button><button class="chip" data-cat="Puzzle">🧩 Puzzle</button><button class="chip" data-cat="Racing">🏎️ Racing</button><button class="chip" data-cat="Sports">⚽ Sports</button><button class="chip" data-cat="Arcade">🕹️ Arcade</button><button class="chip" data-cat="Adventure">🗺️ Adventure</button><button class="chip" data-cat="Favorites">❤️ Favorites</button><button class="chip" data-cat="Recent">🕘 Recently Played</button></div><div class="feed-status" id="feedStatus" role="status">🌐 Connecting to GamePix feed...</div><article class="game-of-day" id="gameOfDay" hidden aria-label="Game of the Day"><div class="god-art"><span id="gameOfDayPlaceholder">🎯</span><img id="gameOfDayImage" alt="" loading="lazy" hidden></div><div class="god-copy"><span class="god-kicker">✨ DAILY SPOTLIGHT</span><h3 id="gameOfDayTitle">Game of the Day</h3><p id="gameOfDayMeta">Hand-picked for today</p><p id="gameOfDayDescription">Discover today’s featured game.</p><button class="btn primary" id="gameOfDayPlay" type="button">▶ Play today’s pick</button></div></article><section class="section" id="recommendations" style="margin-top:12px"><div class="section-head"><div><h2>🧠 Smart Picks For You</h2><div class="section-sub">Recommendations adapt to your favorites and recently played games</div></div><button class="btn small" id="refreshRecommendations" type="button">🔄 Refresh picks</button></div><div class="recommend-grid" id="recommendGrid"><div class="empty">Load some games to personalize your picks.</div></div></section><div class="game-grid" id="gameGrid"><div class="empty">⏳ Loading the game universe...</div></div><div id="loadSentinel" aria-hidden="true" style="height:2px;margin-top:18px"></div><div class="section-sub" id="autoLoadHint" style="text-align:center;margin:14px 0 24px">♾️ Infinite scroll is on · Keep scrolling and games will load automatically</div></section>
+<section class="section" id="dashboard"><div class="section-head"><div><h2>🧠 Smart Gaming Dashboard</h2><div class="section-sub">Your personal gaming snapshot · updates as you play</div></div><span class="eyebrow">PLAYER ANALYTICS</span></div><div class="dashboard-grid"><div class="dash-tile"><span class="dash-icon">🎮</span><strong id="dashGames">0</strong><small>Total game opens</small></div><div class="dash-tile"><span class="dash-icon">⭐</span><strong id="dashXP">0</strong><small>Total XP earned</small></div><div class="dash-tile"><span class="dash-icon">❤️</span><strong id="dashFavorites">0</strong><small>Favorite games</small></div><div class="dash-tile"><span class="dash-icon">🔥</span><strong id="dashStreak">0 days</strong><small>Login streak</small></div></div><div class="dashboard-bottom"><div class="panel"><div class="section-head" style="margin-bottom:0"><div><h3 style="margin:0">📊 Your 7-day activity</h3><div class="section-sub">Game opens recorded on this device</div></div><span class="pill" id="dashWeekTotal">0 plays</span></div><div class="activity-chart" id="activityChart" aria-label="Game opens over the last seven days"></div><p class="dash-note">Activity is saved locally in this browser. Old activity starts from the day this dashboard is added.</p></div><div class="panel"><h3 style="margin:0">🚀 Level progress</h3><div class="dash-level"><strong id="dashLevelName">Level 1 Gamer</strong><span id="dashLevelXP">0 / 100 XP</span></div><div class="progress"><div id="dashLevelProgress"></div></div><div class="reward-grid" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-top:14px"><div class="reward-tile"><div class="big">🏅</div><strong id="dashBadges">0 unlocked</strong><small>Achievements</small></div><div class="reward-tile"><div class="big">📅</div><strong id="dashWeeklyXP">0 XP</strong><small>This week</small></div></div><div class="dash-actions"><button class="btn primary" type="button" onclick="goTo('recommendations')">🧠 Smart picks</button><button class="btn" type="button" onclick="goTo('achievements')">🏅 View badges</button><button class="btn" type="button" onclick="goTo('rewards')">🎁 Daily rewards</button></div></div></div></section>
+<section class="section" id="collections"><div class="section-head"><div><h2>🗂️ My Game Collections</h2><div class="section-sub">Keep favorites and recently played games one tap away</div></div></div><div class="collection-grid"><button class="collection-card" type="button" onclick="openCollection('Favorites')"><span class="collection-icon">❤️</span><strong>Favorite Games</strong><small><span id="collectionFavCount">0</span> saved games · open collection →</small></button><button class="collection-card" type="button" onclick="openCollection('Recent')"><span class="collection-icon">🕘</span><strong>Recently Played</strong><small><span id="collectionRecentCount">0</span> games · jump back in →</small></button><button class="collection-card" type="button" onclick="openCollection('All')"><span class="collection-icon">🧭</span><strong>Explore All</strong><small>Discover more games →</small></button></div></section>
+<section class="section" id="rewards"><div class="section-head"><div><h2>🎁 Rewards Center</h2><div class="section-sub">✨ Daily bonuses and lucky prizes</div></div><span class="eyebrow">LOCAL REWARDS</span></div><div class="two-col"><div class="panel"><h3 style="margin:0 0 5px">🌞 Daily Login Bonus</h3><p class="muted">Claim once each day on this browser.</p><div class="reward-grid"><div class="reward-tile"><div class="big">⭐</div><strong>+50 XP</strong><small>Daily XP</small></div><div class="reward-tile"><div class="big">🪙</div><strong>+25 Coins</strong><small>Bonus coins</small></div><div class="reward-tile"><div class="big">🔥</div><strong id="streakText">0-day streak</strong><small>Daily login streak</small></div></div><button class="btn primary" id="dailyBtn" style="width:100%;margin-top:14px">🎁 Claim Daily Reward</button><div class="streak-days" id="streakCalendar" aria-label="Seven day login streak rewards"></div><p class="muted" style="font-size:11px;margin:0">🔥 Keep your streak going. Milestone rewards increase up to day 7; streak progress is saved in this browser.</p></div><div class="panel" style="text-align:center"><h3 style="margin:0">🌌 Cosmic Lucky Spin</h3><p class="muted">One free spin every day · collect XP and coins</p><div class="wheel-wrap cosmic-wheel-wrap"><div class="wheel cosmic-wheel" id="wheel" aria-label="Cosmic reward wheel">✦</div><span class="wheel-pointer" aria-hidden="true">▼</span></div><div class="spin-chip-row"><span>⭐ XP BOOST</span><span>🪙 COIN DROP</span><span>🌌 JACKPOT</span></div><button class="btn primary" id="spinBtn">✨ SPIN FOR REWARDS</button><div class="muted spin-result" id="spinResult" aria-live="polite" style="margin-top:9px">✨ Your next reward awaits!</div><details style="text-align:left;margin-top:12px"><summary style="cursor:pointer;color:var(--muted);font-size:12px">🎁 View possible prizes</summary><div class="badge-grid" style="margin-top:10px"><span class="badge">⭐ +10 XP</span><span class="badge">✨ +25 XP</span><span class="badge">💎 +50 XP</span><span class="badge">🚀 +75 XP</span><span class="badge">👑 +100 XP</span><span class="badge">🌌 +200 XP Jackpot</span><span class="badge">🪙 +10 Coins</span><span class="badge">💰 +25 Coins</span><span class="badge">💰 +50 Coins</span><span class="badge">🎁 +100 Coins</span><span class="badge">🌟 +40 XP + 20 Coins</span><span class="badge">🎊 +60 XP + 30 Coins</span></div></details></div></div></section>
+<section class="section" id="coinshop"><div class="section-head"><div><h2>🛍️ Aura Coin Shop</h2><div class="section-sub">🪙 Spend your saved coins on XP boosts</div></div><span class="eyebrow">LOCAL REWARDS</span></div><div class="panel"><div class="reward-grid"><div class="reward-tile"><div class="big">⭐</div><strong>XP Boost +25</strong><small>Cost: 40 coins</small><button class="btn small primary" style="margin-top:9px;width:100%" onclick="buyBoost(40,25)">Buy</button></div><div class="reward-tile"><div class="big">💎</div><strong>XP Boost +60</strong><small>Cost: 85 coins</small><button class="btn small primary" style="margin-top:9px;width:100%" onclick="buyBoost(85,60)">Buy</button></div><div class="reward-tile"><div class="big">🚀</div><strong>XP Boost +120</strong><small>Cost: 160 coins</small><button class="btn small primary" style="margin-top:9px;width:100%" onclick="buyBoost(160,120)">Buy</button></div></div><p class="muted" style="margin-bottom:0">💾 XP and coins are stored in this browser and are not real money.</p></div></section>
+<section class="section" id="themeshop"><div class="section-head"><div><h2>🎨 Aura Theme Shop</h2><div class="section-sub">Unlock accent themes with local NEXTPLAY coins</div></div><span class="pill">🪙 <span id="themeCoinBalance">100</span> coins</span></div><div class="panel"><div class="theme-cards" id="themeShopCards"></div><p class="muted" style="font-size:11px;margin:12px 0 0">Themes only change the interface accent colors. Purchases are saved on this device and do not use real money.</p></div></section>
+<section class="section" id="missions"><div class="section-head"><div><h2>🎯 Missions & Quests</h2><div class="section-sub">🚀 Five rotating daily quests · claim XP + coins · resets each day</div></div><span class="pill" id="missionCount">0 / 5 today</span></div><div class="panel" id="missionList"></div></section>
+<section class="section" id="weeklychallenges"><div class="section-head"><div><h2>📅 Weekly Challenges</h2><div class="section-sub">Three goals reset every week · earn bonus XP and coins</div></div><span class="pill" id="challengeWeek">THIS WEEK</span></div><div class="panel" id="weeklyChallengeList"></div></section>
+<section class="section" id="achievements"><div class="section-head"><div><h2>🏅 Achievement Vault</h2><div class="section-sub">💎 Your milestones, your glory</div></div></div><div class="panel"><div class="badge-grid" id="achievementList"></div></div></section>
+<section class="section" id="rarebadges"><div class="section-head"><div><h2>💎 Rare Badge Collection</h2><div class="section-sub">Unlock special profile badges as you explore NEXTPLAY</div></div><span class="pill" id="rareBadgeCount">0 / 5 unlocked</span></div><div class="panel"><div class="rare-grid" id="rareBadgeGrid"></div></div></section>
+<section class="section" id="weekly"><div class="section-head"><div><h2>🏆 Weekly Leaderboard</h2><div class="section-sub">Your weekly progress, saved on this device</div></div><span class="pill" id="weeklyPeriod">THIS WEEK</span></div><div class="panel"><div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0"><div class="stat"><strong id="weeklyXP">0</strong><small>⭐ XP this week</small></div><div class="stat"><strong id="weeklyGames">0</strong><small>🎮 Games opened</small></div><div class="stat"><strong id="weeklyFavs">0</strong><small>❤️ Favorites added</small></div></div><div class="table-wrap"><table class="weekly-board"><thead><tr><th>Rank</th><th>Player</th><th>Weekly XP</th><th>Games</th></tr></thead><tbody id="weeklyBoardBody"><tr><td>#1</td><td>Guest Gamer</td><td>0</td><td>0</td></tr></tbody></table></div><p class="muted" style="margin:12px 0 0;font-size:12px">📌 Local leaderboard: only this browser’s player is shown. A shared worldwide leaderboard requires an online database/backend.</p></div></section>
+<section class="section" id="profile"><div class="section-head"><div><h2>🪪 Player ID & Profile</h2><div class="section-sub">👾 Create your local gamer identity</div></div><span class="pill" id="accountStatusPill">GUEST MODE</span></div><div class="panel" style="margin-bottom:14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><div><strong id="authStatusTitle">🔐 Cloud account not connected</strong><div class="section-sub" id="authStatusText">Sign in with email and password to sync your profile.</div></div><div class="actions"><button class="btn small" id="profileAuthBtn" type="button">Login / Sign up</button><button class="btn small" id="authLogoutBtn" type="button" hidden>Logout</button></div></div></div><div class="two-col"><div class="panel"><div class="profile-top"><div class="avatar" id="avatarPreview">🎮</div><div style="min-width:0"><div class="profile-name" id="profileName">Guest Gamer</div><div class="tagline-preview" id="profileTaglinePreview">Ready to play ✨</div><div class="player-id" id="playerIdText">🪪 Player ID: Not created</div><div class="muted" id="profileLevel">🌟 Level 1 Gamer</div></div></div><div class="profile-fields"><label><span class="field-label">✍️ Gamer Name</span><input class="field" id="playerName" maxlength="22" placeholder="Enter your name"></label><label><span class="field-label">🪪 Player ID</span><input class="field" id="playerIdInput" maxlength="20" placeholder="Auto-generated or custom"></label><label><span class="field-label">✨ Gamer Tagline</span><input class="field" id="playerTagline" maxlength="60" placeholder="e.g. Play smart. Level up."></label></div><div style="margin-top:13px"><span class="field-label">🎭 Choose your avatar</span><div class="avatar-options" id="avatarOptions"><button class="avatar-choice active" data-avatar="🎮">🎮</button><button class="avatar-choice" data-avatar="👾">👾</button><button class="avatar-choice" data-avatar="🥷">🥷</button><button class="avatar-choice" data-avatar="🦊">🦊</button><button class="avatar-choice" data-avatar="🐉">🐉</button><button class="avatar-choice" data-avatar="🤖">🤖</button><button class="avatar-choice" data-avatar="👑">👑</button><button class="avatar-choice" data-avatar="🚀">🚀</button></div></div><div class="actions" style="margin-top:15px"><button class="btn primary" id="saveProfile">💾 Save Player ID</button><button class="btn" id="copyPlayer">📋 Copy ID</button></div><p class="muted">💡 Your profile is stored in this browser. It is not an online account.</p></div><div class="panel"><h3 style="margin:0">📈 Your Progress</h3><div style="display:flex;justify-content:space-between;gap:8px;margin-top:20px"><strong>⭐ XP Progress</strong><span class="muted" id="xpProgressText">0 / 100 XP</span></div><div class="progress"><div id="xpProgress"></div></div><div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="stat"><strong id="playedStat">0</strong><small>🎮 Game opens</small></div><div class="stat"><strong id="favStat">0</strong><small>❤️ Favorites</small></div><div class="stat"><strong id="sessionStat">0m</strong><small>⏱️ This visit</small></div><div class="stat"><strong id="badgeStat">0</strong><small>🏅 Badges</small></div></div><button class="btn" id="exportBtn">📥 Export Progress</button></div></div></section>
+<section class="section" id="proprofile"><div class="section-head"><div><h2>🪪 Pro Gamer Identity</h2><div class="section-sub">Three upgrades: shareable gamer card, rank titles and friend challenges</div></div><span class="eyebrow">PLAYER LEGACY</span></div><div class="pro-identity-grid"><div><article class="gamer-card" id="gamerCard"><div class="gamer-card-head"><span class="gamer-card-brand">✦ NEXTPLAY / PRO</span><span class="gamer-card-rank" id="proCardRank">🎮 ROOKIE</span></div><div class="gamer-card-main"><div class="gamer-card-avatar" id="proCardAvatar">🎮</div><div><div class="gamer-card-name" id="proCardName">Guest Gamer</div><div class="gamer-card-tagline" id="proCardTagline">Ready to play ✨</div><div class="gamer-card-id" id="proCardId">PLAYER ID · NOT CREATED</div></div></div><div class="gamer-card-stats"><div class="gamer-card-stat"><strong id="proCardLevel">1</strong><small>LEVEL</small></div><div class="gamer-card-stat"><strong id="proCardXP">0</strong><small>TOTAL XP</small></div><div class="gamer-card-stat"><strong id="proCardBadges">0</strong><small>BADGES</small></div></div></article><div class="pro-action-row"><button class="btn primary" id="shareGamerCard" type="button">📣 Share Gamer Card</button><button class="btn" id="downloadGamerCard" type="button">⬇️ Save Card SVG</button></div><p class="dash-note">Your card is generated from this browser's saved profile. Sharing sends your display stats, not account credentials.</p></div><div class="panel"><h3 style="margin:0">🏅 Rank & Title Progression</h3><p class="muted" style="font-size:12px;margin:5px 0 0">Earn XP to unlock your next title.</p><div class="dash-level"><strong id="rankCurrentTitle">🎮 Rookie</strong><span id="rankProgressText">0 / 100 XP</span></div><div class="progress"><div id="rankProgress"></div></div><div class="rank-ladder" id="rankLadder"></div><div class="challenge-box"><h3>⚔️ Challenge a Friend</h3><p>Create a share message with your current level and invite a friend to explore NEXTPLAY.</p><button class="btn primary" id="challengeFriend" type="button" style="width:100%;margin-top:12px">🚀 Create Challenge Invite</button></div></div></div></section>
+<section class="section" id="community"><div class="section-head"><div><h2>💬 Gaming Community</h2><div class="section-sub">Share your score and leave messages on this device</div></div><span class="pill">LOCAL CHAT</span></div><div class="community-layout"><div class="panel chat-panel"><div class="chat-head"><strong>💬 Community Messages</strong><span class="community-status"><span class="local-dot"></span>Saved here</span></div><div class="chat-feed" id="communityChatFeed" aria-live="polite"></div><form class="chat-compose" id="communityChatForm"><input class="field" id="communityChatInput" maxlength="240" placeholder="Say something or share your score…" aria-label="Community message" required><button class="btn primary" type="submit">Send</button></form><div class="chat-hint">Messages are saved only in this browser. They are not sent to other players.</div></div><div class="panel"><h3 style="margin:0 0 8px">🏆 Your Local Scoreboard</h3><div class="profile-top"><div class="avatar" id="communityAvatar">🎮</div><div><div class="profile-name" id="communityName">Guest Gamer</div><div class="player-id" id="communityPlayerId">Player ID not created</div></div></div><div class="reward-grid" style="margin-top:16px"><div class="reward-tile"><strong id="communityXP">0 XP</strong><small>Your XP</small></div><div class="reward-tile"><strong id="communityLevel">Level 1</strong><small>Your level</small></div><div class="reward-tile"><strong id="communityGames">0</strong><small>Games opened</small></div></div><button class="btn primary" id="shareScoreBtn" style="width:100%;margin-top:12px">📣 Share My Score</button><p class="muted" style="margin:10px 0 0">This is your local profile, not a worldwide ranking.</p><button class="btn small" id="clearChatBtn" style="margin-top:12px">Clear local chat</button></div></div></section>
+<section class="section" id="settings"><div class="section-head"><div><h2>⚙️ Aura Settings</h2><div class="section-sub">🎨 Make the arena yours</div></div></div><div class="panel"><div class="setting-row"><div>📲 <strong>Install NEXTPLAY App</strong><small>Add NEXTPLAY to your home screen for an app-like experience</small></div><button class="btn primary" id="installSettingsBtn" type="button">Install App</button></div><div class="setting-row"><div>🌗 <strong>Theme</strong><small>Switch dark and light appearance</small></div><button class="btn" id="themeSetting">Toggle Theme</button></div><div class="setting-row"><div>🔊 <strong>Sound Effects</strong><small>Optional sound for button actions</small></div><label><input class="switch" type="checkbox" id="soundToggle"> <span id="soundLabel">Off</span></label></div><div class="setting-row"><div>🧹 <strong>Reset Local Progress</strong><small>Remove this browser's saved player data</small></div><button class="btn" id="resetBtn">Reset</button></div></div></section>
+</main>
+<section class="section" id="nextplay-new-features">
+  <div class="section-head"><div><h2>✨ NEXTPLAY Discovery Lab</h2><div class="section-sub">Mystery picks, game battles, playlists, reviews and community fun</div></div><span class="eyebrow">NEW FEATURES</span></div>
+  <div class="feature-grid">
+    <article class="feature-tile"><div class="big">🎁</div><strong>Mystery Game Box</strong><small id="mysteryCopy">A surprise game awaits.</small><button class="btn primary small" style="margin-top:10px;width:100%" id="mysteryBtn">Open Mystery Box</button></article>
+    <article class="feature-tile"><div class="big">⚔️</div><strong>Game Battle Arena</strong><small>Pick the game you would rather play.</small><button class="btn small" style="margin-top:10px;width:100%" id="battleBtn">Start a Battle</button></article>
+    <article class="feature-tile"><div class="big">🎡</div><strong>Daily Spin</strong><small id="newSpinCopy">Extra fun, no real-money prizes.</small><button class="btn small" style="margin-top:10px;width:100%" id="newSpinBtn">Spin for a badge</button></article>
+    <article class="feature-tile"><div class="big">🗂️</div><strong>My Game Playlist</strong><small id="playlistCount">Build a custom game list.</small><button class="btn small" style="margin-top:10px;width:100%" id="playlistBtn">Manage Playlist</button></article>
+    <article class="feature-tile"><div class="big">⭐</div><strong>Game Reviews</strong><small>Save your personal review for a game.</small><button class="btn small" style="margin-top:10px;width:100%" id="reviewBtn">Write a Review</button></article>
+    <article class="feature-tile"><div class="big">🎲</div><strong>I'm Feeling Lucky</strong><small>Choose a random game from the feed.</small><button class="btn primary small" style="margin-top:10px;width:100%" id="luckyBtn">Surprise Me</button></article>
+    <article class="feature-tile"><div class="big">🕵️</div><strong>Secret Easter Egg</strong><small id="eggCopy">A secret is hidden somewhere here…</small><button class="btn small" style="margin-top:10px;width:100%" id="eggBtn">Find Secret</button></article>
+    <article class="feature-tile"><div class="big">📈</div><strong>Gaming Stats</strong><small id="newStatsCopy">Your local activity snapshot.</small><button class="btn small" style="margin-top:10px;width:100%" id="statsBtn">View My Stats</button></article>
+    <article class="feature-tile"><div class="big">⏳</div><strong>Limited-Time Event</strong><small id="eventCopy">Weekly discovery event.</small><button class="btn small" style="margin-top:10px;width:100%" id="eventBtn">Join Event</button></article>
+    <article class="feature-tile"><div class="big">🗳️</div><strong>Community Voting</strong><small>Vote for the next featured genre.</small><div id="communityPoll" style="display:grid;gap:6px;margin-top:10px"></div></article>
+  </div>
+  <div class="two-col" style="margin-top:14px">
+    <div class="panel"><div class="section-head"><div><h3 style="margin:0">⚔️ Game Battle</h3><div class="section-sub">Votes are saved on this device only.</div></div></div><div id="battleArea" class="empty">Tap “Start a Battle” to compare two games.</div></div>
+    <div class="panel"><div class="section-head"><div><h3 style="margin:0">🗂️ Playlist</h3><div class="section-sub">Your custom NEXTPLAY queue</div></div></div><div id="playlistArea" class="empty">Your playlist is empty. Add games by title.</div></div>
+  </div>
+  <div class="panel" style="margin-top:14px"><div class="section-head"><div><h3 style="margin:0">📝 My Reviews</h3><div class="section-sub">Personal reviews stored in this browser, not public reviews.</div></div></div><div id="reviewArea" class="empty">No reviews yet. Write your first review.</div></div>
+</section>
+
+<footer>💜 NEXTPLAY PRO · 🎮 Play responsibly · 💾 Progress stays in this browser.<br>Game titles, artwork and trademarks belong to their respective owners.</footer>
+<nav class="bottom" aria-label="Quick navigation">
+  <a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#rewards"><span>🎁</span>Rewards</a>
+  <button class="bottom-more" id="bottomMoreBtn" type="button" aria-label="Open all navigation options" aria-expanded="false" aria-controls="bottomMoreMenu"><span>•••</span><small>More</small></button>
+</nav>
+<div class="bottom-menu-backdrop" id="bottomMenuBackdrop" hidden></div>
+<section class="bottom-more-menu" id="bottomMoreMenu" aria-label="All NEXTPLAY options" hidden>
+  <div class="bottom-menu-head"><div><strong>🎮 NEXTPLAY</strong><small>Quick navigation</small></div><button type="button" id="bottomMoreClose" aria-label="Close menu">×</button></div>
+  <div class="bottom-menu-grid">
+    <a href="#home"><span>🏠</span>Home</a><a href="#games"><span>🎮</span>Games</a><a href="#dashboard"><span>📊</span>Stats</a><a href="#collections"><span>🗂️</span>Collections</a>
+    <a href="#rewards"><span>🎁</span>Rewards & Spin</a><a href="#coinshop"><span>🛍️</span>Coin Shop</a><a href="#missions"><span>🎯</span>Quests</a><a href="#nextplay-new-features"><span>✨</span>Discovery Lab</a>
+    <a href="#weekly"><span>🏆</span>Weekly Board</a><a href="#proprofile"><span>🪪</span>Pro Card</a><a href="#community"><span>💬</span>Community</a><a href="#profile"><span>👤</span>Player ID</a>
+  </div>
+  <p class="bottom-menu-note">Your progress is saved on this device.</p>
+</section><div class="toast" id="toast" role="status" aria-live="polite"></div><div class="achievement-pop" id="achievementPop" role="status" aria-live="polite"><strong id="achievementPopTitle">🏆 Achievement unlocked!</strong><span id="achievementPopText"></span></div>
+<dialog class="modal" id="authDialog" style="max-width:460px;width:min(460px,94vw);padding:22px"><div class="modal-head"><div><div class="modal-title">🔐 NEXTPLAY Account</div><div class="muted">Email and password only · No Google login</div></div><button class="btn small" id="authCloseBtn" type="button">✕ Close</button></div><form id="authForm" style="display:grid;gap:12px;margin-top:15px"><label><span class="field-label">Email address</span><input class="field" id="authEmail" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label><label><span class="field-label">Password</span><input class="field" id="authPassword" type="password" autocomplete="current-password" required minlength="6" maxlength="128" placeholder="At least 6 characters"></label><div class="actions" style="flex-wrap:wrap"><button class="btn primary" id="authLoginBtn" type="submit">Login</button><button class="btn" id="authSignupBtn" type="button">Create account</button></div><p class="muted" id="authMessage" role="status" aria-live="polite">Create an account, then confirm your email if Supabase requires it.</p></form></dialog>
+<dialog class="modal" id="gameDialog"><div class="modal-head"><div><div class="modal-title" id="dialogTitle">🎮 Game Arena</div><div class="muted" id="dialogCategory"></div></div><div class="actions"><button class="btn small" id="fullscreenBtn">⛶ Fullscreen</button><button class="btn small" id="closeGame">✕ Close</button></div></div><div class="play-reward-banner" id="playRewardBanner">🪙 Score-based rewards: <strong>1 score = 1 NEXTPLAY coin</strong> when a game reports its score</div><div class="play-reward-status" id="playRewardStatus" aria-live="polite">🎯 Waiting for a supported game score event…</div><div class="dialog-rating" id="dialogRating"><strong>Rate this game:</strong><span id="dialogRatingStars" class="rating-stars"></span><span class="rating-note" id="dialogRatingNote">Your rating is saved in this browser</span></div><div class="arena-layout"><div class="arena-game"><iframe class="game-frame" id="gameFrame" title="Selected game" allow="fullscreen; autoplay; gamepad" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="frame-note" id="frameMessage">🎮 The game is embedded inside NEXTPLAY PRO.</div></div><aside class="arena-chat"><div class="chat-head"><strong>💬 Game Chat</strong><span class="community-status"><span class="local-dot"></span>Local</span></div><div class="chat-feed" id="arenaChatFeed" aria-live="polite"></div><form class="chat-compose" id="arenaChatForm"><input class="field" id="arenaChatInput" maxlength="240" placeholder="Message or score…" aria-label="Game chat message" required><button class="btn primary" type="submit">Send</button></form><button class="btn small chat-score-btn" id="arenaShareScore">📣 Share my score</button><div class="chat-hint">Local chat only · not visible to other devices</div></aside></div></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+'use strict';
+// Direct GamePix feed: no Vercel api/games.js proxy required.
+const WORKER_FEED = '';
+const GAMEPIX_SID = 'MX192';
+const PAGE_SIZE = 96;
+const STORE_KEY = 'nextplay_pro_ultimate_v1';
+const $ = id => document.getElementById(id);
+const initialState = () => ({name:'',playerId:'',avatar:'🎮',tagline:'Ready to play ✨',xp:0,coins:100,favorites:[],recent:[],gameOpens:0,dailyClaim:'',lastDailyDate:'',dailyStreak:0,spinDays:[],claimedMissions:[],dailyMissionDate:'',dailyMissionClaims:[],dailyGamesOpened:0,dailyFavorites:0,dailyRatings:0,claimedAchievements:[],theme:'dark',sound:false,sessionStart:Date.now(),totalMinutes:0,chatMessages:[],playRewardDay:'',playRewardCount:0,playRewardSeconds:0,weekKey:'',weekStartXP:0,weekStartGames:0,weekStartFavorites:0,ownedThemes:['aura'],activeAccent:'aura',weeklyChallengeKey:'',weeklyChallengeClaims:[],rareBadgesSeen:[],activityByDay:{}});
+let state = loadState(), games = [], page = 1, lastPage = Infinity, loading = false, category = 'All', toastTimer, audioCtx = null, selectedGame = null, sessionSeconds = 0, currentSessionScore = 0, currentSessionRewarded = 0;
+function loadState(){try{const v=JSON.parse(localStorage.getItem(STORE_KEY));const s=v&&typeof v==='object'?{...initialState(),...v}:initialState();if(s.dailyMissionDate!==dayKey()){s.dailyMissionDate=dayKey();s.dailyMissionClaims=[];s.dailyGamesOpened=0;s.dailyFavorites=0;s.dailyRatings=0;}if(!s.activityByDay||typeof s.activityByDay!=='object'||Array.isArray(s.activityByDay))s.activityByDay={};return s}catch{return initialState()}}
+function saveState(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state))}catch{showToast('⚠️ Browser storage unavailable. Progress may not persist.')}}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600)}
+function goTo(id){$(id)?.scrollIntoView({behavior:'smooth',block:'start'})}
+function dayKey(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function level(){return Math.floor(state.xp/100)+1} function levelXP(){return state.xp%100}
+function makeId(name){const slug=(name||'GAMER').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,7)||'GAMER';return 'NP-'+slug+'-'+Math.random().toString(36).slice(2,6).toUpperCase()}
+function getWeekKey(date=new Date()){const d=new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));const day=d.getUTCDay()||7;d.setUTCDate(d.getUTCDate()+4-day);const yearStart=new Date(Date.UTC(d.getUTCFullYear(),0,1));const week=Math.ceil((((d-yearStart)/86400000)+1)/7);return `${d.getUTCFullYear()}-W${String(week).padStart(2,'0')}`}
+function ensureWeeklyStats(){const key=getWeekKey();if(state.weekKey!==key){state.weekKey=key;state.weekStartXP=state.xp||0;state.weekStartGames=state.gameOpens||0;state.weekStartFavorites=state.favorites?.length||0;saveState()}}
+function renderWeeklyBoard(){ensureWeeklyStats();const wx=Math.max(0,(state.xp||0)-(state.weekStartXP||0));const wg=Math.max(0,(state.gameOpens||0)-(state.weekStartGames||0));const wf=Math.max(0,(state.favorites?.length||0)-(state.weekStartFavorites||0));$('weeklyXP').textContent=wx;$('weeklyGames').textContent=wg;$('weeklyFavs').textContent=wf;$('weeklyPeriod').textContent=state.weekKey||getWeekKey();$('weeklyBoardBody').innerHTML=`<tr><td class="rank">#1</td><td><div class="weekly-player"><span class="weekly-avatar">${esc(state.avatar||'🎮')}</span><span><strong>${esc(state.name||'Guest Gamer')}</strong><small style="display:block;color:var(--muted)">${esc(state.playerId||'Local player')}</small></span></div></td><td><strong>${wx} XP</strong></td><td>${wg}</td></tr>`}
+function openCollection(which){category=which;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.cat===which));$('search').value='';renderGames();goTo('games');showToast(which==='Favorites'?'❤️ Your favorite games':which==='Recent'?'🕘 Your recently played games':'🧭 All games')}
+function notifyAchievement(a){const pop=$('achievementPop');if(!pop)return;$('achievementPopTitle').textContent=`🏆 Achievement unlocked: ${a.icon} ${a.name}`;$('achievementPopText').textContent='Your gaming legacy just got stronger!';pop.classList.add('show');clearTimeout(window.__npAchievementTimer);window.__npAchievementTimer=setTimeout(()=>pop.classList.remove('show'),3600);showToast(`🏆 Unlocked: ${a.name}`);}
+let achievementBaselineReady=false;
+function renderSmartDashboard(){const put=(id,v)=>{const el=$(id);if(el)el.textContent=v};put('dashGames',state.gameOpens||0);put('dashXP',state.xp||0);put('dashFavorites',(state.favorites||[]).length);put('dashStreak',`${state.dailyStreak||0} day${state.dailyStreak===1?'':'s'}`);put('dashLevelName',`Level ${level()} Gamer`);put('dashLevelXP',`${levelXP()} / 100 XP`);const bar=$('dashLevelProgress');if(bar)bar.style.width=levelXP()+'%';put('dashBadges',`${achievements.filter(a=>a.check()).length} unlocked`);const weekly=Math.max(0,(state.xp||0)-(state.weekStartXP||0));put('dashWeeklyXP',`${weekly} XP`);const chart=$('activityChart');if(!chart)return;const days=[];for(let i=6;i>=0;i--){const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-i);const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;days.push({key,label:d.toLocaleDateString(undefined,{weekday:'short'}),value:Number((state.activityByDay||{})[key]||0)});}const max=Math.max(1,...days.map(d=>d.value));chart.innerHTML=days.map(d=>`<div class="activity-day" title="${d.key}: ${d.value} game opens"><div class="activity-bar-wrap"><div class="activity-bar" style="height:${Math.max(3,Math.round(d.value/max*100))}%"></div></div><strong>${d.value}</strong><small>${d.label}</small></div>`).join('');put('dashWeekTotal',`${days.reduce((n,d)=>n+d.value,0)} plays`)}
+const gamerRanks=[{min:0,name:'Rookie',icon:'🎮'},{min:100,name:'Player',icon:'🕹️'},{min:300,name:'Challenger',icon:'⚔️'},{min:600,name:'Elite',icon:'💠'},{min:1000,name:'Legend',icon:'👑'},{min:2000,name:'Mythic',icon:'🌌'}];
+function currentGamerRank(){let rank=gamerRanks[0];for(const r of gamerRanks){if((state.xp||0)>=r.min)rank=r;else break}return rank}
+function renderProIdentity(){const put=(id,value)=>{const el=$(id);if(el)el.textContent=value};const rank=currentGamerRank(),idx=gamerRanks.findIndex(r=>r.name===rank.name),next=gamerRanks[idx+1];const xp=Math.max(0,Number(state.xp)||0),progress=next?Math.max(0,Math.min(100,Math.round((xp-rank.min)/(next.min-rank.min)*100))):100;put('proCardAvatar',state.avatar||'🎮');put('proCardName',state.name||'Guest Gamer');put('proCardTagline',state.tagline||'Ready to play ✨');put('proCardId',`PLAYER ID · ${state.playerId||'NOT CREATED'}`);put('proCardRank',`${rank.icon} ${rank.name.toUpperCase()}`);put('proCardLevel',level());put('proCardXP',xp.toLocaleString());put('proCardBadges',achievements.filter(a=>a.check()).length);put('rankCurrentTitle',`${rank.icon} ${rank.name} Gamer`);put('rankProgressText',next?`${xp-rank.min} / ${next.min-rank.min} XP to ${next.name}`:'MAX TITLE · MYTHIC');const bar=$('rankProgress');if(bar)bar.style.width=progress+'%';const ladder=$('rankLadder');if(ladder)ladder.innerHTML=gamerRanks.map((r,i)=>{const unlocked=xp>=r.min,active=r.name===rank.name;return `<div class="rank-step ${active?'active':''}"><span class="rank-step-icon">${r.icon}</span><span class="rank-step-copy"><strong>${esc(r.name)} Gamer</strong><small>${r.min.toLocaleString()} XP required</small></span><span class="rank-state">${active?'CURRENT':unlocked?'✓ UNLOCKED':'🔒 LOCKED'}</span></div>`}).join('')}
+function profileShareText(){const r=currentGamerRank();return `🎮 NEXTPLAY PRO GAMER CARD\n${state.avatar||'🎮'} ${state.name||'Guest Gamer'}\n${r.icon} Rank: ${r.name} · Level ${level()}\n⭐ ${state.xp||0} XP · 🏅 ${achievements.filter(a=>a.check()).length} badges · 🎮 ${state.gameOpens||0} games opened\n🪪 ${state.playerId||'Create your Player ID'}\n${state.tagline||'Ready to play ✨'}\nPlay with me: ${location.href.split('#')[0]}`}
+async function shareGamerCard(){const text=profileShareText();try{if(navigator.share){await navigator.share({title:'My NEXTPLAY Gamer Card',text});showToast('📣 Gamer card shared!')}else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);showToast('📋 Gamer card copied. Paste it anywhere!')}else{window.prompt('Copy your NEXTPLAY Gamer Card:',text)}}catch(err){if(err?.name!=='AbortError')showToast('Could not open sharing. Try Save Card SVG.')}}
+function downloadGamerCard(){const rank=currentGamerRank(),name=esc(state.name||'Guest Gamer'),tagline=esc(state.tagline||'Ready to play'),id=esc(state.playerId||'NOT CREATED'),avatar=esc(state.avatar||'🎮'),xp=Number(state.xp)||0,badges=achievements.filter(a=>a.check()).length;const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#26103f"/><stop offset=".58" stop-color="#11112d"/><stop offset="1" stop-color="#090b1a"/></linearGradient><linearGradient id="accent"><stop stop-color="#d946ef"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs><rect width="1200" height="630" rx="38" fill="url(#bg)"/><circle cx="1030" cy="90" r="230" fill="#a855f7" opacity=".13"/><circle cx="60" cy="610" r="270" fill="#4f46e5" opacity=".15"/><text x="70" y="78" font-family="Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="6" fill="#e9d5ff">✦ NEXTPLAY / PRO</text><rect x="850" y="43" width="280" height="54" rx="27" fill="#a855f733" stroke="#e879f9" stroke-opacity=".7"/><text x="990" y="77" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#f5d0fe">${rank.icon} ${rank.name.toUpperCase()}</text><rect x="70" y="145" width="150" height="150" rx="34" fill="url(#accent)"/><text x="145" y="245" text-anchor="middle" font-family="Arial,sans-serif" font-size="82" fill="#fff">${avatar}</text><text x="260" y="205" font-family="Arial,sans-serif" font-size="54" font-weight="900" fill="#fff">${name}</text><text x="260" y="252" font-family="Arial,sans-serif" font-size="24" fill="#d8cbe9">${tagline}</text><text x="260" y="290" font-family="Arial,sans-serif" font-size="18" letter-spacing="2" fill="#c4b5fd">PLAYER ID · ${id}</text><g font-family="Arial,sans-serif"><rect x="70" y="365" width="320" height="125" rx="22" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".15"/><rect x="440" y="365" width="320" height="125" rx="22" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".15"/><rect x="810" y="365" width="320" height="125" rx="22" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".15"/><text x="105" y="420" font-size="42" font-weight="900" fill="#fff">${level()}</text><text x="105" y="457" font-size="20" fill="#c7bbdb">PLAYER LEVEL</text><text x="475" y="420" font-size="42" font-weight="900" fill="#fff">${xp.toLocaleString()}</text><text x="475" y="457" font-size="20" fill="#c7bbdb">TOTAL XP</text><text x="845" y="420" font-size="42" font-weight="900" fill="#fff">${badges}</text><text x="845" y="457" font-size="20" fill="#c7bbdb">BADGES</text></g><text x="70" y="565" font-family="Arial,sans-serif" font-size="21" fill="#d8b4fe">PLAY · DISCOVER · REPEAT</text><text x="1130" y="565" text-anchor="end" font-family="Arial,sans-serif" font-size="17" fill="#a89cbd">Progress saved on this device</text></svg>`;const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`NEXTPLAY-${(state.name||'gamer').replace(/[^a-z0-9_-]/gi,'-')}-card.svg`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);showToast('⬇️ Gamer card saved as SVG!')}
+async function challengeFriend(){const r=currentGamerRank();const text=`⚔️ NEXTPLAY FRIEND CHALLENGE ⚔️\nI’m ${state.name||'Guest Gamer'} (${r.name}, Level ${level()}) with ${state.xp||0} XP. Can you beat my progress?\nCreate your own gamer profile and start playing: ${location.href.split('#')[0]}\nMy Player ID: ${state.playerId||'Not created yet'}`;try{if(navigator.share){await navigator.share({title:'NEXTPLAY Friend Challenge',text});showToast('🚀 Challenge invite shared!')}else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);showToast('📋 Challenge invite copied! Send it to a friend.')}else{window.prompt('Copy this challenge invite:',text)}}catch(err){if(err?.name!=='AbortError')showToast('Could not share invite. Try again.')}}
+function updateUI(){const lv=level();$('statGames').textContent=games.length||'—';$('statXP').textContent=state.xp;$('statLevel').textContent=lv;$('statCoins').textContent=state.coins;$('headerPlayer').textContent=state.playerId?'🪪 '+state.playerId:'🪪 Create Player ID';$('profileName').textContent=state.name||'Guest Gamer';$('profileTaglinePreview').textContent=state.tagline||'Ready to play ✨';if($('playerTagline'))$('playerTagline').value=state.tagline||'';$('playerIdText').textContent='🪪 Player ID: '+(state.playerId||'Not created');$('profileLevel').textContent='🌟 Level '+lv+' Gamer';$('avatarPreview').textContent=state.avatar;$('playerName').value=state.name;$('playerIdInput').value=state.playerId;$('xpProgressText').textContent=levelXP()+' / 100 XP';$('xpProgress').style.width=levelXP()+'%';$('playedStat').textContent=state.gameOpens;$('favStat').textContent=state.favorites.length;$('badgeStat').textContent=achievements.filter(a=>a.check()).length;$('streakText').textContent=(state.dailyStreak||0)+'-day streak';$('dailyBtn').disabled=state.dailyClaim===dayKey();$('dailyBtn').textContent=state.dailyClaim===dayKey()?'✅ Daily Reward Claimed':'🎁 Claim Daily Reward';$('spinBtn').disabled=state.spinDays.includes(dayKey());$('spinBtn').textContent=state.spinDays.includes(dayKey())?'✅ Spin Used Today':'🎰 Spin the Wheel';$('themeBtn').textContent=state.theme==='dark'?'☀️':'🌙';$('soundToggle').checked=state.sound;$('soundLabel').textContent=state.sound?'On':'Off';document.body.classList.toggle('light',state.theme==='light');renderMissions();renderAchievements();renderWeeklyBoard();renderStreakCalendar();renderWeeklyChallenges();renderRareBadges();renderThemeShop();renderRecommendations();renderSmartDashboard();renderProIdentity();document.body.dataset.accent=state.activeAccent||'aura';$('themeCoinBalance').textContent=state.coins;$('collectionFavCount').textContent=state.favorites.length;$('collectionRecentCount').textContent=state.recent.length;renderChat()}
+function addXP(n){state.xp+=n;saveState();updateUI()}function playSound(){if(!state.sound)return;try{audioCtx ||= new(window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.frequency.value=650;g.gain.value=.035;o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.08)}catch{}}
+function normalizeGame(raw,i){const cat=raw.category||raw.genre||raw.categories?.[0]||'Arcade';const image=raw.image||raw.thumbnailUrl||raw.thumbnailUrl100||raw.thumbnail_url||raw.thumbnail||raw.cover||raw.image_url||raw.imageUrl||raw.thumb||'';const url=raw.embedUrl||raw.embed_url||raw.embedURL||raw.gameUrl||raw.game_url||raw.play_url||raw.url||raw.embed||'';return{id:String(raw.id||raw.gid||raw.slug||raw.namespace||raw.title||raw.name||i),title:String(raw.title||raw.name||raw.game_name||raw.gameName||'Untitled Game'),category:String(Array.isArray(cat)?cat[0]:cat),image:String(image),url:String(url),description:String(raw.description||raw.desc_en||raw.desc||'')}}
+function getItems(j){if(Array.isArray(j))return j;for(const k of ['items','games','results','data','response','payload']){const v=j?.[k];if(Array.isArray(v))return v;if(v&&typeof v==='object'){for(const n of ['items','games','results'])if(Array.isArray(v[n]))return v[n]}}return[]}
+function getLast(j){const raw=j?.last_page??j?.lastPage??j?.pagination?.last_page??j?.meta?.last_page??j?.pagination?.lastPage;const n=Number(raw);return Number.isFinite(n)&&n>0?n:Infinity}
+function normCat(s){s=String(s).toLowerCase();if(/race|driv|car/.test(s))return'Racing';if(/sport|football|soccer|basketball/.test(s))return'Sports';if(/puzz|match|brain|logic/.test(s))return'Puzzle';if(/action|fight|shoot|war|zombie/.test(s))return'Action';if(/adventure|quest|explor/.test(s))return'Adventure';return'Arcade'}
+function renderGameOfDay(){const card=$('gameOfDay');if(!card)return;if(!games.length){card.hidden=true;return;}const day=Math.floor(Date.now()/86400000);const g=games[((day%games.length)+games.length)%games.length];card.hidden=false;card.dataset.gameId=g.id;$('gameOfDayTitle').textContent=g.title;$('gameOfDayMeta').textContent=`${g.category||'Arcade'} · Today’s spotlight`;const desc=String(g.description||'A fresh pick from the NEXTPLAY game universe.');$('gameOfDayDescription').textContent=desc.length>180?desc.slice(0,177)+'…':desc;const img=$('gameOfDayImage'),placeholder=$('gameOfDayPlaceholder');if(g.image&&/^https?:\/\//i.test(g.image)){img.src=g.image;img.alt=g.title;img.hidden=false;placeholder.hidden=true;img.onerror=()=>{img.hidden=true;placeholder.hidden=false;};}else{img.removeAttribute('src');img.hidden=true;placeholder.hidden=false;}$('gameOfDayPlay').onclick=()=>playGame(encodeURIComponent(card.dataset.gameId));}
+async function loadGames(reset=false){
+ if(loading)return;
+ if(reset){page=1;lastPage=Infinity;games=[];$('gameGrid').innerHTML='<div class="empty">✨ Refreshing the game universe...</div>';$('autoLoadHint').textContent='♾️ Infinite scroll is on · Loading games automatically';}
+ loading=true;
+ $('feedStatus').textContent=games.length?`🌐 Loading more GamePix games… (${games.length} already loaded)`:'🌐 Loading games from GamePix...';
+ const requestedPage=page;
+ try{
+  const endpoint=WORKER_FEED?WORKER_FEED+page:`https://feeds.gamepix.com/v2/json?sid=${encodeURIComponent(GAMEPIX_SID)}&pagination=${PAGE_SIZE}&page=${page}`;
+  const res=await fetch(endpoint,{headers:{Accept:'application/json'}});
+  if(!res.ok)throw Error('Feed HTTP '+res.status);
+  const json=await res.json(),items=getItems(json),reportedLast=getLast(json);
+  if(Number.isFinite(reportedLast))lastPage=reportedLast;
+  if(!items.length){
+   if(!games.length)throw Error('No game items found in response');
+   lastPage=Math.min(lastPage,requestedPage-1);
+   $('feedStatus').textContent=`✨ ${games.length} games loaded · End of available GamePix feed`;
+   renderGameOfDay();
+   $('autoLoadHint').textContent='✅ All games available in the feed have been loaded';
+   renderGames();updateUI();return;
+  }
+  const known=new Set(games.map(g=>g.id));
+  items.map(normalizeGame).forEach(g=>{if(!known.has(g.id)){games.push(g);known.add(g.id)}});
+  if(items.length<PAGE_SIZE)lastPage=Math.min(lastPage,requestedPage);
+  page=requestedPage+1;
+  const moreAvailable=page<=lastPage;
+  $('feedStatus').textContent=`✨ ${games.length} games loaded`+(moreAvailable?' · More games load as you scroll':' · End of available feed');
+  $('autoLoadHint').textContent=moreAvailable?'♾️ Infinite scroll is on · Scroll down to automatically load more':'✅ All games available in the feed have been loaded';
+  renderGameOfDay();renderGames();updateUI();
+ }catch(e){
+  console.error('Game feed error:',e);
+  $('feedStatus').textContent='⚠️ Live feed could not load. Check connection, feed access or Worker configuration.';
+  $('autoLoadHint').textContent='Tap Refresh to retry. If games still do not load, the GamePix feed may be blocked by browser CORS or temporarily unavailable.';
+  if(!games.length)$('gameGrid').innerHTML='<div class="empty">🪐 The game feed could not be loaded.<br><br><button class="btn primary" onclick="loadGames(true)">🔄 Try Again</button><p class="muted">NEXTPLAY is using the GamePix JSON feed directly without a Vercel proxy. If the browser blocks direct access, a proxy or CORS-enabled feed will be needed.</p></div>';
+ }finally{loading=false;}
+}
+function getGame(id){return games.find(g=>g.id===id)}function isFav(id){return state.favorites.includes(id)}
+const RATINGS_KEY='nextplay_pro_game_ratings_v1';
+function getRatings(){try{const v=JSON.parse(localStorage.getItem(RATINGS_KEY)||'{}');return v&&typeof v==='object'?v:{}}catch{return{}}}
+function getRating(id){return Number(getRatings()[id]||0)}
+function ratingStars(id,context='card'){const value=getRating(id),enc=encodeURIComponent(id);return `<span class="rating-stars" role="group" aria-label="Rate this game from 1 to 5 stars">${[1,2,3,4,5].map(n=>`<button class="rating-star ${n<=value?'on':''}" type="button" aria-label="Rate ${n} out of 5" title="${n} star${n===1?'':'s'}" onclick="rateGame('${enc}',${n},'${context}')">★</button>`).join('')}</span>`}
+function rateGame(encoded,value,context='card'){const id=decodeURIComponent(encoded);if(!getGame(id))return;ensureDailyMissions();state.dailyRatings=(state.dailyRatings||0)+1;const ratings=getRatings();ratings[id]=Math.max(1,Math.min(5,Number(value)||1));saveState();try{localStorage.setItem(RATINGS_KEY,JSON.stringify(ratings))}catch{showToast('⚠️ Browser storage is unavailable; rating may not save.')}renderGames();updateUI();if(selectedGame&&selectedGame.id===id)renderDialogRating();showToast(`⭐ You rated ${getGame(id).title}: ${ratings[id]}/5`);playSound()}
+function renderDialogRating(){if(!selectedGame)return;$('dialogRatingStars').innerHTML=ratingStars(selectedGame.id,'dialog');const v=getRating(selectedGame.id);$('dialogRatingNote').textContent=v?`Your rating: ${v}/5 · saved on this device`:'Your rating is saved in this browser';}
+function renderGames(){if(typeof npRenderFeatures==='function')npRenderFeatures();const q=$('search').value.trim().toLowerCase();let list=games.filter(g=>g.title.toLowerCase().includes(q)||g.category.toLowerCase().includes(q)||g.description.toLowerCase().includes(q));if(category==='Favorites')list=list.filter(g=>isFav(g.id));else if(category==='Recent')list=state.recent.map(getGame).filter(Boolean).filter(g=>g.title.toLowerCase().includes(q));else if(category==='Trending')list=list.slice().sort((a,b)=>(state.recent.includes(b.id)?1:0)-(state.recent.includes(a.id)?1:0));else if(category!=='All')list=list.filter(g=>normCat(g.category)===category);const sort=$('gameSort')?.value||'default';if(sort==='az')list=list.slice().sort((a,b)=>a.title.localeCompare(b.title));else if(sort==='recent')list=list.slice().sort((a,b)=>state.recent.indexOf(a.id)-state.recent.indexOf(b.id));else if(sort==='favorites')list=list.slice().sort((a,b)=>(isFav(b.id)?1:0)-(isFav(a.id)?1:0));if(!list.length){$('gameGrid').innerHTML='<div class="empty">🔎 No games found. Try another search or category!</div>';return}$('gameGrid').innerHTML=list.map(g=>`<article class="game-card"><div class="game-thumb"><span class="placeholder-icon">🎮</span>${g.image?`<img src="${esc(g.image)}" alt="${esc(g.title)}" loading="lazy" onerror="this.remove()">`:''}<span class="game-tag">✨ ${esc(g.category)}</span></div><div class="game-info"><div class="game-title" title="${esc(g.title)}">${esc(g.title)}</div><div class="game-meta">🕹️ Browser game · ${state.recent.includes(g.id)?'🕘 Recently played':'⚡ Ready to explore'}</div><div class="game-rating">${ratingStars(g.id)}<span class="rating-note">${getRating(g.id)?`Your rating: ${getRating(g.id)}/5`:'Rate this game'}</span></div><div class="game-actions"><button class="btn primary" onclick="playGame('${encodeURIComponent(g.id)}')">▶️ Play</button><button class="icon-btn" aria-label="Toggle favorite" onclick="toggleFavorite('${encodeURIComponent(g.id)}')">${isFav(g.id)?'❤️':'🤍'}</button></div></div></article>`).join('')}
+function toggleFavorite(encoded){const id=decodeURIComponent(encoded),wasFav=isFav(id);state.favorites=wasFav?state.favorites.filter(x=>x!==id):[id,...state.favorites];if(!wasFav){ensureDailyMissions();state.dailyFavorites=(state.dailyFavorites||0)+1;}saveState();renderGames();updateUI();showToast(isFav(id)?'❤️ Added to favorites!':'💔 Removed from favorites');playSound()}
+function playGame(encoded){const id=decodeURIComponent(encoded),g=getGame(id);if(!g)return;ensureDailyMissions();state.dailyGamesOpened=(state.dailyGamesOpened||0)+1;selectedGame=g;currentSessionScore=0;currentSessionRewarded=0;state.recent=[id,...state.recent.filter(x=>x!==id)].slice(0,40);state.gameOpens++;if(!state.activityByDay||typeof state.activityByDay!=='object')state.activityByDay={};const activityDay=dayKey();state.activityByDay[activityDay]=(Number(state.activityByDay[activityDay])||0)+1;const activityKeys=Object.keys(state.activityByDay).sort();while(activityKeys.length>30){delete state.activityByDay[activityKeys.shift()]}saveState();$('dialogTitle').textContent='🎮 '+g.title;$('dialogCategory').textContent='✨ '+g.category;renderDialogRating();renderPlayRewardStatus();const frame=$('gameFrame');frame.src='about:blank';if(g.url&&/^https?:\/\//i.test(g.url)){$('frameMessage').textContent='🎮 Loading game. Score coins work only if this game sends a supported score message to the parent page.';frame.src=g.url}else{$('frameMessage').textContent='⚠️ No playable URL was provided for this item in the feed.'}if(!$('gameDialog').open)$('gameDialog').showModal();renderGames();updateUI();renderChat();playSound()}
+$('closeGame').addEventListener('click',closeGame);function closeGame(){saveState();if($('gameDialog').open)$('gameDialog').close();$('gameFrame').src='about:blank';$('gameDialog').classList.remove('fullscreen-modal');$('fullscreenBtn').textContent='⛶ Fullscreen'}$('gameDialog').addEventListener('close',()=>{saveState();$('gameFrame').src='about:blank';$('gameDialog').classList.remove('fullscreen-modal')});$('fullscreenBtn').addEventListener('click',async()=>{const d=$('gameDialog'),f=$('gameFrame');try{if(document.fullscreenElement){await document.exitFullscreen();d.classList.remove('fullscreen-modal');$('fullscreenBtn').textContent='⛶ Fullscreen'}else if(f.requestFullscreen){await f.requestFullscreen();$('fullscreenBtn').textContent='⛶ Exit Fullscreen'}else{d.classList.toggle('fullscreen-modal');$('fullscreenBtn').textContent=d.classList.contains('fullscreen-modal')?'⛶ Exit Fullscreen':'⛶ Fullscreen'}}catch{d.classList.toggle('fullscreen-modal');$('fullscreenBtn').textContent=d.classList.contains('fullscreen-modal')?'⛶ Exit Fullscreen':'⛶ Fullscreen';showToast('📱 Using expanded game view')}});document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)$('fullscreenBtn').textContent='⛶ Fullscreen'});
+// Browser-only community chat: stored locally, never presented as global live chat.
+const CHAT_KEY='nextplay_pro_local_chat_v1';
+function getChatMessages(){try{const v=JSON.parse(localStorage.getItem(CHAT_KEY)||'[]');return Array.isArray(v)?v.slice(-100):[]}catch{return[]}}
+function saveChatMessages(items){try{localStorage.setItem(CHAT_KEY,JSON.stringify(items.slice(-100)))}catch{showToast('⚠️ Browser storage is full; chat may not save.')}}
+function postChatMessage(text,kind='message'){const body=String(text||'').trim().slice(0,240);if(!body)return;const msg={id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),name:(state.name||'Guest Gamer').slice(0,22),avatar:state.avatar||'🎮',playerId:state.playerId||'',body,kind,time:new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})};const items=getChatMessages();items.push(msg);saveChatMessages(items);renderChat();}
+function renderChatFeed(id){const feed=$(id);if(!feed)return;const items=getChatMessages();feed.innerHTML=items.length?items.map(m=>`<article class="chat-msg"><div class="chat-meta"><span class="chat-name">${esc(m.avatar||'🎮')} ${esc(m.name||'Guest Gamer')}</span><time>${esc(m.time||'')}</time></div><div class="chat-body">${esc(m.body||'')}</div></article>`).join(''):'<div class="empty" style="padding:22px 10px">💬 No messages yet. Be the first to post your score!</div>';feed.scrollTop=feed.scrollHeight;}
+function renderChat(){renderChatFeed('communityChatFeed');renderChatFeed('arenaChatFeed');$('communityName').textContent=state.name||'Guest Gamer';$('communityAvatar').textContent=state.avatar||'🎮';$('communityPlayerId').textContent=state.playerId||'Player ID not created';$('communityXP').textContent=state.xp+' XP';$('communityLevel').textContent='Level '+level();$('communityGames').textContent=state.gameOpens;}
+function shareScore(){const game=selectedGame?.title?` while playing ${selectedGame.title}`:'';postChatMessage(`🏆 My NEXTPLAY score: ${state.xp} XP · Level ${level()} · ${state.gameOpens} games opened${game}! How are you doing?`,'score');showToast('📣 Your score was added to this browser’s local chat.');}
+$('communityChatForm').addEventListener('submit',e=>{e.preventDefault();const input=$('communityChatInput');postChatMessage(input.value);input.value='';});
+$('arenaChatForm').addEventListener('submit',e=>{e.preventDefault();const input=$('arenaChatInput');postChatMessage(input.value);input.value='';});
+$('shareScoreBtn').addEventListener('click',shareScore);$('arenaShareScore').addEventListener('click',shareScore);$('clearChatBtn').addEventListener('click',()=>{if(!confirm('Clear chat messages saved in this browser?'))return;saveChatMessages([]);renderChat();showToast('🧹 Local chat cleared.');});
+function ensureDailyMissions(){const today=dayKey();if(state.dailyMissionDate!==today){state.dailyMissionDate=today;state.dailyMissionClaims=[];state.dailyGamesOpened=0;state.dailyFavorites=0;state.dailyRatings=0;}}
+const missions=[
+{id:'play2',icon:'🎮',name:'Warm Up',desc:'Open 2 games today',xp:25,coins:10,check:()=>state.dailyGamesOpened>=2},
+{id:'favorite1',icon:'❤️',name:'Pick a Favorite',desc:'Favorite 1 game today',xp:15,coins:8,check:()=>state.dailyFavorites>=1},
+{id:'dailybonus',icon:'🎁',name:'Daily Check-in',desc:'Claim today’s daily reward',xp:20,coins:10,check:()=>state.dailyClaim===dayKey()},
+{id:'spin1',icon:'🎡',name:'Take a Chance',desc:'Use today’s lucky spin',xp:15,coins:10,check:()=>state.spinDays.includes(dayKey())},
+{id:'rate1',icon:'⭐',name:'Game Critic',desc:'Rate a game today',xp:15,coins:7,check:()=>state.dailyRatings>=1}
+];
+function claimMission(id){ensureDailyMissions();const m=missions.find(x=>x.id===id);if(!m||(state.dailyMissionClaims||[]).includes(id)||!m.check())return;state.dailyMissionClaims.push(id);state.claimedMissions=state.dailyMissionClaims;state.xp+=m.xp;state.coins+=m.coins;saveState();updateUI();showToast(`🎉 ${m.name} complete! +${m.xp} XP · +${m.coins} coins`);playSound()}
+function renderMissions(){ensureDailyMissions();$('missionList').innerHTML=missions.map(m=>{const claimed=(state.dailyMissionClaims||[]).includes(m.id),ready=m.check();return`<div class="task"><span class="task-icon">${m.icon}</span><div class="task-copy"><strong>${esc(m.name)}</strong><small>${esc(m.desc)} · ⭐ ${m.xp} XP · 🪙 ${m.coins}</small></div><button class="btn small ${ready&&!claimed?'primary':''}" ${!ready||claimed?'disabled':''} onclick="claimMission('${m.id}')">${claimed?'✅ Claimed':ready?'🎁 Claim':'🔒 In progress'}</button></div>`}).join('');const count=(state.dailyMissionClaims||[]).length;$('missionCount').textContent=count+' / '+missions.length+' today'}
+const achievements=[{id:'first',icon:'🎮',name:'First Play',check:()=>state.gameOpens>=1},{id:'explorer',icon:'🧭',name:'Explorer · 5 games',check:()=>state.gameOpens>=5},{id:'collector',icon:'❤️',name:'Collector · 5 favorites',check:()=>state.favorites.length>=5},{id:'century',icon:'⭐',name:'100 XP Club',check:()=>state.xp>=100},{id:'veteran',icon:'👑',name:'Level 5',check:()=>level()>=5},{id:'lucky',icon:'🎡',name:'Lucky Player',check:()=>state.spinDays.length>=1},{id:'identity',icon:'🪪',name:'Player Identified',check:()=>!!state.playerId},{id:'dailyhero',icon:'🔥',name:'Daily Hero',check:()=>(state.dailyMissionClaims||[]).length>=5}];function renderAchievements(){const unlocked=achievements.filter(a=>a.check());if(!Array.isArray(state.claimedAchievements))state.claimedAchievements=[];if(!achievementBaselineReady){unlocked.forEach(a=>{if(!state.claimedAchievements.includes(a.id))state.claimedAchievements.push(a.id)});achievementBaselineReady=true;saveState()}else{const fresh=unlocked.filter(a=>!state.claimedAchievements.includes(a.id));if(fresh.length){fresh.forEach(a=>state.claimedAchievements.push(a.id));saveState();notifyAchievement(fresh[0]);}}$('achievementList').innerHTML=achievements.map(a=>`<div class="badge ${a.check()?'':'locked'}">${a.icon} ${esc(a.name)} ${a.check()?'✅':'🔒'}</div>`).join('')}
+function claimDaily(){if(state.dailyClaim===dayKey())return;const today=dayKey();const d=new Date();d.setDate(d.getDate()-1);const yesterday=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;state.dailyStreak=state.lastDailyDate===yesterday?(state.dailyStreak||0)+1:1;state.lastDailyDate=today;state.dailyClaim=today;const streakBonus=Math.min(state.dailyStreak,7)*5;state.xp+=50+streakBonus;state.coins+=25+Math.min(state.dailyStreak,7)*2;saveState();updateUI();showToast(`🎁 Daily reward: +${50+streakBonus} XP, +${25+Math.min(state.dailyStreak,7)*2} coins! 🔥 ${state.dailyStreak}-day streak`);playSound()}
+function buyBoost(cost,xp){if(state.coins<cost){showToast('🪙 Not enough coins yet. Claim daily rewards or spin!');return}state.coins-=cost;state.xp+=xp;saveState();updateUI();showToast(`🛍️ Purchased! +${xp} XP added.`);playSound()}
+function spin(){if(state.spinDays.includes(dayKey()))return;$('spinBtn').disabled=true;$('wheel').classList.add('spinner');const prizes=[{xp:10,coins:0,label:'+10 XP ⭐'},{xp:25,coins:0,label:'+25 XP ✨'},{xp:50,coins:0,label:'+50 XP 💎'},{xp:75,coins:0,label:'+75 XP 🚀'},{xp:100,coins:0,label:'+100 XP 👑'},{xp:200,coins:0,label:'+200 XP JACKPOT 🌌'},{xp:0,coins:10,label:'+10 Coins 🪙'},{xp:0,coins:25,label:'+25 Coins 💰'},{xp:0,coins:50,label:'+50 Coins 💰'},{xp:0,coins:100,label:'+100 Coins 🎁'},{xp:40,coins:20,label:'+40 XP + 20 Coins 🌟'},{xp:60,coins:30,label:'+60 XP + 30 Coins 🎊'}];const p=prizes[Math.floor(Math.random()*prizes.length)];state.spinDays.push(dayKey());state.xp+=p.xp;state.coins+=p.coins;saveState();setTimeout(()=>{$('wheel').classList.remove('spinner');$('spinResult').textContent='🎉 You won '+p.label+'!';updateUI();showToast('🎡 Lucky Spin: '+p.label);playSound()},900)}
+function saveProfile(){const name=$('playerName').value.trim().slice(0,22);if(!name){showToast('✍️ Enter your gamer name first!');return}let id=$('playerIdInput').value.trim().toUpperCase().replace(/[^A-Z0-9_-]/g,'').slice(0,20);if(!id)id=makeId(name);if(id.length<4){showToast('🪪 Player ID should have at least 4 characters.');return}state.name=name;state.playerId=id;state.tagline=($('playerTagline')?.value.trim()||'Ready to play ✨').slice(0,60);saveState();updateUI();renderChat();showToast('🎉 Player ID saved! Welcome, '+name+'!');playSound()}
+function setAvatar(avatar){state.avatar=avatar;saveState();
+// NEXTPLAY Discovery Lab: local-first features. Local votes/reviews are not presented as global data.
+const NP_POLL_KEY='nextplay_discovery_poll_v1';
+function npFeatureSave(){saveState();npRenderFeatures()}
+function npPickGame(excludeId=''){const pool=games.filter(g=>g.id!==excludeId);return pool.length?pool[Math.floor(Math.random()*pool.length)]:null}
+function npGameArt(g){return g&&g.image?`<img src="${esc(g.image)}" alt="" loading="lazy" onerror="this.style.display='none'">`:'🎮'}
+function npRenderFeatures(){
+ const ids=Array.isArray(state.customPlaylist)?state.customPlaylist:[];
+ if($('playlistCount'))$('playlistCount').textContent=`${ids.length} game${ids.length===1?'':'s'} saved in your playlist`;
+ const box=$('playlistArea');if(box){const items=ids.map(getGame).filter(Boolean);box.innerHTML=items.length?items.map(g=>`<div class="feature-game-row"><div class="feature-game-art">${npGameArt(g)}</div><div class="feature-game-copy"><strong>${esc(g.title)}</strong><small>${esc(g.category)}</small></div><button class="btn" onclick="playGame('${encodeURIComponent(g.id)}')">▶ Play</button><button class="btn small" onclick="npRemovePlaylist('${encodeURIComponent(g.id)}')">Remove</button></div>`).join(''):'<div class="empty">Your playlist is empty. Tap Manage Playlist to add a game by name.</div>'}
+ const rev=$('reviewArea');if(rev){const entries=Object.entries(state.personalReviews||{});rev.innerHTML=entries.length?entries.map(([id,r])=>`<div class="review-item"><strong>${esc(getGame(id)?.title||'Game no longer in feed')} · ${'★'.repeat(r.stars||0)}${'☆'.repeat(5-(r.stars||0))}</strong><p>${esc(r.text||'No written note.')}</p><button class="btn small" onclick="npWriteReview('${encodeURIComponent(id)}')">Edit review</button></div>`).join(''):'<div class="empty">No reviews yet. Reviews are private to this browser.</div>'}
+ const poll=$('communityPoll');if(poll){const options=['Puzzle','Racing','Action','Arcade'];let votes={};try{votes=JSON.parse(localStorage.getItem(NP_POLL_KEY)||'{}')||{}}catch{};const total=options.reduce((n,k)=>n+(votes[k]||0),0);poll.innerHTML=options.map(k=>`<button class="btn small" type="button" onclick="npVoteGenre('${k}')">${k} · ${votes[k]||0} vote${(votes[k]||0)===1?'':'s'}</button>`).join('')+`<small style="color:var(--muted)">Local tally: ${total} vote${total===1?'':'s'} · this device only</small>`}
+ if($('newStatsCopy'))$('newStatsCopy').textContent=`${state.gameOpens||0} game opens · ${state.xp||0} XP · ${state.favorites?.length||0} favorites`;
+ if($('newSpinCopy'))$('newSpinCopy').textContent=state.discoverySpinDate===dayKey()?'You used today’s discovery spin.':'One free discovery spin per day.';
+ const d=Math.floor(Date.now()/86400000),g=games.length?games[((d%games.length)+games.length)%games.length]:null;
+ if($('mysteryCopy'))$('mysteryCopy').textContent=g?`Today's hidden pick: ${g.title}`:'Load games to reveal today’s pick.';
+ if($('eggCopy'))$('eggCopy').textContent=`${state.eggFinds||0} secret(s) found`;
+ if($('eventCopy'))$('eventCopy').textContent=`Weekly Explorer · ${6-new Date().getDay()} day(s) left this week`;
+}
+function npOpenMystery(){if(!games.length){showToast('Games are still loading. Try again shortly.');return}const d=Math.floor(Date.now()/86400000),g=games[((d*17%games.length)+games.length)%games.length];showToast('🎁 Mystery pick: '+g.title);playGame(encodeURIComponent(g.id))}
+function npStartBattle(){const a=npPickGame(),b=a?npPickGame(a.id):null;if(!a||!b){showToast('Load at least two games to start a battle.');return}state.currentBattle=[a.id,b.id];saveState();$('battleArea').innerHTML=`<div class="battle-options">${[a,b].map(g=>`<div class="battle-option">${g.image?`<img src="${esc(g.image)}" alt="" onerror="this.style.display='none'">`:'<div style="font-size:38px">🎮</div>'}<strong>${esc(g.title)}</strong><button class="btn primary small" style="width:100%" onclick="npVoteBattle('${encodeURIComponent(g.id)}')">Vote for this game</button><button class="btn small" style="width:100%;margin-top:6px" onclick="playGame('${encodeURIComponent(g.id)}')">▶ Play</button></div>`).join('')}</div><p class="section-sub" style="margin-top:10px">Votes are local to this browser; not a global ranking.</p>`}
+function npVoteBattle(encoded){const id=decodeURIComponent(encoded);state.battleVotes=state.battleVotes||{};state.battleVotes[id]=(state.battleVotes[id]||0)+1;saveState();const g=getGame(id);const tally=state.battleVotes[id]||0;const note=document.createElement('p');note.className='section-sub';note.textContent=`Your vote for ${g?.title||'this game'} is saved on this device. This game has ${tally} local vote(s).`;const area=$('battleArea');area.querySelector('.battle-result-note')?.remove();note.classList.add('battle-result-note');area.appendChild(note);showToast('⚔️ Vote saved on this device!')}
+function npAddGameToPlaylist(encoded){const id=decodeURIComponent(encoded);if(!getGame(id))return;state.customPlaylist=state.customPlaylist||[];if(state.customPlaylist.includes(id)){showToast('Already in your playlist.');return}state.customPlaylist.push(id);saveState();npRenderFeatures();showToast('🗂️ Added to your playlist!')}
+function npManagePlaylist(){if(!games.length){showToast('Games are still loading.');return}const titles=games.slice(0,30).map(g=>g.title);const title=prompt('Type a game title to add to your playlist.\\nAvailable games:\\n'+titles.join('\\n'));if(title===null)return;const g=games.find(x=>x.title.toLowerCase()===title.trim().toLowerCase());if(!g){showToast('No exact match found. Try a title shown in the list.');return}state.customPlaylist=state.customPlaylist||[];if(state.customPlaylist.includes(g.id)){showToast('Already in your playlist.');return}state.customPlaylist.push(g.id);saveState();npRenderFeatures();showToast('🗂️ Added to your playlist!')}
+function npRemovePlaylist(encoded){const id=decodeURIComponent(encoded);state.customPlaylist=(state.customPlaylist||[]).filter(x=>x!==id);saveState();npRenderFeatures();showToast('Removed from playlist.')}
+function npWriteReview(encoded=''){if(!games.length){showToast('Games are still loading.');return}let id=decodeURIComponent(encoded||''),g=getGame(id);if(!g){const title=prompt('Enter the exact game title for your review:\\n'+games.slice(0,20).map(x=>x.title).join('\\n'));if(title===null)return;g=games.find(x=>x.title.toLowerCase()===title.trim().toLowerCase());if(!g){showToast('No matching game found. Try a title shown in the list.');return}id=g.id}const old=(state.personalReviews||{})[id]||{},stars=prompt(`Rate "${g.title}" from 1 to 5 stars:`,String(old.stars||5));if(stars===null)return;const n=Math.max(1,Math.min(5,Math.round(Number(stars)||5))),text=prompt('Write a short personal review (optional):',old.text||'');if(text===null)return;state.personalReviews=state.personalReviews||{};state.personalReviews[id]={stars:n,text:text.slice(0,500),date:dayKey()};saveState();npRenderFeatures();showToast('⭐ Personal review saved on this device.')}
+function npLucky(){const g=npPickGame();if(!g){showToast('Games are still loading.');return}showToast('🎲 Lucky pick: '+g.title);playGame(encodeURIComponent(g.id))}
+function npEasterEgg(){if(state.eggFoundDate===dayKey()){showToast('🕵️ You already found today’s secret!');return}state.eggFoundDate=dayKey();state.eggFinds=(state.eggFinds||0)+1;state.xp=(state.xp||0)+15;saveState();updateUI();npRenderFeatures();showToast('🕵️ Secret found! +15 local XP')}
+function npDiscoverySpin(){if(state.discoverySpinDate===dayKey()){showToast('You already used today’s discovery spin.');return}state.discoverySpinDate=dayKey();const badges=['🌟 Explorer','🧩 Puzzle Scout','🏎️ Speed Seeker','⚔️ Battle Finder','🎮 Game Hunter'];state.discoveryBadge=badges[Math.floor(Math.random()*badges.length)];state.xp=(state.xp||0)+10;saveState();updateUI();npRenderFeatures();showToast(`🎡 You earned ${state.discoveryBadge} and +10 XP!`)}
+function npVoteGenre(genre){let votes={};try{votes=JSON.parse(localStorage.getItem(NP_POLL_KEY)||'{}')||{}}catch{};votes[genre]=(votes[genre]||0)+1;try{localStorage.setItem(NP_POLL_KEY,JSON.stringify(votes))}catch{}npRenderFeatures();showToast(`🗳️ Vote saved for ${genre} on this device.`)}
+function npJoinEvent(){state.eventJoins=state.eventJoins||{};const k=getWeekKey();if(state.eventJoins[k]){showToast('You already joined this week’s Explorer Event.');return}state.eventJoins[k]=true;state.xp=(state.xp||0)+20;saveState();updateUI();showToast('⏳ Explorer Event joined! +20 local XP.')}
+function npShowStats(){goTo('dashboard');showToast(`📈 ${state.gameOpens||0} opens · ${state.xp||0} XP · ${state.favorites?.length||0} favorites`)}
+$('mysteryBtn')?.addEventListener('click',npOpenMystery);$('battleBtn')?.addEventListener('click',npStartBattle);$('newSpinBtn')?.addEventListener('click',npDiscoverySpin);$('playlistBtn')?.addEventListener('click',npManagePlaylist);$('reviewBtn')?.addEventListener('click',()=>npWriteReview());$('luckyBtn')?.addEventListener('click',npLucky);$('eggBtn')?.addEventListener('click',npEasterEgg);$('statsBtn')?.addEventListener('click',npShowStats);$('eventBtn')?.addEventListener('click',npJoinEvent);
+
+updateUI();npRenderFeatures();document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.toggle('active',b.dataset.avatar===avatar));playSound()}
+function toggleTheme(){state.theme=state.theme==='dark'?'light':'dark';saveState();updateUI()}function toggleSound(v){state.sound=v;saveState();updateUI();showToast(v?'🔊 Sound effects enabled':'🔇 Sound effects disabled')}
+// Seven-day login streak calendar mirrors the daily claim reward system.
+function renderStreakCalendar(){const el=$('streakCalendar');if(!el)return;const streak=Math.max(0,state.dailyStreak||0);el.innerHTML=Array.from({length:7},(_,i)=>{const n=i+1,done=streak>=n;return `<div class="streak-day ${done?'done':''} ${streak+1===n&&state.dailyClaim!==dayKey()?'today':''}"><strong>${done?'✓':n===7?'👑':n}</strong><span>Day ${n}</span><br><span>${n*5} XP</span></div>`}).join('')}
+const rareBadges=[{id:'streak3',icon:'🔥',name:'Flame Keeper',desc:'Reach a 3-day login streak',check:()=>state.dailyStreak>=3},{id:'game10',icon:'🌀',name:'Portal Hopper',desc:'Open 10 games',check:()=>state.gameOpens>=10},{id:'xp500',icon:'💎',name:'XP Gem',desc:'Earn 500 XP',check:()=>state.xp>=500},{id:'collector10',icon:'🧿',name:'Curator Elite',desc:'Save 10 favorites',check:()=>state.favorites.length>=10},{id:'week300',icon:'🌌',name:'Weekly Legend',desc:'Earn 300 XP this week',check:()=>Math.max(0,state.xp-(state.weekStartXP||0))>=300}];
+function renderRareBadges(){const el=$('rareBadgeGrid');if(!el)return;const unlocked=rareBadges.filter(b=>b.check());$('rareBadgeCount').textContent=`${unlocked.length} / ${rareBadges.length} unlocked`;el.innerHTML=rareBadges.map(b=>`<div class="rare-badge ${b.check()?'':'locked'}"><span class="rare-icon">${b.icon}</span><div><strong>${esc(b.name)} ${b.check()?'✓':'🔒'}</strong><small>${esc(b.desc)}</small></div></div>`).join('')}
+function ensureWeeklyChallenges(){const key=getWeekKey();if(state.weeklyChallengeKey!==key){state.weeklyChallengeKey=key;state.weeklyChallengeClaims=[];saveState()}}
+const weeklyChallenges=[{id:'games5',icon:'🎮',name:'Game Hopper',desc:'Open 5 games this week',target:5,xp:75,coins:30,progress:()=>Math.max(0,state.gameOpens-(state.weekStartGames||0))},{id:'favorites3',icon:'❤️',name:'Curator',desc:'Add 3 favorites this week',target:3,xp:50,coins:25,progress:()=>Math.max(0,state.favorites.length-(state.weekStartFavorites||0))},{id:'xp200',icon:'⭐',name:'XP Hunter',desc:'Earn 200 XP this week',target:200,xp:100,coins:40,progress:()=>Math.max(0,state.xp-(state.weekStartXP||0))}];
+function renderWeeklyChallenges(){const el=$('weeklyChallengeList');if(!el)return;ensureWeeklyChallenges();$('challengeWeek').textContent=state.weeklyChallengeKey||getWeekKey();el.innerHTML=weeklyChallenges.map(c=>{const p=Math.min(c.target,c.progress()),done=p>=c.target,claimed=(state.weeklyChallengeClaims||[]).includes(c.id);return `<div class="task"><span class="task-icon">${c.icon}</span><div class="task-copy"><strong>${esc(c.name)}</strong><small>${esc(c.desc)} · ${p}/${c.target} · +${c.xp} XP / +${c.coins} coins</small><div class="challenge-progress"><span style="width:${Math.round(p/c.target*100)}%"></span></div></div><button class="btn small ${done&&!claimed?'primary':''}" ${!done||claimed?'disabled':''} onclick="claimWeeklyChallenge('${c.id}')">${claimed?'✅ Claimed':done?'🎁 Claim':'🔒 In progress'}</button></div>`}).join('')}
+function claimWeeklyChallenge(id){ensureWeeklyChallenges();const c=weeklyChallenges.find(x=>x.id===id);if(!c||state.weeklyChallengeClaims.includes(id)||c.progress()<c.target)return;state.weeklyChallengeClaims.push(id);state.xp+=c.xp;state.coins+=c.coins;saveState();updateUI();showToast(`🏆 ${c.name} completed: +${c.xp} XP · +${c.coins} coins`);playSound()}
+const shopThemes=[{id:'aura',name:'Aura Purple',price:0,desc:'Classic NEXTPLAY glow'},{id:'ocean',name:'Cyber Ocean',price:120,desc:'Electric blue accent'},{id:'ember',name:'Solar Ember',price:150,desc:'Orange and gold accent'},{id:'mint',name:'Neon Mint',price:180,desc:'Fresh green accent'}];
+function renderThemeShop(){const el=$('themeShopCards');if(!el)return;$('themeCoinBalance').textContent=state.coins;if(!Array.isArray(state.ownedThemes))state.ownedThemes=['aura'];if(!state.ownedThemes.includes('aura'))state.ownedThemes.unshift('aura');el.innerHTML=shopThemes.map(t=>{const owned=state.ownedThemes.includes(t.id),active=(state.activeAccent||'aura')===t.id;return `<div class="theme-card"><div class="theme-preview ${t.id==='aura'?'':t.id}"></div><strong>${esc(t.name)}</strong><small>${esc(t.desc)}${t.price?` · ${t.price} coins`:''}</small><button class="btn ${active?'primary':''}" type="button" onclick="chooseTheme('${t.id}')">${active?'✓ Active':owned?'Apply':`🪙 Buy ${t.price}`}</button></div>`}).join('')}
+function chooseTheme(id){const t=shopThemes.find(x=>x.id===id);if(!t)return;if(!Array.isArray(state.ownedThemes))state.ownedThemes=['aura'];if(!state.ownedThemes.includes(id)){if(state.coins<t.price){showToast('🪙 Not enough coins for this theme yet.');return}state.coins-=t.price;state.ownedThemes.push(id);showToast(`🎨 Unlocked ${t.name}!`)}else showToast(`🎨 ${t.name} applied!`);state.activeAccent=id;saveState();updateUI();playSound()}
+function renderRecommendations(){const el=$('recommendGrid');if(!el)return;if(!games.length){el.innerHTML='<div class="empty">Load some games to personalize your picks.</div>';return}const favCats=state.favorites.map(getGame).filter(Boolean).map(g=>normCat(g.category));const recentCats=state.recent.map(getGame).filter(Boolean).map(g=>normCat(g.category));const preferred=[...favCats,...recentCats];const picks=games.filter(g=>!state.recent.includes(g.id)).map(g=>({...g,score:(preferred.filter(c=>c===normCat(g.category)).length*3)+(isFav(g.id)?-5:0)})).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,3);const finalPicks=picks.length?picks:games.slice(0,3);el.innerHTML=finalPicks.map(g=>`<article class="recommend-card"><div class="recommend-art">${g.image?`<img src="${esc(g.image)}" alt="" loading="lazy" onerror="this.remove()">`:'🎮'}</div><div class="recommend-copy"><strong title="${esc(g.title)}">${esc(g.title)}</strong><small>${esc(g.category)} · ${preferred.length?'Picked for your taste':'Popular pick'}</small><button class="btn small primary" type="button" onclick="playGame('${encodeURIComponent(g.id)}')">▶ Play</button></div></article>`).join('')}
+$('refreshRecommendations')?.addEventListener('click',()=>{renderRecommendations();showToast('🧠 Your picks have been refreshed!')});
+$('shareGamerCard').addEventListener('click',shareGamerCard);$('downloadGamerCard').addEventListener('click',downloadGamerCard);$('challengeFriend').addEventListener('click',challengeFriend);$('headerPlayer').addEventListener('click',()=>goTo('profile'));$('saveProfile').addEventListener('click',saveProfile);$('playerName').addEventListener('keydown',e=>{if(e.key==='Enter')saveProfile()});$('playerIdInput').addEventListener('keydown',e=>{if(e.key==='Enter')saveProfile()});$('avatarOptions').addEventListener('click',e=>{const b=e.target.closest('[data-avatar]');if(b)setAvatar(b.dataset.avatar)});$('copyPlayer').addEventListener('click',async()=>{if(!state.playerId){showToast('🪪 Create your Player ID first!');return}try{await navigator.clipboard.writeText(state.playerId);showToast('📋 Player ID copied!')}catch{showToast('🪪 Your Player ID: '+state.playerId)}});$('dailyBtn').addEventListener('click',claimDaily);$('spinBtn').addEventListener('click',spin);$('themeBtn').addEventListener('click',toggleTheme);$('themeSetting').addEventListener('click',toggleTheme);$('soundToggle').addEventListener('change',e=>toggleSound(e.target.checked));$('refreshBtn').addEventListener('click',()=>loadGames(true));const loadObserver=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)&&!loading&&page<=lastPage)loadGames()},{rootMargin:'1000px 0px'}):null;if(loadObserver)loadObserver.observe($('loadSentinel'));window.addEventListener('scroll',()=>{if(!loadObserver&&!loading&&page<=lastPage&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-1000)loadGames()},{passive:true});$('search').addEventListener('input',renderGames);$('gameSort').addEventListener('change',renderGames);$('searchBtn').addEventListener('click',renderGames);$('categories').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;category=b.dataset.cat;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));renderGames()});$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nextplay-player-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);showToast('📥 Progress exported!')});$('resetBtn').addEventListener('click',()=>{if(!confirm('🧹 Reset all NEXTPLAY progress saved in this browser? This cannot be undone.'))return;state=initialState();saveState();updateUI();renderGames();showToast('🔄 Local progress reset.')});
+function renderPlayRewardStatus(){const el=$('playRewardStatus');if(!el)return;el.textContent=currentSessionScore>0?`🏆 Score detected: ${currentSessionScore} · Coins earned this session: ${currentSessionRewarded}`:'🎯 Waiting for a supported game score event…';}
+function findReportedScore(data,depth=0){if(depth>4||data==null)return null;if(typeof data==='string'){try{return findReportedScore(JSON.parse(data),depth+1)}catch{return null}}if(typeof data!=='object')return null;const preferred=['finalScore','final_score','score','points','totalScore','total_score'];for(const key of preferred){const v=data[key];if(typeof v==='number'&&Number.isFinite(v)&&v>=0)return Math.floor(v);if(typeof v==='string'&&v.trim()!==''&&Number.isFinite(Number(v))&&Number(v)>=0)return Math.floor(Number(v));}for(const key of ['detail','data','payload','result','results','game','event']){if(data[key]&&typeof data[key]==='object'){const found=findReportedScore(data[key],depth+1);if(found!==null)return found}}return null;}
+window.addEventListener('message',event=>{const frame=$('gameFrame');if(!frame||event.source!==frame.contentWindow||!selectedGame)return;const score=findReportedScore(event.data);if(score===null)return;/* Only accept score messages originating from the currently embedded game frame. */if(score<=currentSessionScore)return;const delta=score-currentSessionRewarded;currentSessionScore=score;if(delta>0){state.coins+=delta;currentSessionRewarded+=delta;state.xp+=Math.floor(delta/10);saveState();updateUI();showToast(`🪙 Game score detected: +${delta} NEXTPLAY coins!`);playSound()}renderPlayRewardStatus();});
+let deferredInstallPrompt=null;const installButtons=[$('installAppBtn'),$('installSettingsBtn')];function showInstallFallback(){const ua=navigator.userAgent||'';if(/android/i.test(ua))showToast('📲 Chrome menu ⋮ → Install app or Add to Home screen');else if(/iphone|ipad|ipod/i.test(ua))showToast('📲 Safari Share button → Add to Home Screen');else showToast('📲 Use your browser menu and choose Install app / Create shortcut');}window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installButtons.forEach(b=>{if(b)b.hidden=false});});window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;installButtons.forEach(b=>{if(b)b.textContent='✅ App Installed'});showToast('🎉 NEXTPLAY installed successfully!');});async function installApp(){if(deferredInstallPrompt){deferredInstallPrompt.prompt();try{await deferredInstallPrompt.userChoice;}catch{}deferredInstallPrompt=null;}else if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone){showToast('✅ NEXTPLAY is already installed.');}else{showInstallFallback();}}installButtons.forEach(b=>{if(b)b.addEventListener('click',installApp)});if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+updateUI();document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.toggle('active',b.dataset.avatar===state.avatar));renderGames();renderChat();loadGames(true);
+
+// Splash screen: keep it brief, then reveal the app even if a feed request stalls.
+(function initAppSplash(){
+  const splash=document.getElementById('appSplash');
+  if(!splash)return;
+  let hidden=false;
+  const hide=()=>{if(hidden)return;hidden=true;splash.classList.add('is-hidden');window.setTimeout(()=>splash.remove(),650);};
+  window.setTimeout(hide,3200);
+  if(document.readyState==='complete')window.setTimeout(hide,1050);
+  else window.addEventListener('load',()=>window.setTimeout(hide,850),{once:true});
+})();
+</script>
+<script>
+// NEXTPLAY Supabase email/password auth integration. Publishable keys are safe for browser use; RLS protects table rows.
+(function(){
+ const SUPABASE_URL='https://rpvnaecbjmxpohlmzrpn.supabase.co';
+ const SUPABASE_PUBLISHABLE_KEY='sb_publishable_YHvyIq8EjVoMt3Jw6uuJUw_zEZNZbO6';
+ const byId=id=>document.getElementById(id);
+ const dlg=byId('authDialog');
+ let client=null, currentUser=null;
+ function authMessage(msg,isError=false){const el=byId('authMessage');if(el){el.textContent=msg;el.style.color=isError?'#ff8b9c':'var(--muted)';}}
+ function showAuth(){if(!dlg)return;authMessage('Login or create an account using your email.');if(typeof dlg.showModal==='function')dlg.showModal();else dlg.setAttribute('open','');}
+ function closeAuth(){if(dlg?.open&&dlg.close)dlg.close();else dlg?.removeAttribute('open');}
+ function paintAuth(user){currentUser=user||null;const signed=!!user;const email=user?.email||'';const status=byId('authStatusTitle'),sub=byId('authStatusText'),pill=byId('accountStatusPill'),open=byId('authOpenBtn'),profileBtn=byId('profileAuthBtn'),logout=byId('authLogoutBtn');if(status)status.textContent=signed?'✅ Signed in: '+email:'🔐 Cloud account not connected';if(sub)sub.textContent=signed?'Your account can sync your gamer profile. Game progress and coins remain local unless separately synced.':'Sign in with email and password to sync your profile.';if(pill)pill.textContent=signed?'CLOUD ACCOUNT':'GUEST MODE';if(open)open.textContent=signed?'👤 Account':'🔐 Login / Sign up';if(profileBtn)profileBtn.textContent=signed?'👤 Account':'Login / Sign up';if(logout)logout.hidden=!signed;}
+ async function loadCloudProfile(user){if(!client||!user)return;try{const {data,error}=await client.from('profiles').select('username,avatar_url').eq('id',user.id).maybeSingle();if(error)throw error;if(data){if(data.username){state.name=String(data.username).slice(0,22);byId('playerName').value=state.name;}if(data.avatar_url){state.avatar=String(data.avatar_url).slice(0,16);document.querySelectorAll('.avatar-choice').forEach(b=>b.classList.toggle('active',b.dataset.avatar===state.avatar));}saveState();updateUI();}}catch(e){console.warn('NEXTPLAY profile read:',e.message);}}
+ async function syncCloudProfile(){if(!client||!currentUser)return;const username=(state.name||byId('playerName')?.value||'Guest Gamer').trim().slice(0,22);const avatar=(state.avatar||'🎮').slice(0,16);try{const {error}=await client.from('profiles').upsert({id:currentUser.id,username,avatar_url:avatar,updated_at:new Date().toISOString()},{onConflict:'id'});if(error)throw error;}catch(e){showToast('⚠️ Profile saved on this device, but cloud sync failed. Check Supabase table policies.');console.warn('NEXTPLAY profile sync:',e.message);}}
+ async function signIn(){if(!client){authMessage('Supabase SDK could not load. Check your internet connection and reload.',true);return;}const email=byId('authEmail').value.trim(),password=byId('authPassword').value;if(!email||!password){authMessage('Enter your email and password.',true);return;}byId('authLoginBtn').disabled=true;try{const {data,error}=await client.auth.signInWithPassword({email,password});if(error)throw error;paintAuth(data.user);await loadCloudProfile(data.user);closeAuth();showToast('🎉 Logged in successfully!');}catch(e){authMessage(e.message||'Login failed.',true);}finally{byId('authLoginBtn').disabled=false;}}
+ async function signUp(){if(!client){authMessage('Supabase SDK could not load. Check your internet connection and reload.',true);return;}const email=byId('authEmail').value.trim(),password=byId('authPassword').value;if(!email||password.length<6){authMessage('Enter a valid email and a password with at least 6 characters.',true);return;}byId('authSignupBtn').disabled=true;try{const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});if(error)throw error;if(data.session){paintAuth(data.user);await loadCloudProfile(data.user);closeAuth();showToast('🎉 Account created!');}else{authMessage('Account created. Check your email for the confirmation link, then log in.');}}catch(e){authMessage(e.message||'Sign-up failed.',true);}finally{byId('authSignupBtn').disabled=false;}}
+ async function logout(){if(!client)return;const {error}=await client.auth.signOut();if(error){showToast('⚠️ Logout failed: '+error.message);return;}paintAuth(null);showToast('👋 Logged out. Your local game progress is unchanged.');}
+ byId('authOpenBtn')?.addEventListener('click',showAuth);byId('profileAuthBtn')?.addEventListener('click',showAuth);byId('authCloseBtn')?.addEventListener('click',closeAuth);byId('authLogoutBtn')?.addEventListener('click',logout);byId('authForm')?.addEventListener('submit',e=>{e.preventDefault();signIn();});byId('authSignupBtn')?.addEventListener('click',signUp);
+ byId('saveProfile')?.addEventListener('click',()=>{if(currentUser)window.setTimeout(syncCloudProfile,0);});
+ if(window.supabase?.createClient){try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});client.auth.getSession().then(async({data,error})=>{if(error)console.warn(error.message);const user=data?.session?.user||null;paintAuth(user);if(user)await loadCloudProfile(user);});client.auth.onAuthStateChange((event,session)=>{const user=session?.user||null;paintAuth(user);if(user&&event==='SIGNED_IN')setTimeout(()=>loadCloudProfile(user),0);});}catch(e){paintAuth(null);console.error('Supabase initialization failed:',e);}}else{paintAuth(null);console.error('Supabase JS SDK unavailable.');}
+})();
+</script>
+
+<script>
+
+// Accessible three-dot navigation menu
+(function initBottomMoreMenu(){
+ const btn=document.getElementById('bottomMoreBtn'),menu=document.getElementById('bottomMoreMenu'),backdrop=document.getElementById('bottomMenuBackdrop'),close=document.getElementById('bottomMoreClose');
+ if(!btn||!menu||!backdrop)return;
+ function openMenu(){menu.hidden=false;backdrop.hidden=false;btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';close?.focus();}
+ function closeMenu(){menu.hidden=true;backdrop.hidden=true;btn.setAttribute('aria-expanded','false');document.body.style.overflow='';btn.focus();}
+ btn.addEventListener('click',()=>menu.hidden?openMenu():closeMenu());close?.addEventListener('click',closeMenu);backdrop.addEventListener('click',closeMenu);
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.hidden=true;backdrop.hidden=true;btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden)closeMenu();});
+})();
+
+</script>
+
+<style id="nextplay-ai-inline-css">
+#nextplay-chat-button{position:fixed;right:18px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:70;border:1px solid #ffffff35;border-radius:999px;padding:13px 17px;background:linear-gradient(135deg,#8b5cf6,#635bff 55%,#2563eb);color:#fff;font:800 13px/1.1 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 12px 32px #4c1d9580;cursor:pointer;transition:transform .18s,box-shadow .18s}#nextplay-chat-button:hover{transform:translateY(-2px);box-shadow:0 16px 38px #4c1d95a8}#nextplay-chat-button:focus-visible,#nextplay-chat button:focus-visible,#nextplay-chat input:focus-visible{outline:3px solid #c4b5fd;outline-offset:3px}#nextplay-chat{position:fixed;right:16px;bottom:calc(140px + env(safe-area-inset-bottom));z-index:71;display:none;flex-direction:column;width:min(390px,calc(100vw - 24px));height:min(570px,calc(100dvh - 175px));min-height:320px;overflow:hidden;border:1px solid #a78bfa66;border-radius:22px;background:#100c1d;color:#f8f7ff;box-shadow:0 24px 75px #0009;font-family:system-ui,-apple-system,Segoe UI,sans-serif}#nextplay-chat.open{display:flex;animation:npChatIn .18s ease-out}@keyframes npChatIn{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}.np-chat-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;background:linear-gradient(120deg,#25134a,#17122b 70%,#10283e);border-bottom:1px solid #ffffff16}.np-chat-header strong{display:block;font-size:15px;letter-spacing:.2px}.np-chat-header small{display:block;color:#c4b5fd;font-size:11px;margin-top:3px}.np-chat-header button{width:34px;height:34px;border:1px solid #ffffff26;border-radius:11px;background:#ffffff10;color:#fff;font-size:23px;cursor:pointer}#np-chat-messages{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:14px;background:radial-gradient(ellipse at top right,#2a14501e,transparent 60%),#100c1d;scroll-behavior:smooth}.np-message{max-width:90%;padding:10px 12px;border-radius:15px;font-size:13px;line-height:1.5;overflow-wrap:anywhere;white-space:pre-wrap}.np-message.assistant{align-self:flex-start;background:#211a35;border:1px solid #ffffff12;border-bottom-left-radius:5px;color:#f3efff}.np-message.user{align-self:flex-end;background:linear-gradient(135deg,#7047d8,#5145cd);border-bottom-right-radius:5px;color:#fff}.np-message.error{border-color:#f8717166;color:#fecaca}.np-chat-status{padding:5px 14px 7px;background:#100c1d;color:#a99dbf;font-size:10px;min-height:23px}#np-chat-form{display:flex;gap:8px;padding:11px;border-top:1px solid #ffffff15;background:#171127}#np-chat-input{min-width:0;flex:1;border:1px solid #ffffff20;border-radius:13px;padding:12px;background:#0d0918;color:#fff;font:13px system-ui,sans-serif;outline:none}#np-chat-input::placeholder{color:#9689ac}#np-chat-send{border:0;border-radius:13px;padding:0 15px;background:linear-gradient(135deg,#8b5cf6,#635bff);color:#fff;font-weight:800;cursor:pointer}#np-chat-send:disabled{opacity:.5;cursor:wait}.np-chat-suggestions{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.np-chat-suggestions button{border:1px solid #a78bfa50;border-radius:99px;background:#211a35;color:#ddd6fe;padding:7px 9px;font-size:11px;cursor:pointer}@media(max-width:480px){#nextplay-chat-button{right:12px;bottom:calc(77px + env(safe-area-inset-bottom));padding:12px 14px}#nextplay-chat{right:8px;bottom:calc(132px + env(safe-area-inset-bottom));width:calc(100vw - 16px);height:min(590px,calc(100dvh - 155px));border-radius:19px}}@media(prefers-reduced-motion:reduce){#nextplay-chat.open{animation:none}#np-chat-messages{scroll-behavior:auto}}
+
+/* Mobile overlap fix: keep both AI launchers side-by-side above the bottom nav. */
+@media(max-width:760px){
+  #nextplay-chat-button{
+    right:10px!important;left:auto!important;
+    bottom:calc(78px + env(safe-area-inset-bottom))!important;
+    z-index:80!important;max-width:calc(50vw - 18px);padding:10px 11px!important;
+    font-size:11px!important;white-space:nowrap;
+  }
+  #nextplay-chat{
+    right:8px!important;left:auto!important;
+    bottom:calc(132px + env(safe-area-inset-bottom))!important;
+    width:calc(100vw - 16px)!important;
+    height:min(560px,calc(100dvh - 155px))!important;
+    max-height:calc(100dvh - 155px)!important;z-index:85!important;
+  }
+}
+
+</style>
+
+<button
+  id="nextplay-chat-button"
+  type="button"
+  aria-controls="nextplay-chat"
+  aria-expanded="false"
+>
+  ✦ Ask NOVA AI
+</button>
+
+<section
+  id="nextplay-chat"
+  role="dialog"
+  aria-label="Nextplay AI chat"
+  aria-modal="false"
+>
+  <header class="np-chat-header">
+    <div>
+      <strong>✦ NOVA AI</strong>
+      <small>Your all-in-one gaming copilot</small>
+    </div>
+    <button id="np-chat-close" type="button" aria-label="Close chat">
+      ×
+    </button>
+  </header>
+
+  <div
+    id="np-chat-messages"
+    role="log"
+    aria-live="polite"
+    aria-label="Chat messages"
+  ></div>
+
+  <div id="np-chat-status" class="np-chat-status">
+    Ready
+  </div>
+
+  <form id="np-chat-form">
+    <input
+      id="np-chat-input"
+      type="text"
+      maxlength="4000"
+      placeholder="Ask anything..."
+      autocomplete="off"
+      aria-label="Your message"
+      required
+    >
+    <button id="np-chat-send" type="submit">Send</button>
+  </form>
+</section>
+
+<script id="nextplay-ai-inline-js">
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const chat = $('nextplay-chat'), toggle = $('nextplay-chat-button'), close = $('np-chat-close');
+  const form = $('np-chat-form'), input = $('np-chat-input'), messages = $('np-chat-messages');
+  const send = $('np-chat-send'), status = $('np-chat-status');
+  if (!chat || !toggle || !form || !input || !messages || !send || !status) return;
+  let history = [], busy = false, welcomed = false;
+  const welcome = 'Hi! I’m Nextplay AI 🎮 Ask me about games, coding, study tips, ideas, or anything you’re curious about.';
+  function addMessage(role, content, extraClass = '') {
+    const bubble = document.createElement('div');
+    bubble.className = `np-message ${role} ${extraClass}`.trim();
+    bubble.textContent = content;
+    messages.appendChild(bubble); messages.scrollTop = messages.scrollHeight;
+    return bubble;
+  }
+  function openChat() {
+    chat.classList.add('open'); toggle.setAttribute('aria-expanded', 'true');
+    if (!welcomed) { addMessage('assistant', welcome); welcomed = true; }
+    input.focus();
+  }
+  function closeChat() { chat.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus(); }
+  toggle.addEventListener('click', () => chat.classList.contains('open') ? closeChat() : openChat());
+  close?.addEventListener('click', closeChat);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && chat.classList.contains('open')) closeChat(); });
+  async function submitMessage(text) {
+    const message = String(text || '').trim();
+    if (!message || busy) return;
+    addMessage('user', message); input.value = ''; busy = true; send.disabled = true; status.textContent = 'Nextplay AI is thinking…';
+    const typing = addMessage('assistant', 'Thinking…');
+    try {
+      const nextHistory = [...history, { role: 'user', content: message }].slice(-12);
+      const response = await fetch('/api/chat', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ messages: nextHistory })
+      });
+      let data = {};
+      try { data = await response.json(); } catch { throw new Error('The server returned an unreadable response. Check the /api/chat deployment.'); }
+      if (!response.ok) throw new Error(data.error || `Request failed (${response.status}).`);
+      const answer = typeof data.reply === 'string' ? data.reply.trim() : '';
+      if (!answer) throw new Error('AI returned an empty reply. Please try again.');
+      typing.textContent = answer; history = [...nextHistory, { role: 'assistant', content: answer }].slice(-12);
+      status.textContent = 'Ready · Your chat stays in this browser session';
+    } catch (err) {
+      typing.classList.add('error');
+      const msg = err?.message || 'Something went wrong.';
+      typing.textContent = msg.includes('Failed to fetch')
+        ? 'Could not reach /api/chat. Deploy the api/chat.js serverless function on Vercel and check your deployment URL.'
+        : msg;
+      status.textContent = 'Connection issue · Check the server configuration';
+    } finally { busy = false; send.disabled = false; input.focus(); messages.scrollTop = messages.scrollHeight; }
+  }
+  form.addEventListener('submit', e => { e.preventDefault(); submitMessage(input.value); });
+})();
+
+</script>
+
+<style id="nextplay-game-ai-inline-css">
+#nextplay-game-chat-button{position:fixed;left:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:72;border:1px solid #86efac55;border-radius:999px;padding:12px 15px;background:linear-gradient(135deg,#047857,#059669 55%,#0f766e);color:#fff;font:800 12px/1.15 system-ui,sans-serif;box-shadow:0 10px 30px #04785766;cursor:pointer;max-width:calc(100vw - 32px)}#nextplay-game-chat-button:hover{filter:brightness(1.12)}#nextplay-game-chat-button:focus-visible,#nextplay-game-chat button:focus-visible,#nextplay-game-chat input:focus-visible{outline:3px solid #86efac;outline-offset:3px}#nextplay-game-chat{position:fixed;left:12px;bottom:calc(76px + env(safe-area-inset-bottom));z-index:73;display:none;flex-direction:column;width:min(390px,calc(100vw - 24px));height:min(570px,calc(100dvh - 100px));min-height:310px;overflow:hidden;border:1px solid #34d39966;border-radius:20px;background:#071914;color:#ecfdf5;box-shadow:0 24px 75px #000a;font-family:system-ui,-apple-system,Segoe UI,sans-serif}#nextplay-game-chat.open{display:flex;animation:npgIn .18s ease-out}@keyframes npgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.npg-header{position:relative;top:auto;z-index:auto;backdrop-filter:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 15px;background:linear-gradient(120deg,#064e3b,#052e2b 70%,#102f2a);border-bottom:1px solid #ffffff16}.npg-header strong{display:block;font-size:14px}.npg-header small{display:block;color:#a7f3d0;font-size:11px;margin-top:3px}.npg-header button{width:34px;height:34px;border:1px solid #ffffff26;border-radius:10px;background:#ffffff10;color:#fff;font-size:23px;cursor:pointer}.npg-quick{display:flex;gap:6px;overflow:auto;padding:9px 10px;background:#08251c}.npg-quick button{flex:none;border:1px solid #34d39955;border-radius:99px;background:#064e3b;color:#d1fae5;padding:7px 9px;font-size:10px;cursor:pointer}#npg-messages{flex:1;overflow:auto;display:flex;flex-direction:column;gap:9px;padding:13px;background:radial-gradient(ellipse at top left,#10b98116,transparent 60%),#071914;scroll-behavior:smooth}.npg-message{max-width:91%;padding:10px 12px;border-radius:14px;font-size:12px;line-height:1.5;overflow-wrap:anywhere;white-space:pre-wrap}.npg-message.assistant{align-self:flex-start;background:#103529;border:1px solid #ffffff12;border-bottom-left-radius:5px;color:#ecfdf5}.npg-message.user{align-self:flex-end;background:linear-gradient(135deg,#059669,#0f766e);border-bottom-right-radius:5px;color:#fff}.npg-message.error{border-color:#f8717166;color:#fecaca}.npg-status{padding:5px 13px 7px;background:#071914;color:#86b8a4;font-size:10px;min-height:22px}#npg-form{display:flex;gap:7px;padding:10px;border-top:1px solid #ffffff15;background:#09241b}#npg-input{min-width:0;flex:1;border:1px solid #ffffff20;border-radius:12px;padding:11px;background:#06150f;color:#fff;font:12px system-ui,sans-serif;outline:none}#npg-input::placeholder{color:#86a99a}#npg-send{border:0;border-radius:12px;padding:0 13px;background:linear-gradient(135deg,#10b981,#0f766e);color:#fff;font-weight:800;cursor:pointer}#npg-send:disabled{opacity:.5;cursor:wait}@media(max-width:480px){#nextplay-game-chat-button{left:10px;bottom:calc(14px + env(safe-area-inset-bottom));padding:11px 12px;font-size:11px}#nextplay-game-chat{left:7px;bottom:calc(68px + env(safe-area-inset-bottom));width:calc(100vw - 14px);height:min(590px,calc(100dvh - 85px));border-radius:18px}}@media(prefers-reduced-motion:reduce){#nextplay-game-chat.open{animation:none}#npg-messages{scroll-behavior:auto}}
+/* Mobile overlap fix: game AI button sits above nav, opposite the general AI. */
+@media(max-width:760px){
+  #nextplay-game-chat-button{
+    left:10px!important;right:auto!important;
+    bottom:calc(78px + env(safe-area-inset-bottom))!important;
+    z-index:80!important;max-width:calc(50vw - 18px);padding:10px 11px!important;
+    font-size:11px!important;white-space:nowrap;
+  }
+  #nextplay-game-chat{
+    left:8px!important;right:auto!important;
+    bottom:calc(132px + env(safe-area-inset-bottom))!important;
+    width:calc(100vw - 16px)!important;
+    height:min(560px,calc(100dvh - 155px))!important;
+    max-height:calc(100dvh - 155px)!important;z-index:85!important;
+  }
+}
+
+</style>
+<button id="nextplay-game-chat-button" type="button" aria-controls="nextplay-game-chat" aria-expanded="false" aria-label="Open NEXTPLAY Game Guide AI">🎮 Game Guide AI</button>
+<section id="nextplay-game-chat" role="dialog" aria-label="NEXTPLAY Game Guide AI chat" aria-modal="false">
+  <header class="npg-header">
+    <div><strong>🎮 Game Guide AI</strong><small>Only for NEXTPLAY games</small></div>
+    <button id="npg-close" type="button" aria-label="Close Game Guide AI">×</button>
+  </header>
+  <div class="npg-quick" aria-label="Suggested questions">
+    <button type="button" data-npg-prompt="Recommend a game for me">Recommend a game</button>
+    <button type="button" data-npg-prompt="What game categories are available?">Game categories</button>
+    <button type="button" data-npg-prompt="How do I find a game on NEXTPLAY?">Find a game</button>
+  </div>
+  <div id="npg-messages" role="log" aria-live="polite" aria-label="Game Guide AI messages"></div>
+  <div id="npg-status" class="npg-status">Game help ready</div>
+  <form id="npg-form"><input id="npg-input" type="text" maxlength="2000" placeholder="Ask about NEXTPLAY games…" autocomplete="off" aria-label="Ask about NEXTPLAY games" required><button id="npg-send" type="submit">Send</button></form>
+</section>
+<script id="nextplay-game-ai-inline-js">
+(() => {
+  const $ = id => document.getElementById(id);
+  const panel=$('nextplay-game-chat'), toggle=$('nextplay-game-chat-button'), close=$('npg-close');
+  const form=$('npg-form'), input=$('npg-input'), messages=$('npg-messages'), send=$('npg-send'), status=$('npg-status');
+  if(!panel||!toggle||!form||!input||!messages||!send||!status)return;
+  let history=[],busy=false,welcomed=false;
+  function add(role,content,error=false){const el=document.createElement('div');el.className='npg-message '+role+(error?' error':'');el.textContent=content;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;return el;}
+  function open(){panel.classList.add('open');toggle.setAttribute('aria-expanded','true');if(!welcomed){add('assistant','Hi! I’m Game Guide AI 🎮 I only help with games on NEXTPLAY. Ask me to recommend a game, find a category, or explain how to use the game portal.');welcomed=true;}input.focus();}
+  function shut(){panel.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}
+  toggle.addEventListener('click',()=>panel.classList.contains('open')?shut():open());close?.addEventListener('click',shut);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))shut();});
+  function getCatalog(){return [...document.querySelectorAll('#gameGrid .game-card')].slice(0,60).map(card=>({title:card.querySelector('.game-title')?.textContent?.trim()||'',category:card.querySelector('.game-tag')?.textContent?.replace(/^✨\s*/,'').trim()||''})).filter(g=>g.title).slice(0,60);}
+  async function submit(raw){const message=String(raw||'').trim();if(!message||busy)return;add('user',message);input.value='';busy=true;send.disabled=true;status.textContent='Searching the NEXTPLAY game universe…';const waiting=add('assistant','Checking game information…');
+    try{const response=await fetch('/api/game-chat',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({messages:[...history,{role:'user',content:message}].slice(-10),catalog:getCatalog()})});let data={};try{data=await response.json()}catch{throw new Error('Could not read the game assistant response. Check the Vercel deployment.')}if(!response.ok)throw new Error(data.error||`Request failed (${response.status}).`);if(typeof data.reply!=='string'||!data.reply.trim())throw new Error('Game Guide AI returned an empty answer.');waiting.textContent=data.reply.trim();history=[...history,{role:'user',content:message},{role:'assistant',content:data.reply.trim()}].slice(-10);status.textContent='Ready · NEXTPLAY game help only';}
+    catch(e){waiting.classList.add('error');waiting.textContent=e.message||'Something went wrong.';status.textContent='Connection issue · Check deployment settings';}
+    finally{busy=false;send.disabled=false;input.focus();messages.scrollTop=messages.scrollHeight;}}
+  form.addEventListener('submit',e=>{e.preventDefault();submit(input.value)});
+  document.querySelectorAll('[data-npg-prompt]').forEach(b=>b.addEventListener('click',()=>submit(b.dataset.npgPrompt)));
+})();
+</script>
+
+
+<style id="nextplay-nova-ai-skin">
+#nextplay-chat-button{background:linear-gradient(135deg,#0891b2,#06b6d4 55%,#6366f1);box-shadow:0 12px 32px #0891b277;border-color:#a5f3fc66}
+#nextplay-chat{border-color:#48dfff66;background:#071522}#nextplay-chat .np-chat-header{background:linear-gradient(120deg,#10384a,#10243a 70%,#1c1b42)}#np-chat-messages{background:radial-gradient(ellipse at top right,#0891b222,transparent 60%),#071522}#nextplay-chat .np-message.assistant{background:#10283a;color:#effaff}#nextplay-chat .np-message.user{background:linear-gradient(135deg,#0891b2,#4f46e5)}#np-chat-form{background:#0c1c2b}#np-chat-input{background:#06111c}#np-chat-send{background:linear-gradient(135deg,#0891b2,#4f46e5)}
+#nextplay-game-chat-button{background:linear-gradient(135deg,#0f766e,#0891b2 55%,#4f46e5);box-shadow:0 10px 30px #0891b266;border-color:#99f6e455}#nextplay-game-chat{border-color:#48dfff66;background:#071522}#nextplay-game-chat .npg-header{background:linear-gradient(120deg,#10384a,#10243a 70%,#1c1b42)}.npg-quick{background:#0c2434}.npg-quick button{background:#10384a;border-color:#48dfff55;color:#cffafe}#npg-messages{background:radial-gradient(ellipse at top left,#0891b222,transparent 60%),#071522}#npg-messages .npg-message.assistant{background:#10283a;color:#effaff}#npg-messages .npg-message.user{background:linear-gradient(135deg,#0f766e,#0891b2)}#npg-form{background:#0c1c2b}#npg-input{background:#06111c}#npg-send{background:linear-gradient(135deg,#0f766e,#0891b2)}
+</style>
+  const btn = document.getElementById("npMenuBtn");
+  const drawer = document.getElementById("npDrawer");
+  const backdrop = document.getElementById("npDrawerBackdrop");
+  const closeBtn = document.getElementById("npDrawerClose");
+
+  if (!btn || !drawer || !backdrop || !closeBtn) return;
+
+  function openDrawer() {
+    drawer.classList.add("open");
+    backdrop.classList.add("open");
+    document.body.classList.add("np-drawer-open");
+    btn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    backdrop.classList.remove("open");
+    document.body.classList.remove("np-drawer-open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  btn.addEventListener("click", () => {
+    drawer.classList.contains("open")
+      ? closeDrawer()
+      : openDrawer();
+  });
+
+  closeBtn.addEventListener("click", closeDrawer);
+  backdrop.addEventListener("click", closeDrawer);
+
+  drawer.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeDrawer);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeDrawer();
+  });
+
+  // Connect this button to your existing Nextplay AI widget.
+  document.getElementById("npAskAI")
+    ?.addEventListener("click", () => {
+      closeDrawer();
+
+      // Replace these selectors with your existing AI button ID.
+      const aiButton = document.querySelector(
+        "#nextplay-chat-button, #askNextplayAI, #chatbotButton"
+      );
+
+      if (aiButton) {
+        aiButton.click();
+      } else {
+        console.warn(
+          "Nextplay AI button ID not found. Connect #npAskAI to your existing AI widget."
+        );
+      }
+    })
+</body></html>
