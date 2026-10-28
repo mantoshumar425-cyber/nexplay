@@ -1,0 +1,22 @@
+:root{--accent:#b35cff;--accent2:#7c3aed;--accentGlow:#9333ea44}
+body[data-accent="ocean"]{--accent:#38bdf8;--accent2:#2563eb;--accentGlow:#0891b244}
+body[data-accent="ember"]{--accent:#fb923c;--accent2:#ea580c;--accentGlow:#f9731644}
+body[data-accent="mint"]{--accent:#34d399;--accent2:#059669;--accentGlow:#10b98144}
+body[data-accent="sunset"]{--accent:#fb7185;--accent2:#e11d48;--accentGlow:#f43f5e44}
+body[data-accent="ice"]{--accent:#67e8f9;--accent2:#0891b2;--accentGlow:#06b6d444}
+body[data-accent="gold"]{--accent:#facc15;--accent2:#ca8a04;--accentGlow:#eab30844}
+body[data-accent="rose"]{--accent:#f9a8d4;--accent2:#db2777;--accentGlow:#ec489944}
+body[data-accent="matrix"]{--accent:#4ade80;--accent2:#16a34a;--accentGlow:#22c55e44}
+body[data-accent]{--purple:var(--accent);--violet:var(--accent2);--blue:var(--accent2)}
+body[data-accent] .brand-mark,body[data-accent] .avatar{background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 25px var(--accentGlow)}
+body[data-accent] .btn.primary{background:linear-gradient(110deg,var(--accent2),var(--accent));box-shadow:0 5px 22px var(--accentGlow)}
+body[data-accent] .hero{border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:radial-gradient(ellipse at 82% 15%,color-mix(in srgb,var(--accent) 28%,transparent),transparent 40%),radial-gradient(ellipse at 65% 100%,var(--accentGlow),transparent 48%),linear-gradient(125deg,var(--panel2),var(--bg) 75%)}
+body[data-accent] .gradient-text{background:linear-gradient(95deg,var(--text),var(--accent) 48%,var(--accent2));background-clip:text;color:transparent}
+body[data-accent] .chip.active,body[data-accent] .avatar-choice.active{background:color-mix(in srgb,var(--accent) 24%,var(--panel));border-color:var(--accent)}
+body[data-accent] button:focus-visible,body[data-accent] input:focus-visible{outline-color:var(--accent)}
+body[data-accent] .game-card:hover{border-color:var(--accent);box-shadow:0 12px 30px var(--accentGlow)}
+body[data-accent] .progress>div,body[data-accent] .challenge-progress span{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+body[data-accent] .feature-tile,body[data-accent] .theme-card{border-color:color-mix(in srgb,var(--accent) 20%,var(--line))}
+.room-box{margin-top:14px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));background:linear-gradient(135deg,var(--panel),color-mix(in srgb,var(--accent) 7%,var(--panel)));border-radius:18px;padding:16px}
+.room-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.room-actions>*{flex:1;min-width:130px}.room-code{font-weight:900;letter-spacing:2px;color:var(--accent);font-size:20px;overflow-wrap:anywhere}.room-status{font-size:12px;color:var(--muted);margin-top:7px}
+@media(max-width:600px){.room-actions>*{min-width:100%}}

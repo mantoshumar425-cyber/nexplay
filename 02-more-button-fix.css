@@ -1,0 +1,15 @@
+/* Keep the More/three-dot control visible above the bottom navigation on small phones. */
+#bottomMoreBtn{
+  position:fixed!important;right:12px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;
+  z-index:90!important;flex:none!important;width:58px!important;height:50px!important;min-height:50px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;
+  gap:1px!important;border:1px solid #d8b4fe!important;border-radius:15px!important;
+  background:linear-gradient(135deg,#a855f7,#4f46e5)!important;color:#fff!important;
+  box-shadow:0 5px 24px #7c3aed77!important;padding:4px!important;
+}
+#bottomMoreBtn span{font-size:23px!important;line-height:20px!important;letter-spacing:2px!important;font-weight:1000!important}
+#bottomMoreBtn small{font-size:10px!important;line-height:13px!important;color:#fff!important}
+#bottomMoreBtn:focus-visible{outline:3px solid #fde68a!important;outline-offset:3px!important}
+#bottomMoreMenu{z-index:95!important;bottom:calc(72px + env(safe-area-inset-bottom))!important}
+#bottomMenuBackdrop{z-index:94!important}
+@media(min-width:761px){#bottomMoreBtn{right:max(18px,calc((100vw - 1180px)/2))!important;bottom:18px!important}}

@@ -1,0 +1,23 @@
+:root{--bg:#07101f;--panel:#0d1b31;--panel2:#142743;--text:#f4f8ff;--muted:#a9bad3;--purple:#ff4057;--violet:#e11d48;--blue:#168bff;--line:#8fbfff26;--green:#168bff;--gold:#ff6578;--shadow:0 12px 38px #0007}
+body{background:radial-gradient(ellipse at 12% 0%,#087bff2e,transparent 40%),radial-gradient(ellipse at 88% 5%,#ff21452b,transparent 36%),var(--bg)}
+body.light{--bg:#f2f7ff;--panel:#fff;--panel2:#e9f1ff;--text:#10213a;--muted:#536985;--line:#24466d20;--purple:#e11d48;--violet:#be123c;--blue:#087bff;--green:#087bff;--gold:#e11d48;background:radial-gradient(ellipse at 12% 0%,#168bff24,transparent 40%),radial-gradient(ellipse at 88% 5%,#ff40571c,transparent 36%),var(--bg)}
+.brand-mark,.avatar{background:linear-gradient(135deg,#168bff 0%,#245bff 48%,#ff304f 100%);box-shadow:0 0 25px #168bff3b}
+.brand span:last-child{color:#ff5268}.btn.primary{background:linear-gradient(110deg,#087bff,#245bff 48%,#ff304f);box-shadow:0 5px 22px #087bff38}
+.btn:hover,.icon-btn:hover,.game-card:hover{border-color:#ff526899}.hero{border-color:#168bff55;background:radial-gradient(ellipse at 82% 15%,#ff304f38,transparent 40%),radial-gradient(ellipse at 30% 100%,#168bff35,transparent 48%),linear-gradient(125deg,#10284b,#10182b 72%,#351524);box-shadow:0 0 55px #087bff16}
+.gradient-text{background:linear-gradient(95deg,#70bdff,#fff 42%,#ff5268);background-clip:text;color:transparent}.eyebrow{border-color:#168bff66;background:#168bff18;color:#cbe5ff}
+.chip.active{background:linear-gradient(110deg,#087bff,#ff304f);border-color:#8bbfff;color:#fff}.game-thumb{background:radial-gradient(circle at 30% 25%,#168bff55,transparent 55%),linear-gradient(135deg,#163e70,#391b32)}
+.progress>div{background:linear-gradient(90deg,#168bff,#456dff,#ff304f)}.badge{border-color:#168bff55;background:#168bff12}.avatar-choice.active{border-color:#ff5268;background:#ff304f20}.toast{border-color:#168bff88;background:#102747}
+.np-storefront{border-color:#168bff48;background:radial-gradient(ellipse at 90% 0%,#ff304f25,transparent 38%),linear-gradient(145deg,#102748,#101522 75%)}.np-store-kicker{color:#75bdff}.np-store-badge{border-color:#ff526855;background:#ff304f20;color:#ffdce2}.np-zone-card:hover{border-color:#ff5268aa}
+/* Both AI launchers become matching circular buttons. The existing drag-to-move feature remains enabled. */
+#nextplay-chat-button,#nextplay-game-chat-button{width:62px!important;height:62px!important;min-width:62px!important;min-height:62px!important;max-width:62px!important;padding:0!important;border:2px solid #ffffffbb!important;border-radius:50%!important;display:grid!important;place-items:center!important;overflow:hidden!important;background:linear-gradient(135deg,#087bff 0%,#245bff 48%,#ff304f 100%)!important;color:#fff!important;font-size:0!important;line-height:1!important;box-shadow:0 8px 28px #087bff66,0 0 0 4px #ff304f1c!important;white-space:normal!important;touch-action:none!important}
+#nextplay-chat-button::after,#nextplay-game-chat-button::after{content:'AI';display:grid;place-items:center;width:100%;height:100%;font:900 17px/1 system-ui,sans-serif;letter-spacing:.4px;color:#fff;text-shadow:0 1px 5px #0007}
+#nextplay-chat-button:hover,#nextplay-game-chat-button:hover{filter:brightness(1.12);transform:scale(1.04)}
+#nextplay-chat,#nextplay-game-chat{border-color:#168bff88!important;background:#081629!important;color:#f4f8ff!important;box-shadow:0 24px 75px #000b!important}
+#nextplay-chat .np-chat-header,#nextplay-game-chat .npg-header{background:linear-gradient(120deg,#0b3c78,#14284b 58%,#701b35)!important;border-bottom-color:#8fbfff24!important}
+#np-chat-messages,#npg-messages{background:radial-gradient(ellipse at top left,#168bff20,transparent 60%),radial-gradient(ellipse at bottom right,#ff304f14,transparent 55%),#081629!important}
+#nextplay-chat .np-message.assistant,#npg-messages .npg-message.assistant{background:#112b49!important;color:#edf6ff!important}
+#nextplay-chat .np-message.user,#npg-messages .npg-message.user{background:linear-gradient(135deg,#087bff,#ff304f)!important;color:#fff!important}
+#np-chat-form,#npg-form{background:#0b1b30!important;border-top-color:#8fbfff24!important}#np-chat-input,#npg-input{background:#06101e!important;color:#f4f8ff!important;border-color:#8fbfff3b!important}
+#np-chat-send,#npg-send{background:linear-gradient(135deg,#087bff,#ff304f)!important;color:#fff!important}
+.npg-quick{background:#0a1b30!important}.npg-quick button{background:#112b49!important;border-color:#168bff66!important;color:#d9eaff!important}
+@media(max-width:760px){#nextplay-game-chat-button{width:58px!important;height:58px!important;min-width:58px!important;min-height:58px!important;max-width:58px!important;padding:0!important;font-size:0!important}}

@@ -1,0 +1,86 @@
+/* Reference-inspired NEXTPLAY dashboard: midnight navy, electric violet and compact gaming cards. */
+:root{
+ --bg:#03091c;--panel:#07142d;--panel2:#0c1b3a;--text:#f4f7ff;--muted:#9eb8e4;
+ --purple:#7c3cff;--violet:#5b22ef;--blue:#67b7ff;--line:#28447766;
+ --green:#48e8b0;--gold:#ffd166;--shadow:0 16px 40px #0006;
+}
+html{scroll-padding-top:88px}
+body{padding-bottom:28px;background:radial-gradient(ellipse at 55% 0%,#153b8550,transparent 38%),linear-gradient(135deg,#030819,#050d25 55%,#020718);color:var(--text)}
+header{min-height:78px;padding:12px 22px 12px 25px;background:#03091cf2;border-bottom:1px solid #19336a;box-shadow:0 8px 28px #0005;gap:18px}
+.brand{font-size:25px;letter-spacing:-1px;gap:12px;min-width:245px}
+.brand-mark{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#d946ef,#762cff 58%,#345dff);box-shadow:0 0 30px #713cff70}
+.brand span:last-child{color:#f5f7ff}.brand span:last-child span{color:#c7b4ff}
+.top-nav{gap:4px}.top-nav a{font-size:12px;padding:9px 10px;color:#a9c7f5}
+.head-actions{gap:7px}.head-actions .btn,.head-actions .icon-btn{border-radius:12px}
+.btn,.icon-btn,.chip{border-color:#294779;background:#0b1a39;color:#eaf2ff}
+.btn.primary{background:linear-gradient(115deg,#8b2cff,#6029f5 60%,#315eff);box-shadow:0 7px 22px #5c2dff55;color:white}
+main{width:calc(100% - 280px);max-width:1500px;margin:0 24px 0 250px}
+.hero{min-height:315px;margin:16px 0 17px;padding:35px 34px;border:1px solid #285bb5;border-radius:19px;background:radial-gradient(ellipse at 78% 30%,#0969d877,transparent 36%),radial-gradient(ellipse at 65% 100%,#642aff75,transparent 45%),linear-gradient(110deg,#06183b,#08245b 53%,#10113d);box-shadow:0 15px 45px #0005;isolation:isolate}
+.hero:after{content:"◈";right:7%;top:2%;font-size:clamp(130px,18vw,230px);opacity:.22;color:#9dcbff;text-shadow:0 0 45px #248cff;transform:rotate(-12deg)}
+.eyebrow{background:#1c4cae55;border-color:#6da8ff77;color:#d9eaff}
+.hero h1{max-width:650px;font-size:clamp(40px,5vw,68px);line-height:.99;letter-spacing:-2.7px}
+.gradient-text{background:linear-gradient(90deg,#fff,#b3a2ff 45%,#45d9ff);background-clip:text;color:transparent}
+.hero p{color:#d1e1ff;max-width:520px;line-height:1.65}
+.hero-foot{color:#bcd2fa}.hero-actions .btn{border-radius:11px}
+.stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:13px 0}
+.stat{padding:13px 15px;border-radius:15px;background:linear-gradient(145deg,#0d2044,#07132b);border-color:#25477e;box-shadow:0 8px 24px #0003}
+.stat strong{font-size:23px}.stat .stat-icon{font-size:20px}
+.section{margin-top:23px}.section-head{margin-bottom:12px}.section-head h2{font-size:21px}
+.panel{background:linear-gradient(145deg,#0b1b3a,#06122b);border-color:#203f74;border-radius:17px}
+#games .searchbar{background:#091735;border-color:#254477;border-radius:13px}
+#games .searchbar .field{color:var(--text)}.field{background:#07142e;border-color:#294779;color:#f4f7ff}
+#categories .chip{background:#0a1835;border-color:#254477;color:#bdd1f5;border-radius:12px}
+#categories .chip.active,.chip.active{background:linear-gradient(120deg,#7b2dff,#4b42f5);border-color:#9675ff;color:#fff;box-shadow:0 5px 18px #552bff55}
+.game-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.game-card{background:linear-gradient(160deg,#0c1b3b,#050f27);border-color:#1d3c70;border-radius:15px;box-shadow:0 8px 24px #0004}
+.game-thumb{background:radial-gradient(circle at 25% 20%,#426dff70,transparent 50%),linear-gradient(135deg,#15396b,#161343)}
+.game-info{padding:10px}.game-title{color:#f2f6ff}.game-meta{color:#a8c2ed}
+.game-actions .btn{border-radius:9px}.game-card:hover{border-color:#8064ff;box-shadow:0 15px 32px #0007,0 0 20px #593dff24}
+.game-of-day{background:linear-gradient(110deg,#0b1b3c,#10164b);border-color:#4c42a6}
+.dash-tile,.feature-tile,.theme-card,.collection-card{background:linear-gradient(145deg,#0d1e40,#07132b);border-color:#244477}
+.reward-tile{background:#0c1b3a;border-color:#294779}
+.progress>div{background:linear-gradient(90deg,#7d35ff,#3e69ff,#35d7f6)}
+.gamer-card{background:radial-gradient(ellipse at 90% 0%,#4d32d477,transparent 38%),radial-gradient(ellipse at 0% 100%,#2468d944,transparent 48%),linear-gradient(130deg,#0e2044,#0b1534 62%,#080d24);border-color:#6b5cff}
+.gamer-card-brand{color:#c9c0ff}.gamer-card-rank{background:#633cff33;color:#e2d9ff}
+.avatar,.gamer-card-avatar{background:linear-gradient(145deg,#a52dff,#5a35ef,#2367ff)}
+nav.bottom{position:fixed;z-index:30;left:0;top:79px;bottom:0;right:auto;width:225px;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:5px;padding:20px 12px 90px;background:#03091cf8;border-top:0;border-right:1px solid #1b3261;backdrop-filter:blur(20px)}
+nav.bottom a{flex:0 0 auto;min-width:0;width:100%;min-height:48px;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:13px;padding:10px 13px;border-radius:11px;color:#a9c7f5;font-size:14px;font-weight:650}
+nav.bottom a span{width:25px;text-align:center;font-size:21px}
+nav.bottom a:hover,nav.bottom a:focus-visible{background:#25127d;color:#fff}
+#bottomMoreBtn{right:20px!important;bottom:18px!important}
+#bottomMoreMenu{left:235px!important;right:16px!important;bottom:75px!important}
+#bottomMenuBackdrop{z-index:94}
+footer{color:#7e9ac8}
+.toast{background:#0d1b3b;border-color:#7661ff}
+.modal{background:#07142d;border-color:#6256e9}
+#nextplay-chat-button{background:linear-gradient(135deg,#8b2cff,#3d5fff)!important}
+#nextplay-chat{background:#07142d!important;border-color:#6455ff!important}
+#nextplay-game-chat-button{background:linear-gradient(135deg,#7c3cff,#245dff)!important}
+#nextplay-game-chat{background:#07142d!important;border-color:#6455ff!important}
+@media(max-width:1100px){
+ header{padding-inline:15px}.brand{min-width:auto;font-size:21px}.top-nav{display:none}
+ main{width:calc(100% - 245px);margin-left:225px;margin-right:20px}
+ nav.bottom{width:205px}.game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ body{padding-bottom:88px}header{min-height:64px;padding:9px 12px;gap:8px}
+ .brand{font-size:19px;gap:8px}.brand-mark{width:37px;height:37px}
+ .head-actions{gap:4px}.head-actions .btn,.head-actions .icon-btn{padding:8px;font-size:11px}
+ main{width:92%;margin:0 auto}
+ nav.bottom{top:auto;left:0;right:0;bottom:0;width:100%;height:auto;max-height:76px;flex-direction:row;align-items:center;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;padding:7px 8px calc(7px + env(safe-area-inset-bottom));border-right:0;border-top:1px solid #1b3261;gap:4px}
+ nav.bottom a{width:auto;min-width:62px;min-height:48px;flex:0 0 auto;flex-direction:column;justify-content:center;gap:1px;padding:5px 7px;font-size:10px}
+ nav.bottom a span{font-size:19px;width:auto}
+ .hero{min-height:265px;margin-top:13px;padding:23px 18px;border-radius:18px}
+ .hero h1{font-size:clamp(34px,9vw,49px);letter-spacing:-1.8px}
+ .hero:after{right:0;top:23%;font-size:100px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .game-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .game-thumb{aspect-ratio:1.2/1;min-height:100px}
+ #bottomMoreBtn{right:9px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;width:51px!important;height:48px!important}
+ #bottomMoreMenu{left:8px!important;right:8px!important;bottom:calc(70px + env(safe-area-inset-bottom))!important}
+}
+@media(max-width:390px){
+ .brand{font-size:16px}.brand-mark{width:33px;height:33px}
+ #authOpenBtn{font-size:0!important}#authOpenBtn:after{content:"Login";font-size:11px}
+ .hero h1{font-size:33px}.hero-foot{font-size:10px}
+}
